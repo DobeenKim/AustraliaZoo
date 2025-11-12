@@ -4,8 +4,20 @@
   --color-tertiary : #EFE3C2;
 }
 
+.nav-container {
+  position: relative;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--color-tertiary);
+}
+
 .nav-menu {
   display: flex;
+  flex-direction: row;
   float: right;
   background-color: var(--color-secondary);
 }
@@ -27,3 +39,22 @@
   background-color: var(--color-tertiary);
   color: var(--color-secondary);
 }
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    background-color: var(--color-secondary);
+    top: 50px;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  .nav-menu.show {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+} 
