@@ -3,3 +3,37 @@
   --color-secondary : #3E7B27;
   --color-tertiary : #EFE3C2;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: var(--main-tertiary);
+}
+
+.header-logo,
+.hamburger-menu-icon {
+  margin: 12px;
+}
+
+
+
+@media (min-width: 768px) {
+
+  .header-logo{
+    margin: 20px;
+    width: 100px
+  }
+
+  .hamburger-menu-icon {
+  display: none;
+}
+}
