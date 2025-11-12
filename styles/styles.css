@@ -3,3 +3,27 @@
   --color-secondary : #3E7B27;
   --color-tertiary : #EFE3C2;
 }
+
+.nav-menu {
+  display: flex;
+  float: right;
+  background-color: var(--color-secondary);
+}
+
+.nav-menu a {
+  color: var(--color-tertiary);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.nav-menu a:hover {
+  background-color: var(--main-color);
+  color: var(--color-tertiary);
+}
+
+.nav-menu a.active {
+  background-color: var(--color-tertiary);
+  color: var(--color-secondary);
+}
