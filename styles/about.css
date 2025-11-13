@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+@media (min-width:768px) {
+  .main {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 20px;
+    width: 100%;
+  }
+
+  .members-card {
+    margin: 0 auto;
+    width: 90%;
+    border-radius: 0 20px;
+    background: var(--color-tertiary);
+    text-align: center;
+  }
+
+  .member-info {
+    padding: 16px;
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
+    font-size: 1.3rem;
+    line-height: 2;
+  }
+
+  .img {
+    width: 250px;
+    height: 250px;
+    border-radius: 70%;
+    overflow: hidden;
+    margin: 40px auto;
+  }
+
+  .memberImg {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .github-logo {
+    width: 20%;
+  }
+  
+  .linkedin-logo {
+    width: 18%;
+    padding-top: 10px;
+  }
+}
+
+@media (min-width:1200px) {
+  .main {
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+  }
+}
+
+@media (min-width:1920px) {
+  .github-logo {
+    width: 18%;
+  }
+  
+  .linkedin-logo {
+    width: 15%;
+    padding-top: 10px;
+  }
+}
+
+
