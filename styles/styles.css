@@ -3,3 +3,31 @@
   --color-secondary : #3E7B27;
   --color-tertiary : #EFE3C2;
 }
+
+.sidebar{
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  margin-left: 10px;
+  width: 130px;
+
+}
+
+.sidebar h2 a{
+  color: var(--color-secondary);
+}
+
+
+.mammals a, .birds a, .reptiles a{
+  color: var(--color-tertiary);
+  display: block;
+  padding-top: 10px;
+  text-decoration: none;
+}
+
+@media screen and (max-with:768px){
+  
+}
+
