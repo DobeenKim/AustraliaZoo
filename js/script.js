@@ -10,7 +10,7 @@ let animalArray = [mammal, bird, reptile];
 
 animalArray.forEach(animal => {
     let animalList = document.querySelector(`.${animal.kinds}`);
-     let titleElement = document.querySelector(`.${animal.kinds.toLowerCase()}Title`);
+     let titleElement = document.querySelector(`.${animal.kinds.toLowerCase()}__title`);
     animal.name.forEach(animalName => {
         let animalContainer = document.createElement("li");
         animalContainer.textContent = animalName;
