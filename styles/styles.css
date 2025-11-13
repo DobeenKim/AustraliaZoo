@@ -19,8 +19,7 @@ body {
   background-color: var(--main-tertiary);
 }
 
-.header-logo,
-.hamburger-menu-icon {
+.header-logo {
   margin: 12px;
 }
 
@@ -29,8 +28,4 @@ body {
     margin: 20px;
     width: 100px
   }
-
-  .hamburger-menu-icon {
-  display: none;
-}
 }
