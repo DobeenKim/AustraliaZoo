@@ -12,6 +12,17 @@ body {
   margin: 0;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: var(--main-tertiary);
+}
+
+.header-logo {
+  margin: 12px;
+}
+
 .main {
   width: 100%;
   min-height: 100vh;
@@ -78,7 +89,13 @@ body {
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
+
+  .header-logo{
+    margin: 20px;
+    width: 100px
+  }
+
   .welcome-hero-section {
     padding-top: 200px; 
   }
