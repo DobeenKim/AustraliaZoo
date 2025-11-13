@@ -7,25 +7,30 @@
 .sidebar{
   background-color: var(--main-color);
   display: flex;
+  gap:24px;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   height: 100%;
   margin-left: 10px;
-  width: 130px;
-
+  width: 150px;
+  
 }
 
-.sidebar h2 a{
+.mammals__title, .birds__title, .reptiles__title {
   color: var(--color-secondary);
+  font-size: 2rem;
+
+}
+
+.sidebar li{
+  list-style: none;
+  height: 100px;
+  width: 100%;
+
 }
 
 
-.mammals a, .birds a, .reptiles a{
-  color: var(--color-tertiary);
-  display: block;
-  padding-top: 10px;
-  text-decoration: none;
-}
+
 
 @media screen and (max-with:768px){
   
