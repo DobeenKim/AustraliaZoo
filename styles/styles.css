@@ -46,6 +46,7 @@ body {
 .welcome-description {
   font-size: 1rem;
 }
+
 @media (min-width: 390px) {
   .welcome-hero-section {
     padding-top: 240px;
