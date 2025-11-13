@@ -24,10 +24,7 @@ body {
   margin: 12px;
 }
 
-
-
 @media (min-width: 768px) {
-
   .header-logo{
     margin: 20px;
     width: 100px
