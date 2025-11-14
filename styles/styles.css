@@ -1,5 +1,49 @@
 :root {
-  --main-color :#123524;
-  --color-secondary : #3E7B27;
-  --color-tertiary : #EFE3C2;
+  --main-color: #123524;
+  --color-secondary: #3e7b27;
+  --color-tertiary: #efe3c2;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.sidebar {
+  align-items: center;
+  display: flex;
+}
+
+.sidebar__title {
+  color: var(--color-secondary);
+  font-size: 1.5rem;
+  padding: 8px;
+}
+
+.sidebar__item {
+  color: var(--color-tertiary);
+  font-size: 1rem;
+  padding: 16px;
+}
+
+.sidebar-tab,
+.sidebar-content {
+  background-color: var(--main-color);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.sidebar-tab {
+  color: var(--color-tertiary);
+  font-size: 2rem;
+  padding: 16px;
+}
+
+.sidebar-content {
+  list-style: none;
+  padding: 16px;
+  width: 300px;
 }
