@@ -1,7 +1,12 @@
 :root {
-  --main-color :#123524;
-  --color-secondary : #3E7B27;
-  --color-tertiary : #EFE3C2;
+  --main-color: #123524;
+  --color-secondary: #3E7B27;
+  --color-tertiary: #EFE3C2;
+}
+
+body {
+  background-color: var(--color-tertiary);
+  font-family: Arial, sans-serif;
 }
 
 #reptiles-container {
@@ -16,9 +21,49 @@
   padding: 10px;
   width: 300px;
   text-align: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.reptile-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  background-color: var(--color-secondary);
 }
 
 .reptile-image {
   max-width: 100%;
   height: auto;
+}
+
+h3 {
+  color: var(--main-color);
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+p {
+  color: #333;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+a {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+  color: var(--color-tertiary);
+}
+
+a:focus {
+  outline: 2px solid var(--main-color);
+}
+
+@media (max-width: 768px) {
+  .reptile-item {
+    width: 90%;
+  }
 }
