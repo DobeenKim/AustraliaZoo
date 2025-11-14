@@ -50,7 +50,7 @@ let gabriella = new Member(
 
 let maho = new Member(
     "./img/sloth02.jpg",
-    "MC MAHAA",
+    "MC Mahaa",
     "Maho",
     "Sloth",
     "Maho.Kurauchi@edu.futuregames.se",
@@ -113,12 +113,6 @@ memberArray.forEach(member => {
         if(!isActive) {
             infoList.classList.add("active")
         }
-
-        // if(isActive) {
-        //     infoList.classList.remove("active")
-        // } else {
-        //     infoList.classList.add("active")
-        // }
     })
 
     if (member.linkedin) {
@@ -130,12 +124,11 @@ memberArray.forEach(member => {
         linkedinLink.target = "_blank";
         linkedinLink.classList.add("linkedinBtn")
 
-        let linkedinImage = document.createElement("img");
-        linkedinImage.src ="./logo/linkedin.png";
-        linkedinImage.classList.add("linkedin-logo");
+        let linkedinIcon = document.createElement("i");
+        linkedinIcon.classList.add("fa-brands", "fa-linkedin"); 
 
         linkedinLi.appendChild(linkedinLink)
-        linkedinLink.appendChild(linkedinImage)
+        linkedinLink.appendChild(linkedinIcon) 
     }
 
     if (member.github) {
@@ -147,15 +140,12 @@ memberArray.forEach(member => {
         githubLink.target = "_blank";
         githubLink.classList.add("gitBtn")
 
-        let githubImage = document.createElement("img");
-        githubImage.src ="./logo/github.png";
-        githubImage.classList.add("github-logo");
+        let githubIcon = document.createElement("i");
+        githubIcon.classList.add("fa-brands", "fa-github");
 
         githubLi.appendChild(githubLink)
-        githubLink.appendChild(githubImage)
+        githubLink.appendChild(githubIcon)
     }
-
-    
 });
 
 
