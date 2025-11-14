@@ -6,13 +6,36 @@ body {
   margin: 0;
 }
 
+:root {
+  --main-color :#123524;
+  --color-secondary : #3E7B27;
+  --color-tertiary : #EFE3C2;
+}
+
+.member-info {
+  opacity: 0;
+  visibility: hidden; 
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.member-info.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 @media (min-width:768px) {
-  .main {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(3,1fr);
-    gap: 20px;
+  .product-details {
     width: 100%;
+  }
+
+  .detailsWrap {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 20px;
+    width: 90%;
+    padding-top: 30px;
+    margin: 0 auto;
   }
 
   .members-card {
@@ -21,22 +44,29 @@ body {
     border-radius: 0 20px;
     background: var(--color-tertiary);
     text-align: center;
+    color: var(--main-color);
+  }
+
+    .nickname {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 600;
   }
 
   .member-info {
-    padding: 16px;
-    margin: 0;
+    margin: 0 auto;
+    padding:14px
   }
 
-  li {
+  .member-info li {
     list-style: none;
-    font-size: 1.3rem;
+    font-size: 1rem;
     line-height: 2;
   }
 
   .img {
-    width: 250px;
-    height: 250px;
+    width: 180px;
+    height: 180px;
     border-radius: 70%;
     overflow: hidden;
     margin: 40px auto;
@@ -57,14 +87,18 @@ body {
   }
 }
 
-@media (min-width:1200px) {
-  .main {
+/* @media (min-width:1200px) {
+  .detailsWrap {
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(2,1fr);
   }
-}
 
-@media (min-width:1920px) {
+  .member-info li {
+    font-size: 1.2rem;
+  }
+} */
+
+/* @media (min-width:1920px) {
   .github-logo {
     width: 18%;
   }
@@ -73,6 +107,6 @@ body {
     width: 15%;
     padding-top: 10px;
   }
-}
+} */
 
 

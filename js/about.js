@@ -1,5 +1,6 @@
-function Member(img,name,favAnimal,email,linkedin,github){
+function Member(img,nickname,name,favAnimal,email,linkedin,github){
     this.img = img,
+    this.nickname = nickname,
     this.name = name,
     this.favAnimal = favAnimal,
     this.email = email,
@@ -9,6 +10,7 @@ function Member(img,name,favAnimal,email,linkedin,github){
 
 let dobeen = new Member(
     "./img/raccoon.jpg",
+    "Dodo",
     "Dobeen",
     "Raccoon",
     "Dobeen.Kim@edu.futuregame.se",
@@ -18,14 +20,17 @@ let dobeen = new Member(
 
 let claudia = new Member(
     "./img/panda.jpg",
-    "Claudia","Panda",
+    "Claudia",
+    "Claudia",
+    "Panda",
     "Claudia.Pereira@edu.futuregames.se",
     "https://www.linkedin.com/in/claudia-pereira-carion/",
     "https://github.com/claudiacarion"
 )
 
 let ting = new Member(
-    "./img/Dog.jpg",
+    "./img/dragon.jpg",
+    "Tingting",
     "Ting",
     "Dog",
     "Ting.Li@edu.futuregames.se",
@@ -35,16 +40,18 @@ let ting = new Member(
 
 let gabriella = new Member(
     "./img/sloth01.jpg",
+    "Wineynia",
     "Gabriella",
     "Sloth",
     "Gabriella.Arif@edu.futuregames.se",
     "https://github.com/wineynia",
-    "",
+    "https://www.linkedin.com/in/gabriella-a-99a903121b",
 )
 
 let maho = new Member(
     "./img/sloth02.jpg",
     "Maho",
+    "MAHA",
     "Sloth",
     "Maho.Kurauchi@edu.futuregames.se",
     "http://www.linkedin.com/in/maho-kurauchi",
@@ -53,7 +60,10 @@ let maho = new Member(
 
 let memberArray = [dobeen,claudia,ting,gabriella,maho]
 
-let mainContent = document.querySelector(".main")
+let mainContent = document.querySelector(".product-details")
+
+let detailsWrap = document.createElement("div");
+detailsWrap.classList.add(`detailsWrap`)
 
 memberArray.forEach(member => {
     let memberContainer = document.createElement("div")
@@ -68,6 +78,9 @@ memberArray.forEach(member => {
     imageBox.appendChild(memberImage)
     memberImage.classList.add("memberImg")
 
+    let membersNickname = document.createElement("p");
+    membersNickname.textContent = `${member.nickname}`
+    membersNickname.classList.add("nickname")
 
     let infoList = document.createElement("ul");
     infoList.classList.add(`member-info`);
@@ -82,11 +95,31 @@ memberArray.forEach(member => {
     emailAddress.textContent = `Email : ${member.email}`
 
     memberContainer.appendChild(imageBox)
+    memberContainer.appendChild(membersNickname)
     infoList.appendChild(name)
     infoList.appendChild(favoritAnimal)
     infoList.appendChild(emailAddress)
     memberContainer.appendChild(infoList)
-    mainContent.appendChild(memberContainer)
+    detailsWrap.appendChild(memberContainer)
+    mainContent.appendChild(detailsWrap)
+
+    memberImage.addEventListener("click",() => {
+        let isActive = infoList.classList.contains("active");
+        const ACTIVE = document.querySelectorAll(".member-info.active")
+
+        ACTIVE.forEach(list => {
+            list.classList.remove("active")
+        });
+        if(!isActive) {
+            infoList.classList.add("active")
+        }
+
+        // if(isActive) {
+        //     infoList.classList.remove("active")
+        // } else {
+        //     infoList.classList.add("active")
+        // }
+    })
 
     if (member.linkedin) {
         let linkedinLi = document.createElement("li");
@@ -121,7 +154,9 @@ memberArray.forEach(member => {
         githubLi.appendChild(githubLink)
         githubLink.appendChild(githubImage)
     }
-})
+
+    
+});
 
 
 
