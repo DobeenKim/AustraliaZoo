@@ -3,3 +3,68 @@
   --color-secondary : #3E7B27;
   --color-tertiary : #EFE3C2;
 }
+
+.main img{
+  display: none;
+}
+
+.sidebar{
+  align-items: center;
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  gap:24px;
+  justify-content: space-between;
+  width: 200px;
+  
+}
+
+.sidebar  a{
+  color: var(--color-secondary);
+  font-size: 2rem;
+  margin-left: -37px;
+}
+
+.sidebar li{
+  list-style: none;
+  height: 50px;
+  margin-top: 5px;
+  margin-left: -40px;
+  width: 100%;
+  text-align: center;
+}
+
+.sidebar li:hover {
+    background-color: #f5f5f5;
+    color: #009dff;
+}
+
+.active{
+  display: none;
+}
+
+@media (max-width:768px){
+
+  .sidebar {
+    display: none;
+  }
+
+  .main img{
+    display: block;
+    height: 50px;
+    width: 50px;
+  }
+
+  .box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  }
+
+  .sidebar ul a{
+     font-size: 1rem;
+  }
+}
+
+ 
