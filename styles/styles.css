@@ -23,7 +23,6 @@ body {
 
 .welcome-hero-section {
   width: 95%; 
-  padding-top: 100px;
   margin: 0 auto;
   text-align: center;
 }
@@ -47,13 +46,7 @@ body {
   font-size: 1rem;
 }
 
-@media (min-width: 390px) {
-  .welcome-hero-section {
-    padding-top: 240px;
-  }
-}
-
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .welcome-hero-section {
     padding-top: 200px; 
   }
@@ -71,13 +64,4 @@ body {
   }
 }
 
-@media (min-width: 1200px) {
-  .welcome-hero-section {
-    max-width: 1100px; 
-    padding-top: 300px; 
-  }
 
-  .welcome-main-title {
-    font-size: 4rem;
-  }
-}
