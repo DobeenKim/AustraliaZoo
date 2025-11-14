@@ -14,13 +14,14 @@ body {
 
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  background-color: var(--main-tertiary);
+  align-items: center;
+  background-color: var(--main-color);
+  padding: 12px;
 }
 
 .header-logo {
-  margin: 12px;
+  margin-right: 20px;
+  flex: 0 0 auto;
 }
 
 .main {
@@ -83,6 +84,61 @@ body {
   --color-tertiary : #EFE3C2;
 }
 
+.nav-container {
+  flex: 1;
+  display: flex;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--color-tertiary);
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.nav-menu a {
+  color: var(--color-tertiary);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.nav-menu a:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-tertiary);
+}
+
+.nav-menu a.active {
+  background-color: var(--color-tertiary);
+  color: var(--color-secondary);
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    background-color: var(--color-secondary);
+    top: 50px;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  .nav-menu.show {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+} 
 @media (min-width: 390px) {
   .welcome-hero-section {
     padding-top: 240px;
