@@ -98,7 +98,7 @@ body {
   display: flex;
   flex-direction: row;
   float: right;
-  background-color: var(--color-secondary);
+  background-color: var(--main-color);
 }
 
 .nav-menu a {
@@ -110,7 +110,7 @@ body {
 }
 
 .nav-menu a:hover {
-  background-color: var(--main-color);
+  background-color: var(--color-secondary);
   color: var(--color-tertiary);
 }
 
