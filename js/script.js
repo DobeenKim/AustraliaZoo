@@ -1,5 +1,5 @@
-function Animal(kinds, name){
-    this.kinds = kinds,
+function Animal(species, name){
+    this.species = species,
     this.name = name
 }
 
@@ -9,27 +9,41 @@ let reptile = new Animal("Reptiles", ["frill-necked lizard", "Hawksbill Turtle",
 let animalArray = [mammal, bird, reptile];
 
 animalArray.forEach(animal => {
-    let animalList = document.querySelector(`.${animal.kinds}`);
-     let titleElement = document.querySelector(`.${animal.kinds.toLowerCase()}__title`);
+    let animalList;
+    if (animal.species === "Mammals") {
+        animalList = document.getElementById("one");
+    } else if (animal.species === "Birds") {
+        animalList = document.getElementById("two");
+    } else if (animal.species === "Reptiles") {
+        animalList = document.getElementById("three");
+    }
+
     animal.name.forEach(animalName => {
         let animalContainer = document.createElement("li");
         animalContainer.textContent = animalName;
         animalContainer.style.display = "none";
         animalList.appendChild(animalContainer);
-      if (titleElement) {
-        titleElement.addEventListener("click", () => {
-           
-            const animalItems = animalList.querySelectorAll("li");
-            const isHidden = animalItems[0].style.display === "none";
-            
-            animalItems.forEach(item => {
-                item.style.display = isHidden ? "block" : "none";
-            });
-        })
-      }
     });
-       
-})
         
+    document.querySelectorAll("h3 a").forEach(title => {
+        title.addEventListener("click", () => {
+            let animalItems = title.parentElement.nextElementSibling.querySelectorAll("li");
+            let hide = animalItems[0].style.display === "none";
+            animalItems.forEach(item => {
+                item.style.display = hide ? "block" : "none";
+            });
+          
+        })
+ 
+    })
+      
+});
+
+
+let img = document.querySelector("img");
+let sidebar = document.querySelector(".sidebar")
+img.addEventListener("click", () => {
+    sidebar.classList.toggle("box")
+})       
             
 
