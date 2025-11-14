@@ -21,18 +21,18 @@ animalArray.forEach(animal => {
     animal.name.forEach(animalName => {
         let animalContainer = document.createElement("li");
         animalContainer.textContent = animalName;
-        animalContainer.style.display = "none";
+        animalContainer.classList.add("active");
         animalList.appendChild(animalContainer);
     });
         
     document.querySelectorAll("h3 a").forEach(title => {
         title.addEventListener("click", () => {
-            let animalItems = title.parentElement.nextElementSibling.querySelectorAll("li");
-            let hide = animalItems[0].style.display === "none";
-            animalItems.forEach(item => {
-                item.style.display = hide ? "block" : "none";
+            let animalUls = title.parentElement.nextElementSibling;
+            let animalLis = animalUls.querySelectorAll("li");
+
+            animalLis.forEach(item => {
+              item.classList.toggle("active");
             });
-          
         })
  
     })
