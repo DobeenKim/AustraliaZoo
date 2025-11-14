@@ -23,6 +23,28 @@ body {
   margin: 12px;
 }
 
+.footer {
+  background-color: var(--main-color);
+  color: var(--color-tertiary);
+  padding: 16px;
+  text-align: center;
+}
+
+.icon {
+  margin: 8px;
+}
+
+.social-media:visited,
+.social-media a {
+  color: var(--color-tertiary);
+  text-decoration: none;
+}
+
+.icon:hover{
+  color: var(--color-secondary);
+  transform: scale(1.1);
+}
+
 @media (min-width: 768px) {
   .header-logo{
     margin: 20px;
