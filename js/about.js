@@ -50,8 +50,8 @@ let gabriella = new Member(
 
 let maho = new Member(
     "./img/sloth02.jpg",
+    "MC MAHAA",
     "Maho",
-    "MAHA",
     "Sloth",
     "Maho.Kurauchi@edu.futuregames.se",
     "http://www.linkedin.com/in/maho-kurauchi",
