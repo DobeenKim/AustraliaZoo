@@ -132,39 +132,39 @@ birds.addAnimal(
 );
 
 // Mammals Sidebar
-// let sidebarContent = document.querySelector(".sidebar-content");
-// let sidebarTitle = document.createElement("h3");
-// sidebarTitle.classList.add("sidebar__title");
-// sidebarTitle.textContent = mammals.name;
-// sidebarContent.appendChild(sidebarTitle);
-
-// let mammalsArray = mammals.animals;
-
-// mammalsArray.forEach(mammal => {
-//   let sidebarItem = document.createElement("li");
-//   sidebarItem.classList.add("sidebar__item");
-//   sidebarItem.textContent = mammal.name;
-//   sidebarTitle.appendChild(sidebarItem);
-// }
-// );
-//
-
-// Reptiles Sidebar
 let sidebarContent = document.querySelector(".sidebar-content");
 let sidebarTitle = document.createElement("h3");
 sidebarTitle.classList.add("sidebar__title");
-sidebarTitle.textContent = reptiles.name;
+sidebarTitle.textContent = mammals.name;
 sidebarContent.appendChild(sidebarTitle);
 
-let reptilesArray = reptiles.animals;
+let mammalsArray = mammals.animals;
 
-reptilesArray.forEach(reptile => {
+mammalsArray.forEach(mammal => {
   let sidebarItem = document.createElement("li");
   sidebarItem.classList.add("sidebar__item");
-  sidebarItem.textContent = reptile.name;
+  sidebarItem.textContent = mammal.name;
   sidebarTitle.appendChild(sidebarItem);
 }
 );
+//
+
+// Reptiles Sidebar
+// let sidebarContent = document.querySelector(".sidebar-content");
+// let sidebarTitle = document.createElement("h3");
+// sidebarTitle.classList.add("sidebar__title");
+// sidebarTitle.textContent = reptiles.name;
+// sidebarContent.appendChild(sidebarTitle);
+
+// let reptilesArray = reptiles.animals;
+
+// reptilesArray.forEach(reptile => {
+//   let sidebarItem = document.createElement("li");
+//   sidebarItem.classList.add("sidebar__item");
+//   sidebarItem.textContent = reptile.name;
+//   sidebarTitle.appendChild(sidebarItem);
+// }
+// );
 //
 
 // Birds Sidebar
