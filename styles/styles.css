@@ -137,6 +137,7 @@ body {
   }
   .hamburger {
     display: block;
+    margin-left: auto;
   }
 } 
 @media (min-width: 390px) {
