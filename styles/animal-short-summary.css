@@ -27,7 +27,6 @@
     transition-delay: .5s;
     animation: shake-animation 3.72s;
     transform-origin: 50% 50%;
-
 }
 
 @keyframes shake-animation {
