@@ -121,6 +121,16 @@ body {
   .sidebar {
     display: none;
  }
+  
+ .sidebar a {
+  font-size: 15px;
+  margin-left: -111px;
+ }
+
+ .sidebar li{
+  font-size: 15px;
+  margin-left: -111px;
+ }
 
   .menu {
     display: block;
@@ -128,8 +138,20 @@ body {
     width: 50px;
   }
  
-  .box{
+ .mainContent .photo{
+  height: 140px;
+  width: 180px;
+  margin:10px 20px;
+}
+
+.more{
+  width: 445px;
+  margin-left: -218px;
+}
+
+.box{
   display: block;
+  text-align: left;
   
 }
 

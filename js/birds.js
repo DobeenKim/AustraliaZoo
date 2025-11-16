@@ -39,7 +39,6 @@ birdsArray.forEach(animal => {
 
   let menu = document.querySelector(".menu");
   menu.addEventListener("click", () => {
-    
       nav.classList.toggle("box");
   });
 
