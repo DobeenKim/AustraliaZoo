@@ -120,6 +120,61 @@ body {
   color: var(--color-secondary);
 }
 
+.main__sidebar{ 
+  align-items: center;
+  background-color: var(--main-color);
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  transition: 0.5s;
+  white-space: nowrap;
+  width: 60px;
+}
+
+.main__sidebar:hover {
+  width: 300px;
+}
+
+.sidebar{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: -50px;
+  width: 200px;
+  text-align: center;
+}
+
+.sidebar-tab {
+  color: var(--color-tertiary);
+  font-size: 2rem;
+  padding: 24px 12px;
+}
+
+.sidebar:visited,
+.sidebar a {
+  color: var(--color-tertiary);
+  text-decoration: none;
+}
+
+.sidebar li{
+  color: var(--color-tertiary);
+  cursor: pointer;
+  font-size: 1rem;
+  list-style: none;
+  padding-top: 10px;
+  text-decoration: none;
+}
+
+.sidebar ul li:hover{
+ color: var(--color-secondary);
+  transform: scale(1.1);
+}
+
+.active{
+  display: none;
+}
+
 @media (min-width: 768px) {
   .header-logo{
     margin: 20px;
@@ -159,6 +214,6 @@ body {
   .welcome-description { 
     font-size: 1.3rem; 
   }
-}
 
+}
 
