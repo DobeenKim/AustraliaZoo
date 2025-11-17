@@ -5,7 +5,7 @@ function Animal(species, names){
 
 let mammal = new Animal("Mammals", ["Echidna", "Tasmanian Devil", "Quokka"]);
 let bird = new Animal("Birds", ["Cassowary", "Kookaburra", "Yellow Tailed Black Cockatoo"]);
-let reptile = new Animal("Reptiles", ["frill-necked lizard", "Hawksbill Turtle", "Perentie"]);
+let reptile = new Animal("Reptiles", ["Frill-necked Lizard", "Hawksbill Turtle", "Perentie"]);
 let animalArray = [mammal, bird, reptile];
 
 animalArray.forEach((animal, index) => {
@@ -34,10 +34,5 @@ document.querySelectorAll("h3 a").forEach(title => {
 
 
 
-let img = document.querySelector("img");
-let sidebar = document.querySelector(".sidebar")
-img.addEventListener("click", () => {
-    sidebar.classList.toggle("hide");
-})       
-            
+    
 
