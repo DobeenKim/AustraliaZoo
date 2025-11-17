@@ -37,12 +37,7 @@ birdsArray.forEach(animal => {
     ulChildren.classList.toggle("hide");
   }) 
 
-  let menu = document.querySelector(".menu");
-  menu.addEventListener("click", () => {
-      nav.classList.toggle("box");
-  });
-
-    
+  
   ulChildren.addEventListener("click", () => {
     commonPart();
     let content = document.querySelector(".mainContent");
