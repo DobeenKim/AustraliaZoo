@@ -1,4 +1,4 @@
-function Animal(name, lifespan, group, food, description, length, weight, location) {
+function Animal(name, lifespan, group, food, description, length, weight, location, image) {
   (this.name = name),
     (this.lifespan = `${lifespan} years`),
     (this.group = group),
@@ -7,6 +7,7 @@ function Animal(name, lifespan, group, food, description, length, weight, locati
     (this.length = `${length} cm`),
     (this.weight = `${weight} kg`),
     (this.location = location);
+    this.image = image;
 }
 
 function Species(name, description) {
@@ -56,7 +57,7 @@ mammals.addAnimal(
   )
 );
 
-console.log(mammals);
+
 
 // Mammals Sidebar
 // let sidebarContent = document.querySelector(".sidebar-content");
