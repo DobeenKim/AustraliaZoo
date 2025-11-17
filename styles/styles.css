@@ -4,24 +4,23 @@
   --color-tertiary: #efe3c2;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 body {
-  margin: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;;
 }
 
 .header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 10px;
   background-color: var(--main-color);
-  padding: 12px;
 }
 
 .header-logo {
   margin-right: 20px;
   flex: 0 0 auto;
+  width: 80px;
 }
 
 .main {
@@ -84,40 +83,33 @@ body {
 }
 
 .nav-container {
-  flex: 1;
   display: flex;
-}
-
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-  color: var(--color-tertiary);
+  align-items: center;
 }
 
 .nav-menu {
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: flex-end;
+  flex-direction: column;
+  background-color: var(--color-tertiary);
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  display: none;
 }
 
 .nav-menu a {
-  color: var(--color-tertiary);
+  padding: 15px;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
-  font-size: 1.5rem;
-}
-
-.nav-menu a:hover {
-  background-color: var(--color-secondary);
-  color: var(--color-tertiary);
+  color: var(--main-color);
+  border-bottom: 1px solid;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .nav-menu a.active {
-  background-color: var(--color-tertiary);
-  color: var(--color-secondary);
+  background-color: var(--color-secondary);
+  color: var(--main-color);
 }
 
 @media (min-width: 768px) {
@@ -137,9 +129,40 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   }
   
-  .nav-menu.show {
+  .nav-menu a:hover {
+  background-color: darken(var(--color-secondary), 10%);
+ }
+
+.hamburger {
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.nav-menu.show {
+  display: flex;
+}
+
+@media(min-width: 600px) {
+  .nav-menu {
+    flex-direction: row;
+    position: static;
     display: flex;
+    border: none;
   }
+
+  .nav-menu a {
+    border: none;
+  }
+
+  .nav-menu a:hover {
+    background-color: darken(var(--color-secondary), 10%);
+    color: var(--main-color);
+  }
+
+  .nav-container {
+    justify-content: flex-end;
+  }
+
   .hamburger {
     display: block;
   }
@@ -161,4 +184,4 @@ body {
   }
 }
 
-
+}
