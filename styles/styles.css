@@ -24,8 +24,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: -50px;
-  width: 200px;
+  gap:10px;
+  width: 100px;
   text-align: center;
 }
 
@@ -37,17 +37,20 @@
 
 .sidebar:visited,
 .sidebar a {
-  color: var(--color-tertiary);
+  color: var(--color-secondary);
+  font-size: 2rem;
   text-decoration: none;
 }
 
-.sidebar li{
+.sidebar ul li{
   color: var(--color-tertiary);
   cursor: pointer;
   font-size: 1rem;
   list-style: none;
   padding-top: 10px;
+  margin-left: -37px;
   text-decoration: none;
+ 
 }
 
 .sidebar ul li:hover{
@@ -59,11 +62,6 @@
   display: none;
 }
 
-@media (max-width:768px) {
-  .sidebar a{
-  font-size: 1rem;
-}
-  
-}
+
 
 
