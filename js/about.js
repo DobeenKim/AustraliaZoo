@@ -9,7 +9,7 @@ function Member(img,nickname,name,favAnimal,email,linkedin,github){
 }
 
 let dobeen = new Member(
-    "./img/raccoon.jpg",
+    "./images/raccoon.jpg",
     "Dodo",
     "Dobeen",
     "Raccoon",
@@ -19,7 +19,7 @@ let dobeen = new Member(
 )
 
 let claudia = new Member(
-    "./img/panda.jpg",
+    "./images/panda.jpg",
     "Claudia",
     "Claudia",
     "Panda",
@@ -29,7 +29,7 @@ let claudia = new Member(
 )
 
 let ting = new Member(
-    "./img/dragon.jpg",
+    "./images/dragon.jpg",
     "Tingting",
     "Ting",
     "Dog",
@@ -39,7 +39,7 @@ let ting = new Member(
 )
 
 let gabriella = new Member(
-    "./img/sloth01.jpg",
+    "./images/sloth01.jpg",
     "Wineynia",
     "Gabriella",
     "Sloth",
@@ -49,7 +49,7 @@ let gabriella = new Member(
 )
 
 let maho = new Member(
-    "./img/sloth02.jpg",
+    "./images/sloth02.jpg",
     "MC Mahaa",
     "Maho",
     "Sloth",

@@ -28,21 +28,29 @@ a {
 }
 
 @media (min-width:768px) {
+  .message {
+  font-size: 2.4rem;
+  padding: 36px;
+  color:var(--main-color);
+  font-weight: 600;
+  text-align: center;
+  }
+  
   .product-details {
     width: 100%;
-    margin: 100px 0 100px 0;
+    margin: 20px 0 20px;
   }
 
   .detailsWrap {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(3,1fr);
-    gap: 20px;
+    gap: 20px 0;
     width: 80%;
     margin: 0 auto;
   }
 
-  .members-card {
+  .detailsWrap .members-card {
     margin: 0 auto;
     width: 90%;
     border-radius: 0 20px;
@@ -59,13 +67,15 @@ a {
 
   .member-info {
     margin: 0 auto;
-    padding:14px
+    padding:14px;
+    width: 100%;
   }
 
   .member-info li {
     list-style: none;
     font-size: 1rem;
     line-height: 2;
+    overflow-wrap: break-word;
   }
 
   .img {
