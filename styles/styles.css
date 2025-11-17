@@ -1,7 +1,7 @@
 :root {
-  --main-color :#123524;
-  --color-secondary : #3E7B27;
-  --color-tertiary : #EFE3C2;
+  --main-color: #123524;
+  --color-secondary: #3e7b27;
+  --color-tertiary: #efe3c2;
 }
 
 * {
@@ -9,8 +9,51 @@
 }
 
 body {
-  background-color: var(--color-tertiary);
-  color: var(--main-color);
+  display: flex;
   margin: 0;
 }
 
+.sidebar {
+  align-items: center;
+  background-color: var(--main-color);
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  transition: 0.5s;
+  white-space: nowrap;
+  width: 60px;
+  z-index: 999; 
+}
+
+.sidebar:hover {
+  width: 300px;
+}
+
+.sidebar__title {
+  color: var(--color-secondary);
+  font-size: 1.5rem;
+  padding: 8px;
+}
+
+.sidebar__item {
+  color: var(--color-tertiary);
+  font-size: 1rem;
+  padding: 16px;
+}
+
+.sidebar-tab {
+  color: var(--color-tertiary);
+  font-size: 2rem;
+  padding: 24px 12px;
+}
+
+.sidebar-content {
+  list-style: none;
+  padding: 16px;
+}
+
+.main-content {
+  margin-left: 60px;
+  padding: 32px;
+}

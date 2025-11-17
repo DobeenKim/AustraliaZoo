@@ -77,10 +77,10 @@ let animalsArray = mammals.animals;
 
 mammals.animals.forEach(animal => {
   let animalWrapper = document.createElement("div");
-  animalWrapper.classList.add("animal-card")
+  animalWrapper.classList.add("animal-card");
   mainContent.appendChild(animalWrapper);
   let animalName = document.createElement("h4");
-  animalName.classList.add("animal-title")
+  animalName.classList.add("animal-title");
   animalName.textContent = animal.name;
   animalWrapper.appendChild(animalName);
 
@@ -95,7 +95,7 @@ mammals.animals.forEach(animal => {
   let species = document.createElement("p");
   species.classList.add("animal-species");
   species.textContent = `Group: ${animal.group}`;
-    animalWrapper.appendChild(species);
+  animalWrapper.appendChild(species);
 
   let animalFood = document.createElement("p");
   animalFood.classList.add("animal-food");
@@ -128,18 +128,17 @@ mammals.animals.forEach(animal => {
 });
 
 // Mammals Sidebar
-// let sidebarContent = document.querySelector(".sidebar-content");
-// let sidebarTitle = document.createElement("h3");
-// sidebarTitle.classList.add("sidebar__title");
-// sidebarTitle.textContent = mammals.name;
-// sidebarContent.appendChild(sidebarTitle);
+let sidebarContent = document.querySelector(".sidebar-content");
+let sidebarTitle = document.createElement("h3");
+sidebarTitle.classList.add("sidebar__title");
+sidebarTitle.textContent = mammals.name;
+sidebarContent.appendChild(sidebarTitle);
 
-// let mammalsArray = mammals.animals;
+let mammalsArray = mammals.animals;
 
-// mammalsArray.forEach(mammal => {
-//   let sidebarItem = document.createElement("li");
-//   sidebarItem.classList.add("sidebar__item");
-//   sidebarItem.textContent = mammal.name;
-//   sidebarTitle.appendChild(sidebarItem);
-// }
-// );
+mammalsArray.forEach(mammal => {
+  let sidebarItem = document.createElement("li");
+  sidebarItem.classList.add("sidebar__item");
+  sidebarItem.textContent = mammal.name;
+  sidebarTitle.appendChild(sidebarItem);
+});
