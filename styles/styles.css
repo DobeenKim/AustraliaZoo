@@ -19,7 +19,6 @@
   width: 300px;
 }
 
-
 .sidebar{
   align-items: center;
   display: flex;
@@ -36,14 +35,11 @@
   padding: 24px 12px;
 }
 
-
-
 .sidebar:visited,
 .sidebar a {
   color: var(--color-tertiary);
   text-decoration: none;
 }
-
 
 .sidebar li{
   color: var(--color-tertiary);
@@ -59,23 +55,15 @@
   transform: scale(1.1);
 }
 
-
-
-
 .active{
   display: none;
 }
-
-
-
-
 
 @media (max-width:768px) {
   .sidebar a{
   font-size: 1rem;
 }
   
-
 }
 
 

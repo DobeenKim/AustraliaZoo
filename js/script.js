@@ -29,10 +29,5 @@ document.querySelectorAll("h3 a").forEach(title => {
             item.classList.toggle("active");
             });
         })
- 
 })
-
-
-
-    
 
