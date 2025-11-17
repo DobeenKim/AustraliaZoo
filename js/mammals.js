@@ -9,15 +9,16 @@ function Animal(name, lifespan, group, food, description, length, weight, locati
     (this.location = location);
 }
 
-function Species(name) {
+function Species(name, description) {
   (this.name = name),
+    (this.description = description),
     (this.animals = []),
     (this.addAnimal = function (animal) {
       this.animals.push(animal);
     });
 }
 
-const mammals = new Species("Mammals");
+const mammals = new Species("Mammals", "Mammals are a class of warm-blooded, vertebrate animals that are defined by having hair or fur, producing milk to nourish their young through mammary glands, and typically giving birth to live young. They are also distinguished by a diaphragm and three middle ear bones. This diverse group includes humans, cats, whales, and bats.");
 mammals.addAnimal(
   new Animal(
     "Echidna",
@@ -55,6 +56,7 @@ mammals.addAnimal(
   )
 );
 
+console.log(mammals);
 
 // Mammals Sidebar
 // let sidebarContent = document.querySelector(".sidebar-content");
@@ -72,4 +74,3 @@ mammals.addAnimal(
 //   sidebarTitle.appendChild(sidebarItem);
 // }
 // );
-
