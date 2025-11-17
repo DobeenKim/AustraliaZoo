@@ -1,8 +1,8 @@
-Australian Zoo Website
+#Australian Zoo Website
 
 A dynamic and interactive website for Australian Zoo featuring native Australian animals across three main categories: Mammals, Birds and Reptiles. Built with modern web technologies, featuring smooth animations and responsive design.
 
-🌟 Features
+##🌟 Features
 
 ⦁	Five Categories: They showcase homepage, animal categories, about us. 
 ⦁	Interactive Navigation: Click category headers and sidebar to toggle pages.
@@ -11,51 +11,51 @@ A dynamic and interactive website for Australian Zoo featuring native Australian
 ⦁	Performance Optimized: Fast loading with minimal dependencies.
 ⦁	Accessibility: Keyboard navigation and screen reader friendly.
 
-🏠 Homepage
+###🏠 Homepage
 
-🐨 Animal Categories
+###🐨 Animal Categories
 
-🐾 Mammals
-⦁	Echidna
-⦁	Tasmanian Devil
-⦁	Quokka
+####🐾 Mammals
+-Echidna
+-Tasmanian Devil
+-Quokka
 
-🕊️ Birds
-⦁	Cassowary
-⦁	Kookaburra
-⦁	Yellow Tailed Black Cockatoo
+####🕊️ Birds
+-Cassowary
+-Kookaburra
+-Yellow Tailed Black Cockatoo
 
-🦎 Reptiles
-⦁	Frill-necked Lizard
-⦁	Hawksbill Turtle
-⦁	Perentie
+####🦎 Reptiles
+-Frill-necked Lizard
+-Hawksbill Turtle
+-Perentie
 
-👩 About us
-⦁ Claudia Pereira
-⦁	Dobeen Kim
-⦁	Gabriella Arif
-⦁	Maho Kurauchi
-⦁	Ting Li
+###👩 About us
+-Claudia Pereira
+-Dobeen Kim
+-Gabriella Arif
+-Maho Kurauchi
+-Ting Li
 
-🚀 Quick Start
+##🚀 Quick Start
 
-🎆Prerequisites
+###🎆Prerequisites
 
-⦁	A modern web browser (Chrome, Firefox, Safari, or Edge)
-⦁	No additional software or dependencies required
+-A modern web browser (Chrome, Firefox, Safari, or Edge)
+-No additional software or dependencies required
 
 
-⚙️Installation
+##⚙️Installation
 
 1-Clone the repository:
 git clone https://github.com/DobeenKim/AustralianZoo
 
 2-Or download directly
-⦁	Download the ZIP file
-⦁	Extract to your preferred directory
+-Download the ZIP file
+-Extract to your preferred directory
 
 
-📁 Project Structure
+##📁 Project Structure
 Australian-Zoo-website/
 │
 ├── index.html              # Main entry point
@@ -68,31 +68,31 @@ Australian-Zoo-website/
        └── js
 
        
-🛠️ Technologies Used
-⦁	HTML5: Semantic markup and modern structure
-⦁	CSS3: Advanced styling with grid, flexbox, and animations
-⦁	JavaScript ES6+: Dynamic content and interactive features
-⦁	Responsive Design: Mobile-first approach
+##🛠️ Technologies Used
+-HTML5: Semantic markup and modern structure
+-CSS3: Advanced styling with grid, flex box, and animations
+-JavaScript ES6+: Dynamic content and interactive features
+-Responsive Design: Mobile-first approach
 
 
-🌐 Browser Support
+##🌐 Browser Support
 
-⦁	✅ Chrome 60+
-⦁	✅ Firefox 55+
-⦁	✅ Safari 12+
-⦁	✅ Edge 79+
-
-
-📱 Responsive Breakpoints
-
-⦁	Mobile: 320px - 767px
-⦁	Tablet: 768px - 1023px
-⦁	Desktop: 1024px+
+-✅ Chrome 60+
+-✅ Firefox 55+
+-✅ Safari 12+
+-✅ Edge 79+
 
 
-🔧 Development
+##📱 Responsive Breakpoints
 
-Local Development
+-Mobile: 320px - 767px
+-Tablet: 768px - 1023px
+-Desktop: 1024px+
+
+
+##🔧 Development
+
+###Local Development
 
 1.	Clone the repository
 2.	Open index.html in your browser
@@ -100,27 +100,27 @@ Local Development
 4.	Refresh browser to see updates
 
 
-🐛 Troubleshooting
+##🐛 Troubleshooting
 
-Common Issues
+###Common Issues
 
 1.Lists not showing
 
-⦁	Ensure JavaScript is enabled in browser
-⦁	Check browser console for errors (F12)
+-Ensure JavaScript is enabled in browser
+-Check browser console for errors (F12)
 
 2.Styling issues
 
-⦁	Clear browser cache (Ctrl+F5)
-⦁	Verify CSS is properly linked
+-Clear browser cache (Ctrl+F5)
+-Verify CSS is properly linked
 
 3.Click events not working
 
-⦁	Check if JavaScript is loaded
-⦁	Verify event listeners are properly attached
+-Check if JavaScript is loaded
+-Verify event listeners are properly attached
 
 
-🤝 Contributing
+##🤝 Contributing
 
 We welcome contributions to improve the Australian Zoo website!
 
@@ -135,20 +135,20 @@ We welcome contributions to improve the Australian Zoo website!
 5.Open a Pull Request
 
 
-Contribution Guidelines
+###Contribution Guidelines
 
-⦁	Follow existing code style
-⦁	Test on multiple browsers
-⦁	Ensure responsive design works
-⦁ Update documentation as needed
+-Follow existing code style
+-Test on multiple browsers
+-Ensure responsive design works
+-Update documentation as needed
 
 
-📄 License
+##📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 
-📞 Support
+##📞 Support
 For support or questions:
 
 📧 Email: support@australianzoo.com
