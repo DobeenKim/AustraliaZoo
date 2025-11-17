@@ -23,7 +23,7 @@ body {
   transition: 0.5s;
   white-space: nowrap;
   width: 60px;
-  z-index: 999; 
+  z-index: 999;
 }
 
 .sidebar:hover {
@@ -49,8 +49,11 @@ body {
 }
 
 .sidebar-content {
-  list-style: none;
   padding: 16px;
+}
+
+.sidebar__list {
+  list-style: none;
 }
 
 .main-content {

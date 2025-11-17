@@ -76,47 +76,30 @@ mainContent.appendChild(mammalsInfo);
 let animalsArray = mammals.animals;
 
 mammals.animals.forEach(animal => {
+  let preview = animal.description.substring(0, 200) + "...";
+
   let animalWrapper = document.createElement("div");
-  animalWrapper.classList.add("animal-card");
+  animalWrapper.innerHTML = `
+  <h4>${animal.name}</h4>
+  <img 
+    src="${animal.image}" 
+    alt="${animal.name} image" 
+    class="animal-image"
+    style="width: 100px; height: 100px;"
+  >
+  <p class="animal-description">${preview}</p>
+  <button class="read-more-btn">Read more</button>
+`;
+
   mainContent.appendChild(animalWrapper);
-  let animalName = document.createElement("h4");
-  animalName.classList.add("animal-title");
-  animalName.textContent = animal.name;
-  animalWrapper.appendChild(animalName);
-
-  let animalImage = document.createElement("img");
-  animalImage.src = animal.image;
-  animalImage.alt = `${animal.name} image`;
-  animalImage.height = 100;
-  animalImage.width = 100;
-  animalImage.classList.add("animal-image");
-  animalWrapper.appendChild(animalImage);
-
-  let species = document.createElement("p");
-  species.classList.add("animal-species");
-  species.textContent = `Group: ${animal.group}`;
-  animalWrapper.appendChild(species);
-
-  let animalFood = document.createElement("p");
-  animalFood.classList.add("animal-food");
-  animalFood.textContent = `Food: ${animal.food}`;
-  animalWrapper.appendChild(animalFood);
-
-  let animalDescription = document.createElement("p");
-  animalDescription.classList.add("animal-description");
-  let preview = `Description: ${animal.description.substring(0, 200)}...`;
-  animalDescription.textContent = preview;
-  animalWrapper.appendChild(animalDescription);
-
-  let toggleBtn = document.createElement("button");
-  toggleBtn.classList.add("read-more-btn");
-  toggleBtn.textContent = "Read more";
-  animalWrapper.appendChild(toggleBtn);
+  let animalDescription = animalWrapper.querySelector(".animal-description");
+  let toggleBtn = animalWrapper.querySelector(".read-more-btn");
 
   let isExpanded = false;
+
   toggleBtn.addEventListener("click", () => {
     if (!isExpanded) {
-      animalDescription.textContent = `Description: ${animal.description}`;
+      animalDescription.textContent = animal.description;
       toggleBtn.textContent = "Read less";
       isExpanded = true;
     } else {
@@ -129,16 +112,12 @@ mammals.animals.forEach(animal => {
 
 // Mammals Sidebar
 let sidebarContent = document.querySelector(".sidebar-content");
-let sidebarTitle = document.createElement("h3");
-sidebarTitle.classList.add("sidebar__title");
-sidebarTitle.textContent = mammals.name;
-sidebarContent.appendChild(sidebarTitle);
 
-let mammalsArray = mammals.animals;
-
-mammalsArray.forEach(mammal => {
-  let sidebarItem = document.createElement("li");
-  sidebarItem.classList.add("sidebar__item");
-  sidebarItem.textContent = mammal.name;
-  sidebarTitle.appendChild(sidebarItem);
-});
+sidebarContent.innerHTML = `
+  <h3 class="sidebar__title">${mammals.name}</h3>
+  <ul class="sidebar__list">
+    ${mammals.animals
+      .map(animal => `<li class="sidebar__item">${animal.name}</li>`)
+      .join("")}
+  </ul>
+`;
