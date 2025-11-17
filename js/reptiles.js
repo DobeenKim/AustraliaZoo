@@ -1,12 +1,7 @@
-const toggleMenu = () => {
-  const menu = document.querySelector(".nav-menu");
-  menu.classList.toggle(`show`);
-};
-
 const reptilesData = [
   {
     name: "Frill-necked Lizard",
-    image: "./styles/images/frill-neck-lizard.png",
+    image: "./images/frill-necked-lizard.jpg",
     food: "Small insects and spiders",
     description:
       "When this unique creature feels threatened, it rises on its hind legs, opens its yellow-coloured mouth, unfurls the colorful, pleated skin flap that encircles its head, and hisses. If an attacker is unintimidated by these antics, the lizard simply turns tail, mouth and frill open, and bolts, legs splaying left and right.",
@@ -18,7 +13,7 @@ const reptilesData = [
   },
   {
     name: "Hawksbill Turtle",
-    image: "./styles/images/seahawk-turtle.png",
+    image: "./images/hawksbill-turtle.jpg",
     lifespan: "50 years",
     food: "Other animals (sponges & jellyfish), sea plants",
     description:
@@ -32,7 +27,7 @@ const reptilesData = [
   },
   {
     name: "Perentie",
-    image: "./styles/images/perentie.png",
+    image: "./images/Perentie.jpg",
     lifespan: "20 years",
     food: "Carnivore, they eat animals like kangaroos, rabbits, lizards and birds",
     description:
