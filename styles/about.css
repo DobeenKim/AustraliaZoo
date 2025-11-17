@@ -6,6 +6,10 @@ body {
   margin: 0;
 }
 
+a {
+  color: var(--main-color)
+}
+
 :root {
   --main-color :#123524;
   --color-secondary : #3E7B27;
@@ -75,13 +79,18 @@ body {
   .memberImg {
     width: 100%;
     object-fit: cover;
+    cursor: pointer;
   }
 
-  .github-logo {
+  .memberImg :hover {
+    
+  }
+
+  .members-card .github-logo {
     width: 20%;
   }
   
-  .fa-brands{
+  .members-card .fa-brands{
     font-size: 3rem;
     padding-top: 10px;
   }
