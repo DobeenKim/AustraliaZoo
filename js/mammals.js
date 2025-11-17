@@ -19,11 +19,11 @@ function Species(name, description) {
     });
 }
 
-const species = new Species(
+const mammals = new Species(
   "Mammals",
   "Mammals are a class of warm-blooded, vertebrate animals that are defined by having hair or fur, producing milk to nourish their young through mammary glands, and typically giving birth to live young. They are also distinguished by a diaphragm and three middle ear bones. This diverse group includes humans, cats, whales, and bats."
 );
-species.addAnimal(
+mammals.addAnimal(
   new Animal(
     "Echidna",
     50,
@@ -33,10 +33,10 @@ species.addAnimal(
     76,
     10,
     "Throughout Australia",
-    "../images/Echidna.jpg"
+    "./images/Echidna.jpg"
   )
 );
-species.addAnimal(
+mammals.addAnimal(
   new Animal(
     "Tasmanian Devil",
     5,
@@ -46,10 +46,10 @@ species.addAnimal(
     70,
     10,
     "Tasmania",
-    "../images/TasmanianDevil.jpg"
+    "./images/TasmanianDevil.jpg"
   )
 );
-species.addAnimal(
+mammals.addAnimal(
   new Animal(
     "Quokka",
     10,
@@ -59,22 +59,73 @@ species.addAnimal(
     50,
     3,
     "Only found on Rottnest Island and a few places on mainland Western Australia",
-    "../images/quokka.jpg"
+    "./images/quokka.jpg"
   )
 );
 
 let mainContent = document.querySelector(".main-content");
-let speciesTitle = document.createElement("h2");
-speciesTitle.classList.add("species-title");
-speciesTitle.textContent = species.name;
-mainContent.appendChild(speciesTitle);
-let speciesInfo = document.createElement("p");
-speciesInfo.classList.add("species-info");
-speciesInfo.textContent = species.description;
-mainContent.appendChild(speciesInfo);
+let mammalsTitle = document.createElement("h2");
+mammalsTitle.classList.add("species-title");
+mammalsTitle.textContent = mammals.name;
+mainContent.appendChild(mammalsTitle);
+let mammalsInfo = document.createElement("p");
+mammalsInfo.classList.add("species-info");
+mammalsInfo.textContent = mammals.description;
+mainContent.appendChild(mammalsInfo);
 
-let animalWrapper = document.createElement("div");
+let animalsArray = mammals.animals;
 
+mammals.animals.forEach(animal => {
+  let animalWrapper = document.createElement("div");
+  animalWrapper.classList.add("animal-card")
+  mainContent.appendChild(animalWrapper);
+  let animalName = document.createElement("h4");
+  animalName.classList.add("animal-title")
+  animalName.textContent = animal.name;
+  animalWrapper.appendChild(animalName);
+
+  let animalImage = document.createElement("img");
+  animalImage.src = animal.image;
+  animalImage.alt = `${animal.name} image`;
+  animalImage.height = 100;
+  animalImage.width = 100;
+  animalImage.classList.add("animal-image");
+  animalWrapper.appendChild(animalImage);
+
+  let species = document.createElement("p");
+  species.classList.add("animal-species");
+  species.textContent = `Group: ${animal.group}`;
+    animalWrapper.appendChild(species);
+
+  let animalFood = document.createElement("p");
+  animalFood.classList.add("animal-food");
+  animalFood.textContent = `Food: ${animal.food}`;
+  animalWrapper.appendChild(animalFood);
+
+  let animalDescription = document.createElement("p");
+  animalDescription.classList.add("animal-description");
+  let preview = `Description: ${animal.description.substring(0, 200)}...`;
+  animalDescription.textContent = preview;
+  animalWrapper.appendChild(animalDescription);
+
+  let toggleBtn = document.createElement("button");
+  toggleBtn.classList.add("read-more-btn");
+  toggleBtn.textContent = "Read more";
+  animalWrapper.appendChild(toggleBtn);
+
+  let isExpanded = false;
+  toggleBtn.addEventListener("click", () => {
+    if (!isExpanded) {
+      animalDescription.textContent = `Description: ${animal.description}`;
+      toggleBtn.textContent = "Read less";
+      isExpanded = true;
+    } else {
+      animalDescription.textContent = preview;
+      toggleBtn.textContent = "Read more";
+      isExpanded = false;
+    }
+  });
+});
 
 // Mammals Sidebar
 // let sidebarContent = document.querySelector(".sidebar-content");

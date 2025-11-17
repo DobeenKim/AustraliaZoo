@@ -9,6 +9,8 @@
 }
 
 body {
+  background-color: var(--color-tertiary);
+  color: var(--main-color);
   margin: 0;
 }
 
