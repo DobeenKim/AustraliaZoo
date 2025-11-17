@@ -1,15 +1,25 @@
 :root {
-  --main-color :#123524;
-  --color-secondary : #3E7B27;
-  --color-tertiary : #EFE3C2;
+  --main-color: #123524;
+  --color-secondary: #3e7b27;
+  --color-tertiary: #efe3c2;
 }
 
 * {
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Ribeye";
+  src: url("../fonts/Ribeye-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   margin: 0;
+  font-family: "Ribeye", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .header {
@@ -40,31 +50,31 @@ body {
   text-decoration: none;
 }
 
-.icon:hover{
+.icon:hover {
   color: var(--color-secondary);
   transform: scale(1.1);
 }
 
 @media (min-width: 768px) {
-  .header-logo{
+  .header-logo {
     margin: 20px;
-    width: 100px
+    width: 100px;
   }
 }
 .main {
   width: 100%;
   min-height: 100vh;
   background-image: url(../images/background-image.jpg);
-  background-size: cover;       
-  background-repeat: no-repeat; 
-  background-position: center;  
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .welcome-hero-section {
-  width: 95%; 
+  width: 95%;
   margin: 0 auto;
   text-align: center;
-  padding-top: 200px; 
+  padding-top: 200px;
 }
 
 .wrap {
@@ -79,12 +89,9 @@ body {
 }
 
 .welcome-main-title {
-  font-size: 3rem; 
+  font-size: 3rem;
 }
 
 .welcome-description {
   font-size: 1.3rem;
 }
-
-
-
