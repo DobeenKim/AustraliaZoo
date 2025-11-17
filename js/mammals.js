@@ -42,7 +42,7 @@ mammals.addAnimal(
     5,
     "Mammal",
     "A predator, then eat meat from other animals such as wallabies and wombats",
-    "The Tasmanian devil (Sarcophilus harrisii) (palawa kani: purinina)[3] is a carnivorous marsupial of the family Dasyuridae. Until recently, it was only found on the island state of Tasmania, but it has been reintroduced to New South Wales in mainland Australia, with a small breeding population. The size of a small dog, the Tasmanian devil became the largest carnivorous marsupial in the world, following the extinction of the thylacine in 1936. It is related to quolls, and distantly related to the thylacine. It is characterised by its stocky and muscular build, black fur, pungent odour, extremely loud and disturbing screech, keen sense of smell, and ferocity when feeding. The Tasmanian devil's large head and neck allow it to generate among the strongest bites per unit body mass of any extant predatory land mammal. It hunts prey and scavenges on carrion.",
+    "The Tasmanian devil (Sarcophilus harrisii) (palawa kani: purinina) is a carnivorous marsupial of the family Dasyuridae. Until recently, it was only found on the island state of Tasmania, but it has been reintroduced to New South Wales in mainland Australia, with a small breeding population. The size of a small dog, the Tasmanian devil became the largest carnivorous marsupial in the world, following the extinction of the thylacine in 1936. It is related to quolls, and distantly related to the thylacine. It is characterised by its stocky and muscular build, black fur, pungent odour, extremely loud and disturbing screech, keen sense of smell, and ferocity when feeding. The Tasmanian devil's large head and neck allow it to generate among the strongest bites per unit body mass of any extant predatory land mammal. It hunts prey and scavenges on carrion.",
     70,
     10,
     "Tasmania",
@@ -64,22 +64,17 @@ mammals.addAnimal(
 );
 
 let mainContent = document.querySelector(".main-content");
-let mammalsTitle = document.createElement("h2");
-mammalsTitle.classList.add("species-title");
-mammalsTitle.textContent = mammals.name;
-mainContent.appendChild(mammalsTitle);
-let mammalsInfo = document.createElement("p");
-mammalsInfo.classList.add("species-info");
-mammalsInfo.textContent = mammals.description;
-mainContent.appendChild(mammalsInfo);
 
-let animalsArray = mammals.animals;
+mainContent.innerHTML = `
+  <h2 class="species-title">${mammals.name}</h2>
+  <p class="species-info">${mammals.description}</p>
+`;
 
 mammals.animals.forEach(animal => {
   let preview = animal.description.substring(0, 200) + "...";
 
-  let animalWrapper = document.createElement("div");
-  animalWrapper.innerHTML = `
+  let animalCard = document.createElement("div");
+  animalCard.innerHTML = `
   <h4>${animal.name}</h4>
   <img 
     src="${animal.image}" 
@@ -87,13 +82,15 @@ mammals.animals.forEach(animal => {
     class="animal-image"
     style="width: 100px; height: 100px;"
   >
+  <p>Group: ${animal.group}</p>
+  <p>Food: ${animal.food}</p>
   <p class="animal-description">${preview}</p>
   <button class="read-more-btn">Read more</button>
 `;
-
-  mainContent.appendChild(animalWrapper);
-  let animalDescription = animalWrapper.querySelector(".animal-description");
-  let toggleBtn = animalWrapper.querySelector(".read-more-btn");
+  mainContent.appendChild(animalCard);
+  
+  let animalDescription = animalCard.querySelector(".animal-description");
+  let toggleBtn = animalCard.querySelector(".read-more-btn");
 
   let isExpanded = false;
 
@@ -116,8 +113,6 @@ let sidebarContent = document.querySelector(".sidebar-content");
 sidebarContent.innerHTML = `
   <h3 class="sidebar__title">${mammals.name}</h3>
   <ul class="sidebar__list">
-    ${mammals.animals
-      .map(animal => `<li class="sidebar__item">${animal.name}</li>`)
-      .join("")}
+    ${mammals.animals.map(animal => `<li class="sidebar__item">${animal.name}</li>`).join("")}
   </ul>
 `;
