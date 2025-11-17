@@ -46,6 +46,7 @@ birdsArray.forEach(animal => {
   ulChildren.addEventListener("click", () => {
     commonPart();
     let content = document.querySelector(".mainContent");
+
     let img = document.createElement("img");
     img.src = animal.img;
     img.classList.add("pic");
@@ -57,11 +58,9 @@ birdsArray.forEach(animal => {
     let btn = document.createElement("button");
     btn.textContent = "Read More";
     btn.classList.add("button");
-
-    content.appendChild(img);
-    content.appendChild(abstract);
-    content.appendChild(btn);
-
+    
+    content.append(img,abstract,btn);
+  
     btn.addEventListener("click", () => {
       let more = document.querySelector(".more")
       if(more){
