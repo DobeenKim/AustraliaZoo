@@ -88,7 +88,7 @@ let yellowTailedBlackCockatoo = new shortSummary(
   "#"
 );
 
-animalSumarryArray = [
+animalSummarryArray = [
   echidna,
   tasmanianDevil,
   quokka,
@@ -199,7 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const selectedText = li.textContent.toLowerCase();
     console.log(selectedText);
-    const selectedAnimal = animalSumarryArray.find(
+    const selectedAnimal = animalSummarryArray.find(
       (animal) => animal.name.toLowerCase() === selectedText
     );
     if (currentCard) {
