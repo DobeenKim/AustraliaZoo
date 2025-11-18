@@ -124,7 +124,7 @@ mammals.animals.forEach(animal => {
   });
 });
 
-// Mammals Sidebar
+// Mammals Sidebar - must be here for full funtionality
 let sidebarContent = document.querySelector(".sidebar-content");
 
 sidebarContent.innerHTML = `
@@ -147,7 +147,7 @@ document.querySelectorAll(".sidebar__item").forEach(item => {
     }
     
     document.querySelector(".active")?.classList.remove("active");
-    
+
     card.classList.add("active");
   })
 });
