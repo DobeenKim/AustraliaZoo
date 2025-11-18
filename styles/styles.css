@@ -39,7 +39,6 @@ body {
   white-space: normal;
 }
 
-
 .sidebar{
   align-items: center;
   display: flex;
@@ -49,7 +48,6 @@ body {
   width: 100px;
   text-align: center;
 }
-
 
 .sidebar-tab {
   color: var(--color-tertiary);
@@ -100,12 +98,6 @@ body {
   border-radius: 50%;
   height: 130px;
   width: 130px;
-}
-
-.less{
-  
-
-
 }
 
 .more{
@@ -167,7 +159,6 @@ body {
 
  .sidebar li{
   font-size: 15px;
-
   }
 
   .mainContent .pic{
@@ -176,10 +167,8 @@ body {
    width: 50px;
   }
 
-  
   .less, .more{
     font-size: 10px;
-   
   }
 
 }
