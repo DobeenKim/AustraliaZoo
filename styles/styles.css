@@ -4,9 +4,23 @@
   --color-tertiary: #efe3c2;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
-  margin: 0;;
+  margin: 0;
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../images/background-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .header {
@@ -27,13 +41,13 @@ body {
   width: 100%;
   min-height: 100vh;
   background-image: url(../img/background-image.jpg);
-  background-size: cover;       
-  background-repeat: no-repeat; 
-  background-position: center;  
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .welcome-hero-section {
-  width: 95%; 
+  width: 95%;
   margin: 0 auto;
   text-align: center;
 }
@@ -50,7 +64,7 @@ body {
 }
 
 .welcome-main-title {
-  font-size: 2rem; 
+  font-size: 2rem;
 }
 
 .welcome-description {
@@ -74,12 +88,12 @@ body {
   text-decoration: none;
 }
 
-.icon:hover{
+.icon:hover {
   color: var(--color-secondary);
   transform: scale(1.1);
-  --main-color :#123524;
-  --color-secondary : #3E7B27;
-  --color-tertiary : #EFE3C2;
+  --main-color: #123524;
+  --color-secondary: #3e7b27;
+  --color-tertiary: #efe3c2;
 }
 
 .nav-container {
@@ -112,7 +126,7 @@ body {
   color: var(--main-color);
 }
 
-.main__sidebar{ 
+.main__sidebar {
   align-items: center;
   background-color: var(--main-color);
   display: flex;
@@ -127,12 +141,12 @@ body {
   width: 300px;
 }
 
-.sidebar{
+.sidebar {
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap:10px;
+  gap: 10px;
   width: 100px;
   text-align: center;
 }
@@ -150,7 +164,7 @@ body {
   text-decoration: none;
 }
 
-.sidebar ul li{
+.sidebar ul li {
   color: var(--color-tertiary);
   cursor: pointer;
   font-size: 1rem;
@@ -158,22 +172,21 @@ body {
   padding-top: 10px;
   margin-left: -37px;
   text-decoration: none;
- 
 }
 
-.sidebar ul li:hover{
- color: var(--color-secondary);
+.sidebar ul li:hover {
+  color: var(--color-secondary);
   transform: scale(1.1);
 }
 
-.active{
+.active {
   display: none;
 }
 
 @media (min-width: 768px) {
-  .header-logo{
+  .header-logo {
     margin: 20px;
-    width: 100px
+    width: 100px;
   }
 
   .nav-menu {
@@ -184,63 +197,61 @@ body {
     background-color: var(--color-secondary);
     top: 50px;
     width: 100%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  }
-  
-  .nav-menu a:hover {
-  background-color: darken(var(--color-secondary), 10%);
- }
-
-.hamburger {
-  cursor: pointer;
-  font-size: 30px;
-}
-
-
-.nav-menu.show {
-  display: flex;
-}
-
-@media(min-width: 600px) {
-  .nav-menu {
-    flex-direction: row;
-    position: static;
-    display: flex;
-    border: none;
-  }
-
-  .nav-menu a {
-    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
 
   .nav-menu a:hover {
     background-color: darken(var(--color-secondary), 10%);
-    color: var(--main-color);
-  }
-
-  .nav-container {
-    justify-content: flex-end;
   }
 
   .hamburger {
-    display: block;
+    cursor: pointer;
+    font-size: 30px;
   }
 
-  .welcome-hero-section {
-    padding-top: 200px; 
+  .nav-menu.show {
+    display: flex;
   }
 
-  .welcome-tagline { 
-    font-size: 2rem; 
-  }
+  @media (min-width: 600px) {
+    .nav-menu {
+      flex-direction: row;
+      position: static;
+      display: flex;
+      border: none;
+    }
 
-  .welcome-main-title {
-    font-size: 3rem; 
-  }
+    .nav-menu a {
+      border: none;
+    }
 
-  .welcome-description { 
-    font-size: 1.3rem; 
-  }
+    .nav-menu a:hover {
+      background-color: darken(var(--color-secondary), 10%);
+      color: var(--main-color);
+    }
 
- }
+    .nav-container {
+      justify-content: flex-end;
+    }
+
+    .hamburger {
+      display: block;
+    }
+
+    .welcome-hero-section {
+      padding-top: 200px;
+    }
+
+    .welcome-tagline {
+      font-size: 2rem;
+    }
+
+    .welcome-main-title {
+      font-size: 3rem;
+    }
+
+    .welcome-description {
+      font-size: 1.3rem;
+    }
+  }
 }
