@@ -86,13 +86,16 @@ mammals.animals.forEach(animal => {
   `;
 
   animalCard.innerHTML = `
-  <h4>${animal.name}</h4>
-  <img 
-    src="${animal.image}" 
-    alt="${animal.name} image" 
-    class="animal-image"
-    style="width: 100px; height: 100px;"
-  >
+  <h4 class="animal-title">${animal.name}</h4>
+  <div class="image-wrapper">
+    <img 
+      src="${animal.image}" 
+      alt="${animal.name} image" 
+      class="animal-image"
+      style="width: 160px; height: 160px;"
+    >
+  <div>
+  <div class="animal-info-container">
   <p class="animal-description">${preview}</p>
   <div class="extra-info">
     <p class="full-description">${animal.description}</p>
@@ -131,8 +134,8 @@ sidebarContent.innerHTML = `
 <h3 class="sidebar__title">${mammals.name}</h3>
 <ul class="sidebar__list">
 ${mammals.animals
-.map(animal => `<li class="sidebar__item ${animal.name.toLowerCase().replace(/\s+/g, "-")}">${animal.name}</li>`)
-.join("")}
+  .map(animal => `<li class="sidebar__item ${animal.name.toLowerCase().replace(/\s+/g, "-")}">${animal.name}</li>`)
+  .join("")}
 </ul>
 `;
 
@@ -145,23 +148,23 @@ const collapse = () => {
     extraInfo.style.display = "none";
     animalDescription.style.display = "block";
     button.textContent = "Read more";
-  })
-}
+  });
+};
 
 document.querySelectorAll(".sidebar__item").forEach(item => {
   item.addEventListener("click", () => {
     let animalClass = item.classList[1];
     let card = document.querySelector(`.animal-card.${animalClass}`);
-    
+
     collapse();
 
     if (card.classList.contains("active")) {
       card.classList.remove("active");
-      return
+      return;
     }
-    
+
     document.querySelector(".active")?.classList.remove("active");
 
     card.classList.add("active");
-  })
+  });
 });
