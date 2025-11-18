@@ -82,23 +82,6 @@ Australian-Zoo-website/
 
 
 
-## 🌐 Browser Support
-
-- ✅ Chrome 60+
-- ✅ Firefox 55+
-- ✅ Safari 12+
-- ✅ Edge 79+
-
-
-
-## 📱 Responsive Breakpoints
-
--Mobile: 320px - 767px
--Tablet: 768px - 1023px
--Desktop: 1024px+
-
-
-
 ## 🔧 Development
 
 ### Local Development
@@ -156,18 +139,10 @@ We welcome contributions to improve the Australian Zoo website!
 
 
 
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-
-
 ## 📞 Support
 
 For support or questions:
 
-📧 Email: support@australianzoo.com
+📧Please contact us on GitHub or lindedin
 
 
-
-## 🐛 Issue Tracker
