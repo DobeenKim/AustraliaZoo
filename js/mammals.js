@@ -128,10 +128,26 @@ mammals.animals.forEach(animal => {
 let sidebarContent = document.querySelector(".sidebar-content");
 
 sidebarContent.innerHTML = `
-  <h3 class="sidebar__title">${mammals.name}</h3>
-  <ul class="sidebar__list">
-    ${mammals.animals
-      .map(animal => `<li class="sidebar__item ${animal.name.toLowerCase().replace(/\s+/g, "-")}">${animal.name}</li>`)
-      .join("")}
-  </ul>
+<h3 class="sidebar__title">${mammals.name}</h3>
+<ul class="sidebar__list">
+${mammals.animals
+.map(animal => `<li class="sidebar__item ${animal.name.toLowerCase().replace(/\s+/g, "-")}">${animal.name}</li>`)
+.join("")}
+</ul>
 `;
+
+document.querySelectorAll(".sidebar__item").forEach(item => {
+  item.addEventListener("click", () => {
+    let animalClass = item.classList[1];
+    let card = document.querySelector(`.animal-card.${animalClass}`);
+    
+    if (card.classList.contains("active")) {
+      card.classList.remove("active");
+      return
+    }
+    
+    document.querySelector(".active")?.classList.remove("active");
+    
+    card.classList.add("active");
+  })
+});

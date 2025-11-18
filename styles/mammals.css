@@ -1,5 +1,5 @@
 .animal-card {
-  /* display: none; */
+  display: none;
 }
 
 .animal-image {
@@ -10,4 +10,8 @@
 
 .extra-info {
   display: none;
+}
+
+.animal-card.active {
+  display: block;
 }
