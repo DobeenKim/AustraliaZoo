@@ -1,3 +1,4 @@
+
 :root {
   --main-color: #123524;
   --color-secondary: #3e7b27;
@@ -21,25 +22,22 @@ body {
   overflow: hidden;
   position: fixed;
   transition: 0.5s;
-  white-space: nowrap;
   width: 60px;
   z-index: 999;
 }
 
 .sidebar:hover {
-  width: 300px;
+  width: 320px;
 }
 
 .sidebar__title {
   color: var(--color-secondary);
   font-size: 1.5rem;
-  padding: 8px;
 }
 
 .sidebar__item {
   color: var(--color-tertiary);
   font-size: 1rem;
-  padding: 16px;
 }
 
 .sidebar-tab {
@@ -48,12 +46,25 @@ body {
   padding: 24px 12px;
 }
 
+.sidebar__item,
 .sidebar-content {
   padding: 16px;
 }
 
+.sidebar-content {
+  overflow-wrap: break-word;
+  white-space: normal;
+  width: 300px;
+}
+
 .sidebar__list {
   list-style: none;
+  margin: 0;
+}
+
+.sidebar__title,
+.sidebar__list {
+  padding: 8px;
 }
 
 .main-content {

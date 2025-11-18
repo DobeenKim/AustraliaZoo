@@ -72,8 +72,9 @@ mainContent.innerHTML = `
 
 mammals.animals.forEach(animal => {
   let preview = animal.description.substring(0, 200) + "...";
-
   let animalCard = document.createElement("div");
+  const animalClassname = animal.name.toLowerCase().replace(/\s+/g, "-");
+  animalCard.classList.add("animal-card", animalClassname);
   animalCard.innerHTML = `
   <h4>${animal.name}</h4>
   <img 
@@ -82,13 +83,17 @@ mammals.animals.forEach(animal => {
     class="animal-image"
     style="width: 100px; height: 100px;"
   >
+  <p>Lifespan: ${animal.lifespan}</p>
   <p>Group: ${animal.group}</p>
   <p>Food: ${animal.food}</p>
+  <p>Length: ${animal.length}</p>
+  <p>Weight: ${animal.weight}</p>
+  <p>Where they are found: ${animal.location}</p>
   <p class="animal-description">${preview}</p>
   <button class="read-more-btn">Read more</button>
 `;
   mainContent.appendChild(animalCard);
-  
+
   let animalDescription = animalCard.querySelector(".animal-description");
   let toggleBtn = animalCard.querySelector(".read-more-btn");
 
