@@ -137,9 +137,7 @@ let sidebarContent = document.querySelector(".sidebar-content");
 sidebarContent.innerHTML = `
   <h3 class="sidebar__title">${mammals.name}</h3>
   <ul class="sidebar__list">
-    ${mammals.animals
-      .map(animal => `<li class="sidebar__item">${animal.name}</li>`)
-      .join("")}
+    ${mammals.animals.map(animal => `<li class="sidebar__item">${animal.name}</li>`).join("")}
   </ul>
 `;
 //
@@ -148,9 +146,7 @@ sidebarContent.innerHTML = `
 sidebarContent.innerHTML = `
   <h3 class="sidebar__title">${reptiles.name}</h3>
   <ul class="sidebar__list">
-    ${reptiles.animals
-      .map(animal => `<li class="sidebar__item">${animal.name}</li>`)
-      .join("")}
+    ${reptiles.animals.map(animal => `<li class="sidebar__item">${animal.name}</li>`).join("")}
   </ul>
 `;
 
@@ -158,8 +154,26 @@ sidebarContent.innerHTML = `
 sidebarContent.innerHTML = `
   <h3 class="sidebar__title">${birds.name}</h3>
   <ul class="sidebar__list">
-    ${birds.animals
-      .map(animal => `<li class="sidebar__item">${animal.name}</li>`)
-      .join("")}
+    ${birds.animals.map(animal => `<li class="sidebar__item">${animal.name}</li>`).join("")}
   </ul>
 `;
+
+const sidebar = document.querySelector(".sidebar");
+const tab = document.querySelector(".sidebar-tab");
+const sidebarItems = document.querySelectorAll(".sidebar__item");
+
+if (window.matchMedia("(max-width: 767px)").matches) {
+  tab.addEventListener("click", () => {
+    sidebar.classList.toggle("open");
+  });
+}
+
+document.addEventListener("click", e => {
+  if (window.matchMedia("(max-width: 767px)").matches && !sidebar.contains(e.target)) {
+    sidebar.classList.remove("open");
+  }
+});
+
+sidebarItems.forEach(item => {
+  item.addEventListener("click", () => sidebar.classList.remove("open"));
+});
