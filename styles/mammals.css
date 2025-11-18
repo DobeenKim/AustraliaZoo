@@ -1,5 +1,13 @@
+.animal-card {
+  /* display: none; */
+}
+
 .animal-image {
   height: 100px;
   object-fit: cover;
   width: 100px;
+}
+
+.extra-info {
+  display: none;
 }

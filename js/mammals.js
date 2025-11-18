@@ -75,6 +75,16 @@ mammals.animals.forEach(animal => {
   let animalCard = document.createElement("div");
   const animalClassname = animal.name.toLowerCase().replace(/\s+/g, "-");
   animalCard.classList.add("animal-card", animalClassname);
+
+  let extraInfo = `
+  <p>Lifespan: ${animal.lifespan}</p>
+  <p>Group: ${animal.group}</p>
+  <p>Food: ${animal.food}</p>
+  <p>Length: ${animal.length}</p>
+  <p>Weight: ${animal.weight}</p>
+  <p>Where they are found: ${animal.location}</p>
+  `;
+
   animalCard.innerHTML = `
   <h4>${animal.name}</h4>
   <img 
@@ -83,17 +93,17 @@ mammals.animals.forEach(animal => {
     class="animal-image"
     style="width: 100px; height: 100px;"
   >
-  <p>Lifespan: ${animal.lifespan}</p>
-  <p>Group: ${animal.group}</p>
-  <p>Food: ${animal.food}</p>
-  <p>Length: ${animal.length}</p>
-  <p>Weight: ${animal.weight}</p>
-  <p>Where they are found: ${animal.location}</p>
   <p class="animal-description">${preview}</p>
+  <div class="extra-info">
+    <p class="full-description">${animal.description}</p>
+    ${extraInfo}
+  </div>
   <button class="read-more-btn">Read more</button>
 `;
+
   mainContent.appendChild(animalCard);
 
+  let extraInfoDiv = animalCard.querySelector(".extra-info");
   let animalDescription = animalCard.querySelector(".animal-description");
   let toggleBtn = animalCard.querySelector(".read-more-btn");
 
@@ -101,11 +111,13 @@ mammals.animals.forEach(animal => {
 
   toggleBtn.addEventListener("click", () => {
     if (!isExpanded) {
-      animalDescription.textContent = animal.description;
+      extraInfoDiv.style.display = "block";
+      animalDescription.style.display = "none";
       toggleBtn.textContent = "Read less";
       isExpanded = true;
     } else {
-      animalDescription.textContent = preview;
+      extraInfoDiv.style.display = "none";
+      animalDescription.style.display = "block";
       toggleBtn.textContent = "Read more";
       isExpanded = false;
     }
@@ -118,6 +130,8 @@ let sidebarContent = document.querySelector(".sidebar-content");
 sidebarContent.innerHTML = `
   <h3 class="sidebar__title">${mammals.name}</h3>
   <ul class="sidebar__list">
-    ${mammals.animals.map(animal => `<li class="sidebar__item">${animal.name}</li>`).join("")}
+    ${mammals.animals
+      .map(animal => `<li class="sidebar__item ${animal.name.toLowerCase().replace(/\s+/g, "-")}">${animal.name}</li>`)
+      .join("")}
   </ul>
 `;
