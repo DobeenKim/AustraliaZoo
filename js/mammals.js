@@ -136,11 +136,25 @@ ${mammals.animals
 </ul>
 `;
 
+const collapse = () => {
+  document.querySelectorAll(".animal-card").forEach(card => {
+    let extraInfo = card.querySelector(".extra-info");
+    let animalDescription = card.querySelector(".animal-description");
+    let button = card.querySelector(".read-more-btn");
+
+    extraInfo.style.display = "none";
+    animalDescription.style.display = "block";
+    button.textContent = "Read more";
+  })
+}
+
 document.querySelectorAll(".sidebar__item").forEach(item => {
   item.addEventListener("click", () => {
     let animalClass = item.classList[1];
     let card = document.querySelector(`.animal-card.${animalClass}`);
     
+    collapse();
+
     if (card.classList.contains("active")) {
       card.classList.remove("active");
       return
