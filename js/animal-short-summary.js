@@ -16,9 +16,9 @@ let echidna = new shortSummary(
   "#"
 );
 
-let tasmaniaDevil = new shortSummary(
+let tasmanianDevil = new shortSummary(
   "./images/TasmanianDevil.jpg",
-  "Tasmania Devil",
+  "Tasmanian Devil",
   `The Tasmanian devil (Sarcophilus harrisii) (palawa kani: purinina)[3] is a carnivorous marsupial of the family Dasyuridae. Until recently, it was only found on the island state of Tasmania, but it has been reintroduced to New South Wales in mainland Australia, with a small breeding population. The size of a small dog, the Tasmanian devil became the largest carnivorous marsupial in the world, following the extinction of the thylacine in 1936. It is related to quolls, and distantly related to the thylacine. It is characterised by its stocky and muscular build, black fur, pungent odour, extremely loud and disturbing screech, keen sense of smell, and ferocity when feeding. The Tasmanian devil's large head and neck allow it to generate among the strongest bites per unit body mass of any extant predatory land mammal. It hunts prey and scavenges on carrion.`,
   "A predator, then eat meat from other animals such as wallabies and wombats",
   "Mammals",
@@ -36,7 +36,7 @@ let quokka = new shortSummary(
 
 let frillNeckedLizard = new shortSummary(
   "./images/frill-necked-lizard.jpg",
-  "Full-necked lizard",
+  "Frill-necked Lizard",
   "When this unique creature feels threatened, it rises on its hind legs, opens its yellow-coloured mouth, unfurls the colorful, pleated skin flap that encircles its head, and hisses. If an attacker is unintimidated by these antics, the lizard simply turns tail, mouth and frill open, and bolts, legs splaying left and right. It continues its deliberate run without stopping or looking back until it reaches the safety of a tree.",
   "Small insects and spiders",
   "reptiles",
@@ -88,9 +88,9 @@ let yellowTailedBlackCockatoo = new shortSummary(
   "#"
 );
 
-animalArray = [
+animalSumarryArray = [
   echidna,
-  tasmaniaDevil,
+  tasmanianDevil,
   quokka,
   frillNeckedLizard,
   hawksbillTurtle,
@@ -172,37 +172,41 @@ const summaryCard = (selectedAnimal) => {
   return summarySection;
 };
 
-const animalNavList = document.querySelectorAll("li");
-const animalNavArray = Array.from(animalNavList);
-let currentCard = null;
+document.addEventListener("DOMContentLoaded", () => {
+  const animalContainer = document.querySelector(".welcome-hero-section");
+  let currentCard = null;
 
-animalNavArray.forEach((li) =>
-  li.addEventListener("click", () => {
-    let isActive = li.classList.contains("active");
+  const sidebar = document.querySelector(".sidebar");
+
+  sidebar.addEventListener("click", (e) => {
+    const li = e.target.closest("li");
+    if (!li) return;
+
+    let isActive = li.classList.contains("active-summary");
 
     if (isActive) {
-      li.classList.remove("active");
+      li.classList.remove("active-summary");
       animalContainer.innerHTML = defaultContent;
-
+      currentCard = null;
       return;
     }
 
     document
-      .querySelectorAll(".active")
-      .forEach((activeList) => activeList.classList.remove("active"));
+      .querySelectorAll(".active-summary")
+      .forEach((activeList) => activeList.classList.remove("active-summary"));
 
-    li.classList.add("active");
+    li.classList.add("active-summary");
+
     const selectedText = li.textContent.toLowerCase();
-    const selectedAnimal = animalArray.find(
+    console.log(selectedText);
+    const selectedAnimal = animalSumarryArray.find(
       (animal) => animal.name.toLowerCase() === selectedText
     );
-
     if (currentCard) {
       currentCard.remove();
     }
     const card = summaryCard(selectedAnimal);
     animalContainer.replaceChildren(card);
-
     currentCard = card;
-  })
-);
+  });
+});
