@@ -47,13 +47,14 @@ body {
   border-bottom: 1px solid;
 }
 
-.nav-menu a.active {
-  background-color: var(--color-secondary);
+.nav-menu a:hover {
+  background-color: darken(var(--color-secondary), 20%);
   color: var(--main-color);
 }
 
-.nav-menu a:hover {
-  background-color: darken(var(--color-secondary), 10%);
+.nav-menu a.active {
+  background-color: var(--color-secondary);
+  color: var(--main-color);
 }
 
 .hamburger {
