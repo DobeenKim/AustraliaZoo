@@ -15,10 +15,9 @@ let reptile = new Animal("Reptiles", [
 ]);
 
 let animalArray = [mammal, bird, reptile];
+let nav = document.querySelector(".sidebar");
 animalArray.forEach((animal) => {
-  let nav = document.querySelector(".sidebar");
   let allTitle = document.createElement("a");
-
   allTitle.textContent = animal.species;
   allTitle.href = "#";
   let uls = document.createElement("ul");
@@ -38,22 +37,21 @@ document.querySelectorAll("a").forEach((title) => {
     let animalLis = animalUls.querySelectorAll("li");
     animalLis.forEach((item) => {
       item.classList.toggle("active");
-      item.addEventListener("click", () =>{
-        main_sidebar.classList.remove("open");
-    });
+      item.addEventListener("click", () => {
+        nav.classList.remove("open");
+      });
     });
   });
 });
 
-let main_sidebar = document.querySelector(".main__sidebar");
 let tab = document.querySelector(".sidebar-tab");
-tab.addEventListener("click", () => {
-  main_sidebar.classList.toggle("open");
+tab.addEventListener("click", (e) => {
+  e.stopPropagation();
+  nav.classList.toggle("open");
 });
 
 document.addEventListener("click", (e) => {
-  if (
-     !main_sidebar.contains(e.target)&&tab.contains(e.target)){
-       main_sidebar.classList.remove("open");
+  if (!nav.contains(e.target) && tab.contains(e.target)) {
+    nav.classList.remove("open");
   }
 });

@@ -28,17 +28,18 @@ body {
   transition: 0.5s;
 }
 
-.main__sidebar.open{
-  left:60px;
+.sidebar.open{
+  left: 60px !important;
 }
 
 .sidebar{
   background-color: var(--main-color);
   height: 100%;
-  left: -300px;
+  left: -280px;
   padding: 16px;
   position: absolute;
   overflow-wrap: break-word;
+  top:0;
   transition: left 0.4s ease;
   width: 280px;
   white-space: normal;
@@ -50,6 +51,7 @@ body {
   font-size: 2rem;
   height: 100%;
   padding: 24px 12px;
+  position: relative;
   width: 60px;
   z-index: 20;
 }
