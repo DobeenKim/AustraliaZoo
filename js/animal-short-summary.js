@@ -71,7 +71,7 @@ let cassowary = new shortSummary(
 );
 
 let kookaburra = new shortSummary(
-  "./images/kookaburra.jpg",
+  "./images/Kookaburra.jpg",
   "Kookaburra",
   "Native to the eucalyptus forests of eastern Australia, the laughing kookaburra is the largest member of the Kingfisher family, with females weighing up to one pound and growing to 43 cm in length. Its beak can reach 10 cm long and is used to snatch a variety of invertebrates and small vertebrates, including the occasional small snake. Since being introduced in western Australia and New Zealand, the kookaburra has angered farmers by preying on their fowl. The laughing kookaburra has dark brown wing plumage and a white head and underside. Dark brown eye stripes run across its face and its upper bill is black. Its reddish-coloured tail is patterned with black bars.",
   "Insects and smalll animals including snakes, frogs and lizards",
