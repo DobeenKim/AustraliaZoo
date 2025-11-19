@@ -15,7 +15,7 @@ body {
 .main {
   width: 100%;
   min-height: 100vh;
-  background-image: url(../img/background-image.jpg);
+  background-image: url(../images/background-image.jpg);
   background-size: cover;       
   background-repeat: no-repeat; 
   background-position: center;  
@@ -46,8 +46,7 @@ body {
   font-size: 1rem;
 }
 
-@media (min-width: 768px) {
-  .welcome-hero-section {
+.welcome-hero-section {
     padding-top: 200px; 
   }
 
@@ -62,6 +61,5 @@ body {
   .welcome-description { 
     font-size: 1.3rem; 
   }
-}
 
 
