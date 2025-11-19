@@ -94,15 +94,20 @@ memberArray.forEach(member => {
     let emailAddress = document.createElement("li");
     emailAddress.textContent = `Email : ${member.email}`
 
-    memberContainer.appendChild(imageBox)
-    memberContainer.appendChild(membersNickname)
-    infoList.appendChild(name)
-    infoList.appendChild(favoritAnimal)
-    infoList.appendChild(emailAddress)
-    memberContainer.appendChild(infoList)
+    // memberContainer.appendChild(imageBox)
+    // memberContainer.appendChild(membersNickname)
+    // infoList.appendChild(name)
+    // infoList.appendChild(favoritAnimal)
+    // infoList.appendChild(emailAddress)
+    // memberContainer.appendChild(infoList)
+    // detailsWrap.appendChild(memberContainer)
+    // mainContent.appendChild(detailsWrap)
+
+    memberContainer.append(imageBox,membersNickname,infoList)
+    infoList.append(name,favoritAnimal,emailAddress)
     detailsWrap.appendChild(memberContainer)
     mainContent.appendChild(detailsWrap)
-
+    
     memberImage.addEventListener("click",() => {
         let isActive = infoList.classList.contains("active");
         const ACTIVE = document.querySelectorAll(".member-info.active")
