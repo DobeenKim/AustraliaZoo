@@ -123,48 +123,6 @@ body {
   color: var(--main-color);
 }
 
-.main__sidebar {
-  align-items: center;
-  background-color: var(--main-color);
-  display: flex;
-  height: 100vh;
-  overflow: hidden;
-  transition: width 0.5s;
-  white-space: nowrap;
-  width: 60px;
-}
-
-
-.sidebar{
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
-  width: 100%;
-  text-align: center;
-}
-
-.sidebar-tab {
-  color: var(--color-tertiary);
-  font-size: 2rem;
-}
-
-.sidebar ul li {
-  color: var(--color-tertiary);
-  cursor: pointer;
-  font-size: 1rem;
-  list-style: none;
-  padding: 10px 0;
-  padding-top: 10px;
-  margin-left: -31px;
-  text-decoration: none;
-}
-
-.sidebar ul li:hover {
-  color: var(--color-secondary);
-  transform: scale(1.1);
-}
 
 @media (min-width: 600px) {
   .nav-menu {
@@ -219,9 +177,7 @@ body {
       font-size: 1.3rem;
     }
 
-    .main__sidebar:hover {
-    width: 320px;
-  }
+   
   }
 
   .welcome-description { 
