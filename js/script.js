@@ -158,18 +158,16 @@ sidebarContent.innerHTML = `
 //   </ul>
 // `;
 
-const sidebar = document.querySelector(".sidebar");
+const sidebar = document.querySelector(".sidebar-content");
 const tab = document.querySelector(".sidebar-tab");
 const sidebarItems = document.querySelectorAll(".sidebar__item");
 
-if (window.matchMedia("(max-width: 767px)").matches) {
-  tab.addEventListener("click", () => {
-    sidebar.classList.toggle("open");
-  });
-}
+tab.addEventListener("click", () => {
+  sidebar.classList.toggle("open");
+});
 
 document.addEventListener("click", e => {
-  if (window.matchMedia("(max-width: 767px)").matches && !sidebar.contains(e.target)) {
+  if (!sidebar.contains(e.target) && !tab.contains(e.target)) {
     sidebar.classList.remove("open");
   }
 });
