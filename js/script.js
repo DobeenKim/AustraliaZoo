@@ -13,11 +13,8 @@ let reptile = new Animal("Reptiles", [
   "Hawksbill Turtle",
   "Perentie",
 ]);
+
 let animalArray = [mammal, bird, reptile];
-
-let main_sidebar = document.querySelector(".main__sidebar");
-let tab = document.querySelector(".sidebar-tab");
-
 animalArray.forEach((animal) => {
   let nav = document.querySelector(".sidebar");
   let allTitle = document.createElement("a");
@@ -41,24 +38,22 @@ document.querySelectorAll("a").forEach((title) => {
     let animalLis = animalUls.querySelectorAll("li");
     animalLis.forEach((item) => {
       item.classList.toggle("active");
-      item.addEventListener("click", () =>
-        main_sidebar.classList.remove("open")
-      );
+      item.addEventListener("click", () =>{
+        main_sidebar.classList.remove("open");
+    });
     });
   });
 });
 
-if (window.matchMedia("(max-width: 767px)").matches) {
-  tab.addEventListener("click", () => {
-    main_sidebar.classList.toggle("open");
-  });
-}
+let main_sidebar = document.querySelector(".main__sidebar");
+let tab = document.querySelector(".sidebar-tab");
+tab.addEventListener("click", () => {
+  main_sidebar.classList.toggle("open");
+});
 
 document.addEventListener("click", (e) => {
   if (
-    window.matchMedia("(max-width: 767px)").matches &&
-    !main_sidebar.contains(e.target)
-  ) {
-    main_sidebar.classList.remove("open");
+     !main_sidebar.contains(e.target)&&tab.contains(e.target)){
+       main_sidebar.classList.remove("open");
   }
 });
