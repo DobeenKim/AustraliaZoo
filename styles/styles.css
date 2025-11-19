@@ -9,14 +9,27 @@
 }
 
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../images/background-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-direction: column;
 }
 
 .header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 10px;
   background-color: var(--main-color);
-  padding: 12px;
 }
 
 .header-logo {
@@ -34,7 +47,7 @@ body {
 }
 
 .welcome-hero-section {
-  width: 95%; 
+  width: 95%;
   margin: 0 auto;
   text-align: center;
 }
@@ -51,7 +64,7 @@ body {
 }
 
 .welcome-main-title {
-  font-size: 2rem; 
+  font-size: 2rem;
 }
 
 .welcome-description {
@@ -71,79 +84,120 @@ body {
   margin: 8px;
 }
 
-.social-media:visited,
 .social-media a {
   color: var(--color-tertiary);
   text-decoration: none;
 }
 
-.icon:hover{
+.icon:hover {
   color: var(--color-secondary);
   transform: scale(1.1);
-  --main-color :#123524;
-  --color-secondary : #3E7B27;
-  --color-tertiary : #EFE3C2;
 }
 
 .nav-container {
-  flex: 1;
   display: flex;
-}
-
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-  color: var(--color-tertiary);
+  align-items: center;
+  flex-direction: column;
 }
 
 .nav-menu {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: flex-end;
+  display: none;
+  flex-direction: column;
+  background-color: var(--color-tertiary);
+  position: absolute;
+  top: 135px;
+  left: 0;
+  right: 0;
 }
 
 .nav-menu a {
-  color: var(--color-tertiary);
+  padding: 15px;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
-  font-size: 1.5rem;
-}
-
-.nav-menu a:hover {
-  background-color: var(--color-secondary);
-  color: var(--color-tertiary);
+  color: var(--main-color);
+  border-bottom: 1px solid;
 }
 
 .nav-menu a.active {
-  background-color: var(--color-tertiary);
+  background-color: var(--color-secondary);
+  color: var(--main-color);
+}
+
+.main__sidebar {
+  align-items: center;
+  background-color: var(--main-color);
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  transition: width 0.5s;
+  white-space: nowrap;
+  width: 60px;
+}
+
+
+.sidebar{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.sidebar-tab {
+  color: var(--color-tertiary);
+  font-size: 2rem;
+}
+
+.sidebar ul li {
+  color: var(--color-tertiary);
+  cursor: pointer;
+  font-size: 1rem;
+  list-style: none;
+  padding: 10px 0;
+  padding-top: 10px;
+  margin-left: -31px;
+  text-decoration: none;
+}
+
+.sidebar ul li:hover {
   color: var(--color-secondary);
+  transform: scale(1.1);
+}
+
+@media (min-width: 600px) {
+  .nav-menu {
+    background-color: var(--color-tertiary);
+    display: flex;
+    flex-direction: row;
+    position: static;
+    border: none;
+  }
+
+  .nav-menu a {
+    border: none;
+  }
+
+  .nav-container {
+    justify-content: flex-end;
+  }
+
+  .hamburger {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {
-  .header-logo{
-    margin: 20px;
-    width: 100px
+  .header-logo {
+    width: 100px;
   }
+.main__sidebar.open{
+  width: 320px;
+}
 
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    right: 0;
-    background-color: var(--color-secondary);
-    top: 50px;
-    width: 100%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  }
-  
   .nav-menu.show {
     display: flex;
-  }
-  .hamburger {
-    display: block;
   }
 
   .welcome-hero-section {
@@ -153,12 +207,21 @@ body {
     padding-top: 100px; 
   }
 
-  .welcome-tagline { 
-    font-size: 2rem; 
-  }
+  .welcome-tagline {
+    font-size: 2rem;
+    }
 
-  .welcome-main-title {
-    font-size: 3rem; 
+    .welcome-main-title {
+      font-size: 3rem;
+    }
+
+    .welcome-description {
+      font-size: 1.3rem;
+    }
+
+    .main__sidebar:hover {
+    width: 320px;
+  }
   }
 
   .welcome-description { 
@@ -170,4 +233,4 @@ body {
     padding-top: 200px; 
   }
 }
-}
+
