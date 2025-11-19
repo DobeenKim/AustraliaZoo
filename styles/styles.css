@@ -39,6 +39,10 @@ body {
   white-space: normal;
 }
 
+.sidebar.open{
+  width: 320px;
+}
+
 .sidebar{
   align-items: center;
   display: flex;
@@ -170,5 +174,8 @@ body {
   .less, .more{
     font-size: 10px;
   }
-
+  
+  .sidebar.open{
+    width: 320px;
+  }
 }

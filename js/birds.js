@@ -79,6 +79,16 @@ secondClickBirds__title.addEventListener("click", () => {
   } 
 }); 
 
-
- 
+let main = document.querySelector(".main")
+let tab = document.querySelector(".sidebar-tab");
+if (window.matchMedia("(max-width: 767px)").matches) {
+  tab.addEventListener("click", () => {
+    main.classList.toggle("open");
+  });
+}
+document.addEventListener("click", e => {
+  if (window.matchMedia("(max-width: 767px)").matches && !main.contains(e.target)) {
+    main.classList.remove("open");
+  }
+})
 
