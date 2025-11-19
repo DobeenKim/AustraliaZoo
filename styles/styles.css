@@ -86,5 +86,29 @@ body {
 }
 
 .welcome-description {
-  font-size: 1.3rem;
+  font-size: 1rem;
+  margin: 0;
+  padding-bottom: 32px;
+}
+
+.welcome-hero-section {
+    padding-top: 100px; 
+  }
+
+  .welcome-tagline { 
+    font-size: 2rem; 
+  }
+
+  .welcome-main-title {
+    font-size: 3rem; 
+  }
+
+  .welcome-description { 
+    font-size: 1.3rem; 
+  }
+
+@media (min-width:768px) {
+  .welcome-hero-section {
+    padding-top: 200px; 
+  }
 }
