@@ -124,11 +124,8 @@ body {
   width: 60px;
 }
 
-.main__sidebar:hover {
-  width: 200px;
-}
 
-.sidebar {
+.sidebar{
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -149,6 +146,10 @@ body {
   font-size: 1rem;
   list-style: none;
   padding: 10px 0;
+  padding-top: 10px;
+  margin-left: -31px;
+  text-decoration: none;
+ 
 }
 
 .sidebar ul li:hover {
@@ -182,6 +183,9 @@ body {
   .header-logo {
     width: 100px;
   }
+.main__sidebar.open{
+  width: 320px;
+}
 
   .nav-menu.show {
     display: flex;
@@ -202,4 +206,8 @@ body {
     .welcome-description {
       font-size: 1.3rem;
     }
+
+    .main__sidebar:hover {
+    width: 320px;
+  }
   }
