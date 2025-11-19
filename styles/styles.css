@@ -44,7 +44,6 @@ body {
   text-decoration: none;
   color: var(--main-color);
   border-bottom: 1px solid;
-  transition: background-color 0.3s, color 0.3s;
 }
 
 .nav-menu a.active {
@@ -67,9 +66,10 @@ body {
 
 @media(min-width: 768px) {
   .nav-menu {
+    background-color: var(--color-tertiary);
+    display: flex;
     flex-direction: row;
     position: static;
-    display: flex;
     border: none;
   }
 
