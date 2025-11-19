@@ -13,16 +13,21 @@ body {
   margin: 0;
 }
 
+.main-container {
+  display: flex;
+  position: relative;
+  min-height: 100vh;
+}
+
 .sidebar {
+  display: flex;
   align-items: center;
   background-color: var(--main-color);
-  display: flex;
-  height: 100vh;
-  overflow: hidden;
-  position: fixed;
-  transition: 0.5s;
   width: 60px;
-  z-index: 999;
+  transition: 0.4s;
+  overflow: hidden;
+  position: relative;
+  z-index: 100;
 }
 
 .sidebar.open {
@@ -67,12 +72,16 @@ body {
 }
 
 .main-content {
-  margin-left: 60px;
+  flex: 1;
   padding: 32px;
 }
 
 @media screen and (min-width: 768px) {
   .sidebar:hover {
-    width: 320px;
+  position: absolute;
+  width: 320px;
+  left: 0;
+  top: 0;
+  bottom: 0;
   }
 }
