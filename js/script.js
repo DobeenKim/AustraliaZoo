@@ -1,10 +1,3 @@
-const toggleMenu = () => {
-  const menu = document.querySelector(".nav-menu");
-  menu.classList.toggle("show");
-};
-
-document.querySelector(".menu-toggle").addEventListener("click", toggleMenu);
-
 function Animal(species, names) {
   (this.species = species), (this.names = names);
 }
@@ -41,7 +34,6 @@ animalArray.forEach((animal) => {
     uls.appendChild(liElement);
   });
 });
-
 
 document.querySelectorAll("a").forEach((title) => {
   title.addEventListener("click", () => {
