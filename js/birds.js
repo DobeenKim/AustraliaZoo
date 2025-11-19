@@ -14,23 +14,26 @@ let bird__three = new Birds("Yellow Tailed Black Cockatoo", "Lifespan: 41 years\
 let birdsArray = [bird__one, bird__two, bird__three];
 
 function commonPart(){
-  let content = document.querySelector(".mainContent");
+  let content = document.querySelector(".main-content");
   let groupPic = document.querySelector(".photo");
   if(groupPic){
     groupPic.style.display = "none";
   } 
-  let removeElement = content.querySelectorAll(".pic, .less, .button, .more");
+  let removeElement = content.querySelectorAll(".pic, .title, .less, .button, .more");
   removeElement.forEach(element => {
       content.removeChild(element);
   });
 }
 
 birdsArray.forEach(animal => {
+  let content = document.querySelector(".main-content")
   let nav = document.querySelector(".sidebar");
   let ulChildren = document.createElement("li");
+
   ulChildren.textContent = animal.name;
+
   ulChildren.classList.add("hide");
-  nav.appendChild(ulChildren);
+  nav.append(ulChildren);
 
   let birds__title = document.querySelector(".side__title");
   birds__title.addEventListener("click",()=>{
@@ -40,11 +43,15 @@ birdsArray.forEach(animal => {
   
   ulChildren.addEventListener("click", () => {
     commonPart();
-    let content = document.querySelector(".mainContent");
+    let content = document.querySelector(".main-content");
 
     let img = document.createElement("img");
     img.src = animal.img;
     img.classList.add("pic");
+
+    let animalTitle= document.createElement("H1");
+    animalTitle.innerHTML = animal.name;
+    animalTitle.classList.add("title");
 
     let abstract = document.createElement("p");
     abstract.classList.add("less");
@@ -54,7 +61,7 @@ birdsArray.forEach(animal => {
     btn.textContent = "Read More";
     btn.classList.add("button");
     
-    content.append(img,abstract,btn);
+    content.append(img,animalTitle,abstract,btn);
   
     btn.addEventListener("click", () => {
       let more = document.querySelector(".more")
