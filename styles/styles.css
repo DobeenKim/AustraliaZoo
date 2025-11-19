@@ -94,7 +94,7 @@ body {
   flex-direction: column;
   background-color: var(--color-tertiary);
   position: absolute;
-  top: 60px;
+  top: 135px;
   left: 0;
   right: 0;
 }
