@@ -174,7 +174,6 @@ const sidebar = document.querySelector(".sidebar-content");
 const tab = document.querySelector(".sidebar-tab");
 const sidebarItems = document.querySelectorAll(".sidebar__item");
 
-
 tab.addEventListener("click", () => {
   sidebar.classList.toggle("open");
 });
