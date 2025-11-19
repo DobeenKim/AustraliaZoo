@@ -105,7 +105,6 @@ body {
   text-decoration: none;
   color: var(--main-color);
   border-bottom: 1px solid;
-  transition: background-color 0.3s, color 0.3s;
 }
 
 .nav-menu a.active {
@@ -159,11 +158,11 @@ body {
 
 @media (min-width: 600px) {
   .nav-menu {
-    flex-direction: row;
+    background-color: var(--color-tertiary);
     display: flex;
+    flex-direction: row;
     position: static;
-    background-color: transparent;
-    box-shadow: none;
+    border: none;
   }
 
   .nav-menu a {
