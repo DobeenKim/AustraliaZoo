@@ -27,8 +27,7 @@ a {
   visibility: visible;
 }
 
-@media (min-width:768px) {
-  .message {
+.message {
   font-size: 2.4rem;
   padding: 36px;
   color:var(--main-color);
@@ -43,8 +42,7 @@ a {
 
   .detailsWrap {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
     gap: 20px 0;
     width: 80%;
     margin: 0 auto;
@@ -52,7 +50,7 @@ a {
 
   .detailsWrap .members-card {
     margin: 0 auto;
-    width: 90%;
+    width: 95%;
     border-radius: 0 20px;
     background: var(--color-tertiary);
     text-align: center;
@@ -73,7 +71,7 @@ a {
 
   .member-info li {
     list-style: none;
-    font-size: 1rem;
+    font-size: 1.3rem;
     line-height: 2;
     overflow-wrap: break-word;
   }
@@ -100,7 +98,6 @@ a {
     font-size: 3rem;
     padding-top: 10px;
   }
-}
 
 
 
