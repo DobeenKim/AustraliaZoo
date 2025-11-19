@@ -139,6 +139,7 @@ ${mammals.animals
 </ul>
 `;
 
+
 const collapse = () => {
   document.querySelectorAll(".animal-card").forEach(card => {
     let extraInfo = card.querySelector(".extra-info");
@@ -167,4 +168,24 @@ document.querySelectorAll(".sidebar__item").forEach(item => {
 
     card.classList.add("active");
   });
+});
+
+const sidebar = document.querySelector(".sidebar");
+const tab = document.querySelector(".sidebar-tab");
+const sidebarItems = document.querySelectorAll(".sidebar__item");
+
+if (window.matchMedia("(max-width: 767px)").matches) {
+  tab.addEventListener("click", () => {
+    sidebar.classList.toggle("open");
+  });
+}
+
+document.addEventListener("click", e => {
+  if (window.matchMedia("(max-width: 767px)").matches && !sidebar.contains(e.target)) {
+    sidebar.classList.remove("open");
+  }
+});
+
+sidebarItems.forEach(item => {
+  item.addEventListener("click", () => sidebar.classList.remove("open"));
 });
