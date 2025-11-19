@@ -142,21 +142,21 @@ sidebarContent.innerHTML = `
 `;
 //
 
-// Reptiles Sidebar
-sidebarContent.innerHTML = `
-  <h3 class="sidebar__title">${reptiles.name}</h3>
-  <ul class="sidebar__list">
-    ${reptiles.animals.map(animal => `<li class="sidebar__item">${animal.name}</li>`).join("")}
-  </ul>
-`;
+// // Reptiles Sidebar
+// sidebarContent.innerHTML = `
+//   <h3 class="sidebar__title">${reptiles.name}</h3>
+//   <ul class="sidebar__list">
+//     ${reptiles.animals.map(animal => `<li class="sidebar__item">${animal.name}</li>`).join("")}
+//   </ul>
+// `;
 
-// Birds Sidebar
-sidebarContent.innerHTML = `
-  <h3 class="sidebar__title">${birds.name}</h3>
-  <ul class="sidebar__list">
-    ${birds.animals.map(animal => `<li class="sidebar__item">${animal.name}</li>`).join("")}
-  </ul>
-`;
+// // Birds Sidebar
+// sidebarContent.innerHTML = `
+//   <h3 class="sidebar__title">${birds.name}</h3>
+//   <ul class="sidebar__list">
+//     ${birds.animals.map(animal => `<li class="sidebar__item">${animal.name}</li>`).join("")}
+//   </ul>
+// `;
 
 const sidebar = document.querySelector(".sidebar");
 const tab = document.querySelector(".sidebar-tab");
