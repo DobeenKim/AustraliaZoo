@@ -30,10 +30,16 @@ a {
 .message {
   font-size: 2.4rem;
   padding: 36px;
-  color:var(--main-color);
   font-weight: 600;
   text-align: center;
+  background:  var(--main-color);
   }
+
+.message p {
+  font-size: 4rem;
+  color: var(--color-tertiary);
+  line-height: 1.4;
+}
   
   .product-details {
     width: 100%;
