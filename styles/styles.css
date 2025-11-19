@@ -65,7 +65,7 @@ body {
   display: flex;
 }
 
-@media(min-width: 600px) {
+@media(min-width: 768px) {
   .nav-menu {
     flex-direction: row;
     position: static;
