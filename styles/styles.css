@@ -10,24 +10,29 @@
 
 body {
   display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
+  
 }
 
 .main-container {
   display: flex;
-  position: relative;
-  min-height: 100vh;
+  flex: 1;
 }
 
 .sidebar {
-  display: flex;
   align-items: center;
   background-color: var(--main-color);
-  width: 60px;
-  transition: 0.4s;
+  display: flex;
   overflow: hidden;
-  position: relative;
-  z-index: 100;
+  position: fixed;
+  transition: 0.5s;
+  width: 60px;
+  z-index: 999;
+  height: 100%;
+  align-self: stretch;
+  bottom: var(--footer-height);
 }
 
 .sidebar.open {
@@ -72,16 +77,12 @@ body {
 }
 
 .main-content {
-  flex: 1;
+  margin-left: 60px;
   padding: 32px;
 }
 
 @media screen and (min-width: 768px) {
   .sidebar:hover {
-  position: absolute;
-  width: 320px;
-  left: 0;
-  top: 0;
-  bottom: 0;
+    width: 320px;
   }
 }
