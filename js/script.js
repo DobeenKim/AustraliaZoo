@@ -26,6 +26,7 @@ animalArray.forEach((animal) => {
   animal.names.forEach((animalName) => {
     let liElement = document.createElement("li");
     liElement.textContent = animalName;
+    liElement.className = "list";
     liElement.classList.add("active");
     uls.appendChild(liElement);
   });
