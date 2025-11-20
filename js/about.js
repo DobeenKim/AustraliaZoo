@@ -58,91 +58,47 @@ let maho = new Member(
     "https://github.com/mamahimiko"
 )
 
+let mainContent = document.querySelector(".main-content");
 let memberArray = [dobeen,claudia,ting,gabriella,maho]
 
-let mainContent = document.querySelector(".product-details")
-
-let detailsWrap = document.createElement("div");
-detailsWrap.classList.add(`detailsWrap`)
-
 memberArray.forEach(member => {
+    let preview = member.nickname;
     let memberContainer = document.createElement("div")
-    memberContainer.classList.add(`members-card`)
+    const memberClassname = member.name.toLowerCase().replace(/\s+/g, "-")
+    memberContainer.classList.add("member-card",memberClassname)
 
-    let imageBox = document.createElement("div");
-    imageBox.classList.add("img")
-    
-    let memberImage = document.createElement("img");
-    memberImage.src = member.img
-    memberImage.alt =`${member.name} Image`
-    imageBox.appendChild(memberImage)
-    memberImage.classList.add("memberImg")
+    let extraInfo = `
+        <p>Favorite Animal: ${member.favAnimal}</p>
+        <p>Email: ${member.email}</p>
+        <p>LinkedIn: <a href="${member.linkedin}" target="_blank">Link</a></p>
+        <p>GitHub: <a href="${member.github}" target="_blank">Link</a></p>
+    `;
 
-    let membersNickname = document.createElement("p");
-    membersNickname.textContent = `${member.nickname}`
-    membersNickname.classList.add("nickname")
+    memberContainer.innerHTML = `
+    <div class="image-wrapper">
+        <img 
+        src="${member.img}" 
+        alt="${member.name} image" 
+        class="member-image"
+        style="width: 160px; height: 160px;"
+        >
+        <h4 class="member-title">${member.name}</h4>
+    </div>
 
-    let infoList = document.createElement("ul");
-    infoList.classList.add(`member-info`);
+    <div class="member-info-container">
+        <p class="member-description">Nick name : ${member.nickname}</p>
+        <p class="member-description">Faverite animal : ${member.favAnimal}</p>
+        <p class="member-description">Email address : ${member.email}</p>
+        <p class="member-description">Contact : ${member.linkedin}</p>
+        <p class="member-description">Contact : ${member.github}</p>
+    </div>
+`;
 
-    let name = document.createElement("li");
-    name.textContent =`Name : ${member.name}`;
+    mainContent.appendChild(memberContainer);
 
-    let favoritAnimal = document.createElement("li");
-    favoritAnimal .textContent = `Favorite Animal : ${member.favAnimal}`
-
-    let emailAddress = document.createElement("li");
-    emailAddress.textContent = `Email : ${member.email}`
-
-    memberContainer.append(imageBox,membersNickname,infoList)
-    infoList.append(name,favoritAnimal,emailAddress)
-    detailsWrap.appendChild(memberContainer)
-    mainContent.appendChild(detailsWrap)
-    
-    memberImage.addEventListener("click",() => {
-        let isActive = infoList.classList.contains("active");
-        const ACTIVE = document.querySelectorAll(".member-info.active")
-
-        ACTIVE.forEach(list => {
-            list.classList.remove("active")
-        });
-        if(!isActive) {
-            infoList.classList.add("active")
-        }
-    })
-
-    if (member.linkedin) {
-        let linkedinLi = document.createElement("li");
-        infoList.appendChild(linkedinLi)
-
-        let linkedinLink = document.createElement("a");
-        linkedinLink.href = member.linkedin;
-        linkedinLink.target = "_blank";
-        linkedinLink.classList.add("linkedinBtn")
-
-        let linkedinIcon = document.createElement("i");
-        linkedinIcon.classList.add("fa-brands", "fa-linkedin"); 
-
-        linkedinLi.appendChild(linkedinLink)
-        linkedinLink.appendChild(linkedinIcon) 
-    }
-
-    if (member.github) {
-        let githubLi = document.createElement("li");
-        infoList.appendChild(githubLi)
-
-        let githubLink = document.createElement("a");
-        githubLink.href = member.github;
-        githubLink.target = "_blank";
-        githubLink.classList.add("gitBtn")
-
-        let githubIcon = document.createElement("i");
-        githubIcon.classList.add("fa-brands", "fa-github");
-
-        githubLi.appendChild(githubLink)
-        githubLink.appendChild(githubIcon)
-    }
+    let memberDescription = memberContainer.querySelector(".member-description");
 });
+
 
 
 
