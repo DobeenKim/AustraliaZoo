@@ -11,8 +11,8 @@
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   margin: 0;
+  min-height: 100vh;
 }
 
 .main-container {
@@ -58,14 +58,14 @@ body {
 
 .sidebar-content {
   background-color: var(--main-color);
+  height: 100%;
   left: -300px;
   overflow-wrap: break-word;
-  height: 100%;
-  white-space: normal;
   position: absolute;
-  z-index: 10;
   transition: left 0.4s ease;
+  white-space: normal;
   width: 280px;
+  z-index: 10;
 }
 
 .sidebar__list {
