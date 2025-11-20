@@ -76,6 +76,7 @@ body {
 
 .ulChildren {
   color: var(--color-tertiary);
+  cursor: pointer;
   font-size: 1rem;
   list-style: none;
   margin: 0;
@@ -97,7 +98,7 @@ body {
 
 .card {
   background-color: var(--color-secondary);
-   background-clip: content-box;
+  background-clip: content-box;
   border-radius: 10px;
   display: block;
   margin: 8px;
@@ -184,5 +185,12 @@ body {
   .header-logo {
     margin: 20px;
     width: 100px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-content {
+    margin: 0 auto;
+    width: 60%;
   }
 }

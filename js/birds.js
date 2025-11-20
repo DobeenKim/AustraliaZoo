@@ -67,19 +67,19 @@ birdsArray.forEach((animal) => {
       let birdsTitle = document.querySelector(".birds-title");
       let birdsAbstract = document.querySelector(".birds-abstract");
 
-       if (birdsTitle) {
+      if (birdsTitle) {
         birdsTitle.style.display = "block";
         birdsTitle.style.visibility = "visible";
-       }
+      }
       if (birdsAbstract) {
         birdsAbstract.style.display = "block";
         birdsAbstract.style.visibility = "visible";
       }
-      
+
       currentAnimal = null;
       return;
     }
-    
+
     commonPart();
     let animalTitle = document.createElement("H4");
     animalTitle.innerHTML = animal.name;
@@ -124,13 +124,13 @@ birdsArray.forEach((animal) => {
 
 let nav = document.querySelector(".sidebar");
 let tab = document.querySelector(".sidebar-tab");
-tab.addEventListener("click", (e) => {
-  e.stopPropagation();
+
+tab.addEventListener("click", () => {
   nav.classList.toggle("open");
 });
 
 document.addEventListener("click", (e) => {
-  if (!nav.contains(e.target) && tab.contains(e.target)) {
+  if (!nav.contains(e.target) && !tab.contains(e.target)) {
     nav.classList.remove("open");
   }
 });
