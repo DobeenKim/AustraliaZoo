@@ -163,10 +163,6 @@ body {
     width: 320px;
   }
 
-  .nav-menu.show {
-    display: flex;
-  }
-
   .welcome-hero-section {
     padding-top: 200px;
   }
