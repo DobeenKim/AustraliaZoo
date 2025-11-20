@@ -29,7 +29,7 @@ birdsArray.forEach(animal => {
   let content = document.querySelector(".main-content")
   let nav = document.querySelector(".sidebar");
   let ulChildren = document.createElement("li");
-
+  ulChildren.className = "ulChildren";
   ulChildren.textContent = animal.name;
 
   ulChildren.classList.add("hide");
