@@ -34,9 +34,9 @@ body {
   width: 100%;
   min-height: 100vh;
   background-image: url(../images/background-image.jpg);
-  background-size: cover;       
-  background-repeat: no-repeat; 
-  background-position: center;  
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
 }
 
@@ -47,13 +47,12 @@ body {
   padding-top: 100px;
 }
 
-
 .main-container {
   display: flex;
-  flex:1;
+  flex: 1;
 }
 
-.main__sidebar  { 
+.main__sidebar {
   align-items: center;
   background-color: var(--main-color);
   display: flex;
@@ -65,8 +64,8 @@ body {
   left: 60px;
 }
 
-.sidebar-tab  {
-font-size: 2rem;
+.sidebar-tab {
+  font-size: 2rem;
   height: 100%;
   padding: 24px 12px;
   position: relative;
@@ -82,23 +81,23 @@ font-size: 2rem;
   padding: 8px;
 }
 
-.sidebar ul {
+.sidebar .ulList {
   list-style: none;
   margin: 0;
   padding: 8px;
 }
 
-.sidebar ul li  {
+.ulList .list {
   color: var(--color-tertiary);
   font-size: 1rem;
   padding: 16px;
 }
 
-.sidebar.active {
+.ulList .active {
   display: none;
 }
 
-.sidebar  {
+.sidebar {
   background-color: var(--main-color);
   height: 100%;
   left: -280px;
@@ -106,7 +105,7 @@ font-size: 2rem;
   padding: 16px;
   position: absolute;
   overflow-wrap: break-word;
-  top:0;
+  top: 0;
   transition: left 0.4s ease;
   width: 280px;
   white-space: normal;
@@ -168,8 +167,8 @@ font-size: 2rem;
   }
 
   .welcome-hero-section {
-    padding-top: 200px; 
-    }
+    padding-top: 200px;
+  }
 
   .welcome-tagline {
     font-size: 2rem;
@@ -181,10 +180,5 @@ font-size: 2rem;
 
   .welcome-description {
     font-size: 1.3rem;
-  }     
+  }
 }
-
-
-
-
-

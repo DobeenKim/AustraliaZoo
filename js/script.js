@@ -21,11 +21,13 @@ animalArray.forEach((animal) => {
   allTitle.textContent = animal.species;
   allTitle.href = "#";
   let uls = document.createElement("ul");
+  uls.className = "ulList"
   nav.append(allTitle, uls);
 
   animal.names.forEach((animalName) => {
     let liElement = document.createElement("li");
     liElement.textContent = animalName;
+    liElement.className = "list";
     liElement.classList.add("active");
     uls.appendChild(liElement);
   });
