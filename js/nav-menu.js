@@ -1,9 +1,9 @@
 const menuItems = [
-  { name: "Home", href: "#home", active: true },
-  { name: "Birds", href: "#birds" },
-  { name: "Reptiles", href: "#reptiles" },
-  { name: "Mammals", href: "#mammals" },
-  { name: "About Us", href: "#aboutUs" },
+  { name: "Home", href: "./index.html", active: true },
+  { name: "Birds", href: "./birds.html" },
+  { name: "Reptiles", href: "./reptiles.html" },
+  { name: "Mammals", href: "./mammals.html" },
+  { name: "About Us", href: "./about.html" },
 ];
 
 const buildNavMenu = () => {
