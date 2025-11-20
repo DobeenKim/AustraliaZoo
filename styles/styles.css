@@ -29,13 +29,14 @@ body {
 }
 
 .sidebar.open{
-  left: 60px !important;
+  left: 60px;
 }
 
 .sidebar{
   background-color: var(--main-color);
   height: 100%;
   left: -280px;
+  margin: 0;
   padding: 16px;
   position: absolute;
   overflow-wrap: break-word;
