@@ -86,16 +86,17 @@ secondClickBirds__title.addEventListener("click", () => {
   } 
 }); 
 
-let main = document.querySelector(".main")
+let nav = document.querySelector(".sidebar")
 let tab = document.querySelector(".sidebar-tab");
-if (window.matchMedia("(max-width: 767px)").matches) {
-  tab.addEventListener("click", () => {
-    main.classList.toggle("open");
-  });
-}
-document.addEventListener("click", e => {
-  if (window.matchMedia("(max-width: 767px)").matches && !main.contains(e.target)) {
-    main.classList.remove("open");
+tab.addEventListener("click", (e) => {
+  e.stopPropagation();
+  nav.classList.toggle("open");
+});
+
+document.addEventListener("click", (e) => {
+  if (
+     !nav.contains(e.target)&&tab.contains(e.target)){
+       nav.classList.remove("open");
   }
-})
+});
 
