@@ -5,22 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles/nav-menu.css">
-    <script src="./js/nav-menu.js"></script>
+    <script src="./js/nav-menu.js" defer></script>
   </head>
   <body>
     <header class="header">
       <img class="header__logo" src="images/header-logo.png" alt="Header Logo">
       <div class="nav-container">
-        <nav class="nav-menu">
-          <a href="#home" class="active">Home</a>
-          <a href="#birds">Birds</a>
-          <a href="#reptiles">Reptiles</a>
-          <a href="mammals">Mammals</a>
-          <a href="aboutUs">About Us</a>
-        </nav>
+        <nav class="nav-menu" id="navMenu"></nav>
         <div class="hamburger" onclick="toggleMenu()">
           &#9776;
         </div>
+      </div>
     </header>
   </body>
 </html>
