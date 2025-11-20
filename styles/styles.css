@@ -144,6 +144,7 @@ body {
   margin: 8px;
 }
 
+.social-media:visited,
 .social-media a {
   color: var(--color-tertiary);
   text-decoration: none;
