@@ -112,5 +112,5 @@ const showFullSummary = (name) => {
   }
 };
 
-createSidebar();
+document.addEventListener("DOMContentLoaded", createSidebar);
 

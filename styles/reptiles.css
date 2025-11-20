@@ -16,30 +16,6 @@ body {
   color: var(--color-secondary);
 }
 
-#sidebar-container {
-  width: 200px;
-  margin: 20px;
-}
-
-#sidebar-container h2 {
- text-align: center;
-}
-
-#sidebar-container a {
-  text-decoration: none;
-  color: var(--color-secondary);
-}
-
-#sidebar-container a:hover {
-  text-decoration: underline;
-  color: var(--color-tertiary);
-}
-
-#sidebar-container a.active {
-  font-weight: bold;
-  color: var(--color-tertiary);
-}
-
 .reptiles {
   background-color: var(--color-tertiary);
   font-family: Arial, sans-serif;
@@ -52,6 +28,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .reptile-item {
@@ -84,17 +61,18 @@ body {
 
 button {
   padding: 10px 15px;
-  background-color: var(--main-color);
+  background-color: var(--color-secondary);
   color: var(--color-tertiary);
-  border: none;
   border-radius: 5px;
+  border-style: none;
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: var(--color-secondary);
+  background-color: var(--color-tertiary);
+  color: var(--main-color);
 }
 
 button:focus {
