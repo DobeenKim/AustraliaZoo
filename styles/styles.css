@@ -10,9 +10,15 @@
 
 body {
   margin: 0;
+<<<<<<< HEAD
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+=======
+  font-family: "Ribeye", serif;
+  font-weight: 400;
+  font-style: normal;
+>>>>>>> feature/about-sidebar
 }
 
 .header {
@@ -157,6 +163,7 @@ body {
 
 @media (min-width: 768px) {
   .header-logo {
+<<<<<<< HEAD
     width: 100px;
   }
   .main__sidebar.open {
@@ -178,4 +185,43 @@ body {
   .welcome-description {
     font-size: 1.3rem;
   }
+=======
+    margin: 20px;
+    width: 100px;
+  }
+}
+.main {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../images/background-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.welcome-hero-section {
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 200px;
+}
+
+.wrap {
+  width: 90%;
+  margin: 0 auto;
+  font-weight: 600;
+  color: var(--color-tertiary);
+}
+
+.welcome-tagline {
+  font-size: 2rem;
+}
+
+.welcome-main-title {
+  font-size: 3rem;
+}
+
+.welcome-description {
+  font-size: 1.3rem;
+>>>>>>> feature/about-sidebar
 }
