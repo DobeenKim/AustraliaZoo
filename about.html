@@ -4,15 +4,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About us page</title>
+  <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="styles/about.css">
+  <link rel="stylesheet" href="styles/nav-menu.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <script src="js/about.js" defer></script>
+  <script src="./js/nav-menu.js"></script>
 </head>
 <body>
+  <header class="header">
+    <img class="header__logo" src="images/header-logo.png" alt="Header Logo">
+      <div class="nav-container">
+        <nav class="nav-menu">
+          <a href="#home" class="active">Home</a>
+          <a href="#birds">Birds</a>
+          <a href="#reptiles">Reptiles</a>
+          <a href="mammals">Mammals</a>
+          <a href="aboutUs">About Us</a>
+        </nav>
+      <div class="hamburger" onclick="toggleMenu()">
+        &#9776;
+      </div>
+  </header>
   <section class="message">
     <p>Welcome to the About Page! <br> Meet our lovely staff!</p>
   </section>
   <section class="product-details">
   </section>
+  <footer class="footer">
+      <div class="contact-info">
+        <h4 class="address">42 Wallaby Way, Sydney NSW 2000, Australia</h4>
+        <h4 class="phone-number">+61 2 5550 1234</h4>
+        <div class="social-media">
+          <a href="mailto:zoo@australiazoo.com.au">
+            <i class="fa-regular fa-envelope icon"></i>
+          </a>
+          <a href="https://www.instagram.com/australiazoo" target="_blank">
+            <i class="fa-brands fa-instagram icon"></i>
+          </a>
+          <a href="https://www.facebook.com/AustraliaZoo/" target="_blank">
+            <i class="fa-brands fa-square-facebook icon"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
 </body>
 </html>
