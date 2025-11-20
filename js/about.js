@@ -75,22 +75,22 @@ memberArray.forEach(member => {
     `;
 
     memberContainer.innerHTML = `
-        <h4 class="member-title">${member.name}</h4>
-        <div class="image-wrapper">
+    <div class="image-wrapper">
         <img 
         src="${member.img}" 
         alt="${member.name} image" 
         class="member-image"
         style="width: 160px; height: 160px;"
         >
+        <h4 class="member-title">${member.name}</h4>
     </div>
 
     <div class="member-info-container">
-        <p class="member-description">${member.nickname}</p>
-        <p class="member-description">${member.favAnimal}</p>
-        <p class="member-description">${member.email}</p>
-        <p class="member-description">${member.linkedin}</p>
-        <p class="member-description">${member.github}</p>
+        <p class="member-description">Nick name : ${member.nickname}</p>
+        <p class="member-description">Faverite animal : ${member.favAnimal}</p>
+        <p class="member-description">Email address : ${member.email}</p>
+        <p class="member-description">Contact : ${member.linkedin}</p>
+        <p class="member-description">Contact : ${member.github}</p>
     </div>
 `;
 
