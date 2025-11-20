@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="./styles/typography.css" />
+    <link rel="stylesheet" href="styles/nav-menu.css">
+    <script src="./js/nav-menu.js" defer></script>
     <script src="https://kit.fontawesome.com/547bf76217.js" crossorigin="anonymous"></script>
     <title>Document</title>
   </head>
 <body>  
   <header class="header">
-    <img class="header__logo" src="images/header-logo.png" alt="Header Logo" width="80" height="auto">
+    <img class="header__logo" src="images/header-logo.png" alt="Header Logo">
+    <div class="nav-container">
+      <nav class="nav-menu" id="navMenu"></nav>
+      <div class="hamburger" onclick="toggleMenu()">
+        &#9776;
+      </div>
+    </div>
   </header>
   <main class="main">
     <section class="welcome-hero-section">

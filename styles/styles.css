@@ -17,13 +17,15 @@ body {
 
 .header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: flex-end;
-  background-color: var(--main-tertiary);
+  padding: 10px;
+  background-color: var(--main-color);
 }
 
-.header-logo {
-  margin: 12px;
+.header__logo {
+  width: 80px;
+  height: auto;
 }
 
 .footer {
@@ -49,11 +51,6 @@ body {
 }
 
 @media (min-width: 768px) {
-  .header-logo {
-    margin: 20px;
-    width: 100px;
-  }
-}
 .main {
   width: 100%;
   min-height: 100vh;
@@ -110,5 +107,6 @@ body {
 @media (min-width:768px) {
   .welcome-hero-section {
     padding-top: 200px; 
+    } 
   }
 }
