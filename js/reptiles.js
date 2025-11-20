@@ -21,7 +21,8 @@ const reptilesData = [
       "The Hawksbill Sea Turtle gets its common name from the distinctive mouth, which resembles a bird’s beak. The shell is covered in large overlapping scutes, which are a distinctive brown/green/amber background.",
     length: "80 cm (carapace)",
     weight: "50 kg",
-    found: "Tropical coasts of Queensland, Northern Territory, and Western Australia",
+    found:
+      "Tropical coasts of Queensland, Northern Territory, and Western Australia",
   },
   {
     photo: "./images/Perentie.jpg",
@@ -55,7 +56,9 @@ const showShortSummary = (name) => {
 
   const reptile = reptilesData.find((r) => r.name === name);
   if (reptile) {
-    const activeLink = [...links].find(link => link.textContent === reptile.name);
+    const activeLink = [...links].find(
+      (link) => link.textContent === reptile.name
+    );
     if (activeLink) {
       activeLink.classList.add("active");
     }
@@ -74,7 +77,8 @@ const showShortSummary = (name) => {
     reptilesContainer.innerHTML = shortSummaryHTML;
   } else {
     console.error("Animal not found!");
-    reptilesContainer.innerHTML = "<p>Oops! It seems we couldn't find that animal. Please try another one!</p>";
+    reptilesContainer.innerHTML =
+      "<p>Oops! It seems we couldn't find that animal. Please try another one!</p>";
   }
 };
 
@@ -113,4 +117,3 @@ const showFullSummary = (name) => {
 };
 
 document.addEventListener("DOMContentLoaded", createSidebar);
-
