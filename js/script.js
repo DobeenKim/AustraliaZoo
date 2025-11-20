@@ -21,6 +21,7 @@ animalArray.forEach((animal) => {
   allTitle.textContent = animal.species;
   allTitle.href = "#";
   let uls = document.createElement("ul");
+  uls.className = "ulList"
   nav.append(allTitle, uls);
 
   animal.names.forEach((animalName) => {

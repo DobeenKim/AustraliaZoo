@@ -15,12 +15,12 @@ body {
   min-height: 100vh;
 }
 
-.main-container{
+.main-container {
   display: flex;
   flex:1;
 }
 
-.main__sidebar{ 
+.main__sidebar { 
   align-items: center;
   background-color: var(--main-color);
   display: flex;
@@ -28,11 +28,11 @@ body {
   transition: 0.5s;
 }
 
-.sidebar.open{
+.sidebar.open {
   left: 60px;
 }
 
-.sidebar{
+.sidebar {
   background-color: var(--main-color);
   height: 100%;
   left: -280px;
@@ -64,19 +64,19 @@ body {
   padding: 8px;
 }
 
-.sidebar ul{
+.sidebar .ulList {
  list-style: none;
  margin: 0;
  padding: 8px;
 }
 
-.sidebar .list{
+.ulList .list {
   color: var(--color-tertiary);
   font-size: 1rem;
   padding: 16px;
 }
 
-.active{
+.ulList .active {
   display: none;
 }
 
