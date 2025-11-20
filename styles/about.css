@@ -1,113 +1,51 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
-
-a {
-  color: var(--main-color)
-}
-
 :root {
-  --main-color :#123524;
-  --color-secondary : #3E7B27;
-  --color-tertiary : #EFE3C2;
+  --main-color: #123524;
+  --color-secondary: #3e7b27;
+  --color-tertiary: #efe3c2;
 }
 
-.member-info {
-  opacity: 0;
-  visibility: hidden; 
-  transition: opacity 0.4s ease, visibility 0.4s ease;
-}
-
-.member-info.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-.message {
-  font-size: 2.4rem;
-  font-weight: 600;
+.main-content {
+  padding: 32px;
   text-align: center;
-  background:  var(--main-color);
-  }
+  height: 100vh;
+}
 
-.message p {
-  font-size: 3.4rem;
+.member-image {
+  border-radius: 50%;
+  height: 200px;
+  object-fit: cover;
+  margin: 8px;
+  width: 200px;
+}
+
+.member-card {
+  display: none;
+}
+
+.member-card.active {
+  background-color: var(--color-secondary);
+  border-radius: 10px;
+  display: block;
+  margin: 8px;
+  padding: 8px;
+}
+
+.member-title {
   color: var(--color-tertiary);
-  line-height: 1.4;
-  margin: 0 auto;
   text-align: center;
-  width: 80%;
-  padding: 20px;
 }
-  
-  .product-details {
-    width: 100%;
-    margin: 20px 0 20px;
-  }
 
-  .detailsWrap {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-    gap: 20px 0;
-    width: 80%;
+.member-info-container {
+  background-color: var(--color-tertiary);
+  border-radius: 10px;
+  color: var(--main-color);
+  padding: 8px;
+  text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+  .member-content {
     margin: 0 auto;
+    width: 60%;
   }
-
-  .detailsWrap .members-card {
-    margin: 0 auto;
-    width: 95%;
-    border-radius: 0 20px;
-    background: var(--color-tertiary);
-    text-align: center;
-    color: var(--main-color);
-  }
-
-  .nickname {
-    font-size: 2rem;
-    margin: 0;
-    font-weight: 600;
-  }
-
-  .member-info {
-    margin: 0 auto;
-    padding:14px;
-    width: 100%;
-  }
-
-  .member-info li {
-    list-style: none;
-    font-size: 1.3rem;
-    line-height: 2;
-    overflow-wrap: break-word;
-  }
-
-  .img {
-    width: 180px;
-    height: 180px;
-    border-radius: 70%;
-    overflow: hidden;
-    margin: 40px auto;
-  }
-
-  .memberImg {
-    width: 100%;
-    object-fit: cover;
-    cursor: pointer;
-  }
-
-  .members-card .github-logo {
-    width: 20%;
-  }
-  
-  .members-card .fa-brands{
-    font-size: 3rem;
-    padding-top: 10px;
-  }
-
-
-
-
+}
