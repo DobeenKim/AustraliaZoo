@@ -8,6 +8,14 @@
   box-sizing: border-box;
 }
 
+.reptiles-body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--main-color);
+  color: var(--color-secondary);
+}
+
 .reptiles {
   background-color: var(--color-tertiary);
   font-family: Arial, sans-serif;
