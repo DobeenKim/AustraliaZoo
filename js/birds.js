@@ -79,19 +79,6 @@ birdsArray.forEach((animal) => {
       return;
     }
     
-    
-    let birdsTitle = document.querySelector(".birds-title");
-    let birdsAbstract = document.querySelector(".birds-abstract");
-
-   if (birdsTitle) {
-      birdsTitle.style.display = "none";
-      birdsTitle.style.visibility = "hidden";
-    }
-    if (birdsAbstract) {
-      birdsAbstract.style.display = "none";
-      birdsAbstract.style.visibility = "hidden";
-    }
-
     commonPart();
     let animalTitle = document.createElement("H4");
     animalTitle.innerHTML = animal.name;
