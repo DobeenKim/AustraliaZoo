@@ -1,4 +1,4 @@
-let memberArray = [
+let sideBarMemberArray = [
   { name: "Dobeen" },
   { name: "Claudia" },
   { name: "Ting" },
@@ -11,7 +11,7 @@ let sidebarContent = document.querySelector(".sidebar-content");
 sidebarContent.innerHTML = `
     <h3 class="sidebar__title">Members!</h3>
     <ul class="sidebar__list">
-      ${memberArray
+      ${sideBarMemberArray
         .map((member) => `<li class="sidebar__item">${member.name}</li>`)
         .join("")}
     </ul>
