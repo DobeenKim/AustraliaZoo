@@ -12,8 +12,8 @@
   width: 100%;
   min-height: 100vh;
   margin: 0;
-  background-color: var(--main-color);
-  color: var(--color-secondary);
+  background-color: var(--color-secondary);
+  color: darken(var(--main-color), 25%);
 }
 
 .reptiles {
@@ -61,7 +61,7 @@
 
 button {
   padding: 10px 15px;
-  background-color: var(--color-secondary);
+  background-color: var(--main-color);
   color: var(--color-tertiary);
   border-radius: 5px;
   border-style: none;
