@@ -172,6 +172,20 @@ document.addEventListener("click", e => {
   }
 });
 
+
 sidebarItems.forEach(item => {
-  item.addEventListener("click", () => sidebar.classList.remove("open"));
+  item.addEventListener("click", () => {
+    const clicked = item.textContent.trim().toLowerCase().replace(/\s+/g, "-");
+    const target = document.querySelector(`.animal-card.${clicked}`);
+
+    document.querySelectorAll(".animal-card").forEach(card => {
+      if (card !== target) {
+        card.classList.remove("active");
+      }
+    });
+
+    target.classList.toggle("active");
+
+    sidebar.classList.remove("open");
+  });
 });
