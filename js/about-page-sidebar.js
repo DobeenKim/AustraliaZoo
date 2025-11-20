@@ -1,64 +1,10 @@
-function Members(img, nickname, name, favAnimal, email, linkedin, github) {
-  (this.img = img),
-    (this.nickname = nickname),
-    (this.name = name),
-    (this.favAnimal = favAnimal),
-    (this.email = email),
-    (this.linkedin = linkedin),
-    (this.github = github);
-}
-
-let dobeen = new Members(
-  "./images/raccoon.jpg",
-  "Dodo",
-  "Dobeen",
-  "Raccoon",
-  "Dobeen.Kim@edu.futuregame.se",
-  "https://www.linkedin.com/in/dobeen-kim",
-  "https://github.com/DobeenKim"
-);
-
-let claudia = new Members(
-  "./images/panda.jpg",
-  "Claudia",
-  "Claudia",
-  "Panda",
-  "Claudia.Pereira@edu.futuregames.se",
-  "https://www.linkedin.com/in/claudia-pereira-carion/",
-  "https://github.com/claudiacarion"
-);
-
-let ting = new Members(
-  "./images/dragon.jpg",
-  "Tingting",
-  "Ting",
-  "Dog",
-  "Ting.Li@edu.futuregames.se",
-  "http://www.linkedin.com/in/ting-li-218540382",
-  "https://github.com/janetli82-ui"
-);
-
-let gabriella = new Members(
-  "./images/sloth01.jpg",
-  "Wineynia",
-  "Gabriella",
-  "Sloth",
-  "Gabriella.Arif@edu.futuregames.se",
-  "https://github.com/wineynia",
-  "https://www.linkedin.com/in/gabriella-a-99a903121b"
-);
-
-let maho = new Members(
-  "./images/sloth02.jpg",
-  "MC Mahaa",
-  "Maho",
-  "Sloth",
-  "Maho.Kurauchi@edu.futuregames.se",
-  "http://www.linkedin.com/in/maho-kurauchi",
-  "https://github.com/mamahimiko"
-);
-
-let memberArray = [dobeen, claudia, ting, gabriella, maho];
+let memberArray = [
+  { name: "Dobeen" },
+  { name: "Claudia" },
+  { name: "Ting" },
+  { name: "Gabriella" },
+  { name: "Maho" },
+];
 
 let sidebarContent = document.querySelector(".sidebar-content");
 
