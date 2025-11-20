@@ -6,7 +6,7 @@
     <title>Aussie Zoo</title>
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="styles/animal-short-summary.css" />
-    <link rel="stylesheet" href="styles/nav-menu.css">
+    <link rel="stylesheet" href="styles/nav-menu.css" />
     <script
       src="https://kit.fontawesome.com/547bf76217.js"
       crossorigin="anonymous"
@@ -18,18 +18,26 @@
 
   <body>
     <header class="header">
-      <img class="header__logo" src="images/header-logo.png" alt="Header Logo">
+      <img
+        class="header__logo"
+        src="images/header-logo.png"
+        alt="Header Logo"
+      />
       <div class="nav-container">
         <nav class="nav-menu" id="navMenu"></nav>
-        <div class="hamburger" onclick="toggleMenu()">
-          &#9776;
-        </div>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
       </div>
     </header>
 
     <main class="main">
-      
-
+      <div class="main-container">
+        <div class="main__sidebar">
+          <div class="sidebar-tab">
+            <i class="fa-solid fa-paw"></i>
+          </div>
+          <ul class="sidebar"></ul>
+        </div>
+      </div>
       <section class="welcome-hero-section">
         <div class="wrap">
           <p class="welcome-tagline">Ready for an Aussie Adventure?</p>
@@ -59,6 +67,5 @@
         </div>
       </div>
     </footer>
-
   </body>
 </html>
