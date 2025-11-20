@@ -29,16 +29,19 @@ a {
 
 .message {
   font-size: 2.4rem;
-  padding: 36px;
   font-weight: 600;
   text-align: center;
   background:  var(--main-color);
   }
 
 .message p {
-  font-size: 4rem;
+  font-size: 3.4rem;
   color: var(--color-tertiary);
   line-height: 1.4;
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+  padding: 20px;
 }
   
   .product-details {
