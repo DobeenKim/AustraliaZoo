@@ -27,6 +27,7 @@ let bird__three = new Birds(
 );
 
 let birdsArray = [bird__one, bird__two, bird__three];
+
 let currentAnimal = null;
 let content = document.querySelector(".main-content");
 let card = document.createElement("div");
