@@ -102,6 +102,22 @@
   text-align: center;
 }
 
+.icon {
+  margin: 8px;
+}
+
+.social-media:visited,
+.social-media a {
+  color: var(--color-tertiary);
+  text-decoration: none;
+}
+
+.icon:hover {
+  color: var(--color-secondary);
+  transform: scale(1.1);
+}
+
+
 @media screen and (min-width: 768px) {
   .member-content {
     margin: 0 auto;
