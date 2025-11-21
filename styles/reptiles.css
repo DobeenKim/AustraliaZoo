@@ -24,6 +24,14 @@
   text-align: center;
 }
 
+#reptiles-description {
+  display: block;
+}
+
+.sidebar-open #reptiles-description {
+  display: none;
+}
+
 .reptile-item {
   border: 1px solid #ccc;
   margin: 10px;
