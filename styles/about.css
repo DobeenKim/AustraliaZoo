@@ -38,8 +38,9 @@ p {
   text-align: center;
 }
 
-.message p {
+.message h1 {
   margin: 0;
+  padding: 0;
 }
 
 .main-content {

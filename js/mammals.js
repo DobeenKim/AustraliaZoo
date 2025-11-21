@@ -96,7 +96,7 @@ mammals.animals.forEach((animal) => {
   `;
 
   animalCard.innerHTML = `
-  <h4 class="animal-title">${animal.name}</h4>
+  <h2 class="animal-title">${animal.name}</h4>
   <div class="image-wrapper">
     <img 
       src="${animal.image}" 

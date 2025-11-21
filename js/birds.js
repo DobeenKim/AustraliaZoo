@@ -10,10 +10,10 @@ function Birds(
   location,
   img
 ) {
-  this.name = name,
-  this.lessDescription = lessDescription,
-  this.moreDescription = moreDescription,
-  this.lifespan = lifespan;
+  (this.name = name),
+    (this.lessDescription = lessDescription),
+    (this.moreDescription = moreDescription),
+    (this.lifespan = lifespan);
   this.group = group;
   this.food = food;
   this.length = `${length} cm`;
@@ -114,7 +114,7 @@ birdsArray.forEach((animal) => {
       card.style.display = "block";
     }
     commonPart();
-    let animalTitle = document.createElement("H4");
+    let animalTitle = document.createElement("H2");
     animalTitle.innerHTML = animal.name;
     animalTitle.classList.add("title");
 
@@ -137,7 +137,7 @@ birdsArray.forEach((animal) => {
       let more = document.querySelector(".more");
       let infoBird = document.querySelector(".info");
 
-      if (more &&infoBird) {
+      if (more && infoBird) {
         more.remove();
         infoBird.remove();
         btn.textContent = "Read More";
@@ -146,19 +146,19 @@ birdsArray.forEach((animal) => {
         moreDescription.innerHTML = animal.moreDescription;
         moreDescription.classList.add("more");
         let information = document.createElement("p");
-    
-      information.innerHTML = `
+
+        information.innerHTML = `
       <p>Lifespan: ${animal.lifespan}</p>
       <p>Group: ${animal.group}</p>
       <p>Food: ${animal.food}</p>
       <p>Length: ${animal.length}</p>
       <p>Weight: ${animal.weight}</p>
       <p>Where they are found: ${animal.location}</p>
-      `;  
-      information.className = "info";
-      btn.innerHTML = "Read Less";
-      abstract.append(moreDescription,information);
-    }
+      `;
+        information.className = "info";
+        btn.innerHTML = "Read Less";
+        abstract.append(moreDescription, information);
+      }
       abstract.appendChild(btn);
     });
     currentAnimal = animal.name;

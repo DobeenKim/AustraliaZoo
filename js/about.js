@@ -72,7 +72,7 @@ memberArray.forEach((member) => {
   memberContainer.classList.add("member-card", memberClassname);
 
   memberContainer.innerHTML = `
-    <h4 class="member-title">${member.name}</h4>
+    <h2 class="member-title">${member.name}</h4>
     <div class="image-wrapper">
         <img 
         src="${member.img}" 
