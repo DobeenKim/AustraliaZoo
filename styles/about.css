@@ -1,0 +1,146 @@
+:root {
+  --main-color: #123524;
+  --color-secondary: #3e7b27;
+  --color-tertiary: #efe3c2;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: var(--main-color);
+}
+
+.header__logo {
+  margin-right: 20px;
+  flex: 0 0 auto;
+  width: 80px;
+  height: auto;
+}
+
+.message {
+  font-size: 2rem;
+  padding: 36px;
+  color:var(--main-color);
+  text-align: center;
+}
+
+.message p {
+  margin: 0;
+}
+
+.main-content {
+  text-align: center;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.member-image {
+  border-radius: 50%;
+  height: 200px;
+  object-fit: cover;
+  margin: 8px;
+  width: 200px;
+}
+
+.member-card {
+  width: 30%;
+}
+
+.main-content .member-card {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-tertiary);
+  opacity: 0.9;
+  width: 80%;
+  background-color: var(--color-secondary);
+  padding: 8px;
+  border-radius: 0.3rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  flex-wrap: wrap;
+  transition: 1s;
+  transition-delay: .5s;
+  animation: shake-animation 3.72s;
+  transform-origin: 50% 50%;
+  margin: 0 auto;
+}
+
+.member-card.active {
+  background-color: var(--color-secondary);
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  padding: 8px;
+}
+
+.member-title {
+  color: var(--color-tertiary);
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.memberContact {
+  width: 100%;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.memberContact  .fa-brands { 
+  color: var(--main-color);
+  padding-left: 8px;
+  font-size: 24px;
+}
+
+.member-info-container {
+  background-color: var(--color-tertiary);
+  border-radius: 10px;
+  color: var(--main-color);
+  padding: 24px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.member-description {
+  width: 100%;
+  word-break: break-word;
+}
+
+.footer {
+  background-color: var(--main-color);
+  color: var(--color-tertiary);
+  padding: 16px;
+  text-align: center;
+}
+
+.icon {
+  margin: 8px;
+}
+
+.social-media:visited,
+.social-media a {
+  color: var(--color-tertiary);
+  text-decoration: none;
+}
+
+.icon:hover {
+  color: var(--color-secondary);
+  transform: scale(1.1);
+}
+
+
+@media screen and (min-width: 768px) {
+  .member-content {
+    margin: 0 auto;
+    width: 60%;
+  }
+
+  .main-content .member-card {
+    width: 500px;
+  }
+}

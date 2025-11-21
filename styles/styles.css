@@ -17,6 +17,7 @@ body {
 
 .header {
   display: flex;
+<<<<<<< HEAD
   align-items: center;
   justify-content: space-between;
   padding: 10px;
@@ -51,6 +52,17 @@ body {
 }
 
 @media (min-width: 768px) {
+=======
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: var(--main-tertiary);
+}
+
+.header-logo {
+  margin: 12px;
+}
+
+>>>>>>> feature/about-page
 .main {
   width: 100%;
   min-height: 100vh;
@@ -61,7 +73,11 @@ body {
 }
 
 .welcome-hero-section {
+<<<<<<< HEAD
   width: 95%;
+=======
+  width: 95%; 
+>>>>>>> feature/about-page
   margin: 0 auto;
   text-align: center;
   padding-top: 200px;
@@ -84,12 +100,47 @@ body {
 
 .welcome-description {
   font-size: 1rem;
+<<<<<<< HEAD
   margin: 0;
   padding-bottom: 32px;
 }
 
 .welcome-hero-section {
     padding-top: 100px; 
+=======
+}
+
+.footer {
+  background-color: var(--main-color);
+  color: var(--color-tertiary);
+  padding: 16px;
+  text-align: center;
+}
+
+.icon {
+  margin: 8px;
+}
+
+.social-media:visited,
+.social-media a {
+  color: var(--color-tertiary);
+  text-decoration: none;
+}
+
+.icon:hover{
+  color: var(--color-secondary);
+  transform: scale(1.1);
+}
+
+@media (min-width: 768px) {
+  .header-logo{
+    margin: 20px;
+    width: 100px
+  }
+
+  .welcome-hero-section {
+    padding-top: 200px; 
+>>>>>>> feature/about-page
   }
 
   .welcome-tagline { 
@@ -104,9 +155,12 @@ body {
     font-size: 1.3rem; 
   }
 
+<<<<<<< HEAD
 @media (min-width:768px) {
   .welcome-hero-section {
     padding-top: 200px; 
     } 
   }
 }
+=======
+>>>>>>> feature/about-page
