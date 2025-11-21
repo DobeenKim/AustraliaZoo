@@ -4,6 +4,21 @@
   --color-tertiary: #efe3c2;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: var(--main-color);
+}
+
+.header__logo {
+  margin-right: 20px;
+  flex: 0 0 auto;
+  width: 80px;
+  height: auto;
+}
+
 .message {
   font-size: 2.4rem;
   padding: 36px;
@@ -65,18 +80,26 @@
 }
 
 .member-info-container {
-  width: 100%;
+  width: 80%;
   background-color: var(--color-tertiary);
   border-radius: 10px;
   color: var(--main-color);
   padding: 24px;
   text-align: center;
   font-weight: 600;
+  margin: 0 auto;
 }
 
 .member-description {
   width: 100%;
   word-break: break-word;
+}
+
+.footer {
+  background-color: var(--main-color);
+  color: var(--color-tertiary);
+  padding: 16px;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -86,6 +109,6 @@
   }
 
   .main-content .member-card {
-      width: 500px;
+    width: 500px;
   }
 }
