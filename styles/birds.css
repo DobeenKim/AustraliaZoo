@@ -15,12 +15,20 @@ body {
   min-height: 100vh;
 }
 
+
 .header {
-  align-items: center;
-  background-color: var(--main-tertiary);
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 10px;
+  background-color: var(--main-color);
+}
+
+.header__logo {
+  margin-right: 20px;
+  flex: 0 0 auto;
+  width: 80px;
+  height: auto;
 }
 
 .main-container {
