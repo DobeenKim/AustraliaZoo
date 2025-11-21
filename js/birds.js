@@ -10,10 +10,10 @@ function Birds(
   location,
   img
 ) {
-  (this.name = name),
-    (this.lessDescription = lessDescription),
-    (this.moreDescription = moreDescription),
-    (this.lifespan = lifespan);
+  this.name = name,
+  this.lessDescription = lessDescription,
+  this.moreDescription = moreDescription,
+  this.lifespan = lifespan;
   this.group = group;
   this.food = food;
   this.length = `${length} cm`;
