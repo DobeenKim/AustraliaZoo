@@ -79,6 +79,7 @@ memberArray.forEach(member => {
     `;
 
     memberContainer.innerHTML = `
+    <h4 class="member-title">${member.name}</h4>
     <div class="image-wrapper">
         <img 
         src="${member.img}" 
@@ -86,7 +87,7 @@ memberArray.forEach(member => {
         class="member-image"
         style="width: 160px; height: 160px;"
         >
-        <h4 class="member-title">${member.name}</h4>
+        
     </div>
 
     <div class="member-info-container">

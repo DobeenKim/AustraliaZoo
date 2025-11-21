@@ -20,10 +20,9 @@
 }
 
 .message {
-  font-size: 2.4rem;
+  font-size: 2rem;
   padding: 36px;
   color:var(--main-color);
-  font-weight: 600;
   text-align: center;
 }
 
@@ -45,16 +44,19 @@
   width: 200px;
 }
 
+.member-card {
+  width: 30%;
+}
+
 .main-content .member-card {
-  display: none;
-  justify-content: center;
+  /* display: none; */
   flex-direction: column;
   align-items: center;
   color: var(--color-tertiary);
   opacity: 0.9;
   width: 80%;
   background-color: var(--color-secondary);
-  padding: 24px;
+  padding: 8px;
   border-radius: 0.3rem;
   box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
   flex-wrap: wrap;
@@ -80,13 +82,11 @@
 }
 
 .member-info-container {
-  width: 80%;
   background-color: var(--color-tertiary);
   border-radius: 10px;
   color: var(--main-color);
   padding: 24px;
   text-align: center;
-  font-weight: 600;
   margin: 0 auto;
 }
 
