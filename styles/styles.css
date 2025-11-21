@@ -17,7 +17,6 @@ body {
 
 .header {
   display: flex;
-<<<<<<< HEAD
   align-items: center;
   justify-content: space-between;
   padding: 10px;
@@ -51,18 +50,6 @@ body {
   transform: scale(1.1);
 }
 
-@media (min-width: 768px) {
-=======
-  justify-content: space-between;
-  align-items: flex-end;
-  background-color: var(--main-tertiary);
-}
-
-.header-logo {
-  margin: 12px;
-}
-
->>>>>>> feature/about-page
 .main {
   width: 100%;
   min-height: 100vh;
@@ -73,11 +60,7 @@ body {
 }
 
 .welcome-hero-section {
-<<<<<<< HEAD
   width: 95%;
-=======
-  width: 95%; 
->>>>>>> feature/about-page
   margin: 0 auto;
   text-align: center;
   padding-top: 200px;
@@ -100,14 +83,12 @@ body {
 
 .welcome-description {
   font-size: 1rem;
-<<<<<<< HEAD
   margin: 0;
   padding-bottom: 32px;
 }
 
 .welcome-hero-section {
-    padding-top: 100px; 
-=======
+  padding-top: 100px; 
 }
 
 .footer {
@@ -140,7 +121,6 @@ body {
 
   .welcome-hero-section {
     padding-top: 200px; 
->>>>>>> feature/about-page
   }
 
   .welcome-tagline { 
@@ -154,13 +134,4 @@ body {
   .welcome-description { 
     font-size: 1.3rem; 
   }
-
-<<<<<<< HEAD
-@media (min-width:768px) {
-  .welcome-hero-section {
-    padding-top: 200px; 
-    } 
-  }
 }
-=======
->>>>>>> feature/about-page
