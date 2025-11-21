@@ -1,4 +1,14 @@
-function Animal(name, lifespan, group, food, description, length, weight, location, image) {
+function Animal(
+  name,
+  lifespan,
+  group,
+  food,
+  description,
+  length,
+  weight,
+  location,
+  image
+) {
   this.name = name;
   this.lifespan = `${lifespan} years`;
   this.group = group;
@@ -72,15 +82,16 @@ mainContent.innerHTML = `
 
 reptiles.animals.forEach((animal) => {
   const animalCard = document.createElement("div");
-  animalCard.classList.add("animal-card");
+  const animalClassname = animal.name.toLowerCase().replace(/\s+/g, "-");
+  animalCard.classList.add("animal-card", animalClassname);
 
   let extraInfo = `
-  <p>Lifespan: ${animal.lifespan}</p>
-  <p>Group: ${animal.group}</p>
-  <p>Food: ${animal.food}</p>
-  <p>Length: ${animal.length}</p>
-  <p>Weight: ${animal.weight}</p>
-  <p>Where they are found: ${animal.location}</p>
+    <p>Lifespan: ${animal.lifespan}</p>
+    <p>Group: ${animal.group}</p>
+    <p>Food: ${animal.food}</p>
+    <p>Length: ${animal.length}</p>
+    <p>Weight: ${animal.weight}</p>
+    <p>Where they are found: ${animal.location}</p>
   `;
 
   animalCard.innerHTML = `
@@ -137,17 +148,16 @@ document.addEventListener("click", (e) => {
 sidebarItems.forEach((item) => {
   item.addEventListener("click", () => {
     const clicked = item.textContent.trim().toLowerCase().replace(/\s+/g, "-");
-    const target = document.querySelector(`.animal-card`);
+    const target = document.querySelector(`.animal-card.${clicked}`);
 
     document.querySelectorAll(".animal-card").forEach((card) => {
-      card.classList.remove("active");
+      if (card !== target) {
+        card.classList.remove("active");
+      }
     });
 
-    if (target) {
-      target.classList.toggle("active");
-    }
+    target.classList.toggle("active");
 
     sidebar.classList.remove("open");
   });
 });
-
