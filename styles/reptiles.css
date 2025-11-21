@@ -89,10 +89,6 @@ body {
   transition: background-color 0.3s;
 }
 
-.sidebar__item:hover {
-  cursor: pointer;
-}
-
 .sidebar-tab {
   color: var(--color-tertiary);
   font-size: 2rem;
