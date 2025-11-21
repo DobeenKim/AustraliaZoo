@@ -148,7 +148,7 @@ birdsArray.forEach((animal) => {
       let more = document.querySelector(".more");
       let infoBird = document.querySelector(".info");
 
-      if (more && infoBird) {
+      if (more &&infoBird) {
         more.remove();
         infoBird.remove();
         btn.textContent = "Read More";
@@ -172,6 +172,7 @@ birdsArray.forEach((animal) => {
       }
       abstract.appendChild(btn);
     });
+    currentAnimal = animal.name;
   });
 });
 
