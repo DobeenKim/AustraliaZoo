@@ -60,7 +60,7 @@
   justify-content: center;
 }
 
-button {
+.read-more-btn {
   padding: 10px 15px;
   background-color: var(--main-color);
   color: var(--color-tertiary);
@@ -71,13 +71,9 @@ button {
   transition: background-color 0.3s;
 }
 
-button:hover {
+.read-more-btn:hover {
   background-color: var(--color-tertiary);
   color: var(--main-color);
-}
-
-button:focus {
-  outline: none;
 }
 
 @media (min-width: 768px) {
