@@ -44,8 +44,7 @@ const reptilesDescriptionContainer = document.getElementById(
 const reptilesContainer = document.getElementById("reptiles-container");
 const sidebarContainer = document.getElementById("sidebar-container");
 const reptilesDescriptionHTML = `
-  <p>Reptiles are a diverse group of cold-blooded vertebrates, characterized by their scaly skin, laying of eggs, and a wide range of habitats. This class includes well-known groups such as snakes, lizards, turtles, and crocodilians.</p>
-  <p>Reptiles have evolved to thrive in various environments, from deserts to wetlands and forests to oceans. Their adaptations include specialized skin that helps retain moisture in arid habitats and varied methods of locomotion tailored to their ecosystems.</p>
+  <p>Reptiles are a diverse group of cold-blooded vertebrates, characterized by their scaly skin, laying of eggs, and a wide range of habitats. This class includes well-known groups such as snakes, lizards, turtles, and crocodilians. Reptiles have evolved to thrive in various environments, from deserts to wetlands and forests to oceans. Their adaptations include specialized skin that helps retain moisture in arid habitats and varied methods of locomotion tailored to their ecosystems.</p>
 `;
 
 const createSidebar = () => {
@@ -142,4 +141,3 @@ const showFullSummary = (name) => {
 };
 
 document.addEventListener("DOMContentLoaded", createSidebar);
-
