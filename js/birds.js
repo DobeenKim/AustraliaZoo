@@ -80,14 +80,7 @@ birdsArray.forEach((animal) => {
   let ulChildren = document.createElement("li");
   ulChildren.className = "ulChildren";
   ulChildren.textContent = animal.name;
-
-  ulChildren.classList.add("hide");
   nav.append(ulChildren);
-
-  let birds__title = document.querySelector(".side__title");
-  birds__title.addEventListener("click", () => {
-    ulChildren.classList.toggle("hide");
-  });
 
   ulChildren.addEventListener("click", () => {
     nav.classList.remove("open");
@@ -99,12 +92,10 @@ birdsArray.forEach((animal) => {
 
       if (birdsTitle) {
         birdsTitle.style.display = "block";
-
         card.style.display = "none";
       }
       if (birdsAbstract) {
         birdsAbstract.style.display = "block";
-
         card.style.display = "none";
       }
 
@@ -116,12 +107,10 @@ birdsArray.forEach((animal) => {
 
     if (birdsTitle) {
       birdsTitle.style.display = "none";
-
       card.style.display = "block";
     }
     if (birdsAbstract) {
       birdsAbstract.style.display = "none";
-
       card.style.display = "block";
     }
     commonPart();
@@ -167,9 +156,9 @@ birdsArray.forEach((animal) => {
       <p>Where they are found: ${animal.location}</p>
       `;  
       information.className = "info";
-        btn.innerHTML = "Read Less";
-        abstract.append(moreDescription,information);
-      }
+      btn.innerHTML = "Read Less";
+      abstract.append(moreDescription,information);
+    }
       abstract.appendChild(btn);
     });
     currentAnimal = animal.name;
