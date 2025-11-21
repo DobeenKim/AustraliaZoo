@@ -81,6 +81,18 @@
   font-size: 1.5rem;
 }
 
+.memberContact {
+  width: 16%;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.fa-brands { 
+  color: var(--main-color);
+  padding-left: 8px;
+  font-size: 24px;
+}
+
 .member-info-container {
   background-color: var(--color-tertiary);
   border-radius: 10px;

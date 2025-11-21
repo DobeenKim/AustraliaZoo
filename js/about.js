@@ -71,13 +71,6 @@ memberArray.forEach(member => {
     const memberClassname = member.name.toLowerCase().replace(/\s+/g, "-")
     memberContainer.classList.add("member-card",memberClassname)
 
-    let extraInfo = `
-        <p>Favorite Animal: ${member.favAnimal}</p>
-        <p>Email: ${member.email}</p>
-        <p>LinkedIn: <a href="${member.linkedin}" target="_blank">Link</a></p>
-        <p>GitHub: <a href="${member.github}" target="_blank">Link</a></p>
-    `;
-
     memberContainer.innerHTML = `
     <h4 class="member-title">${member.name}</h4>
     <div class="image-wrapper">
@@ -87,15 +80,16 @@ memberArray.forEach(member => {
         class="member-image"
         style="width: 160px; height: 160px;"
         >
-        
     </div>
-
-    <div class="member-info-container">
-        <p class="member-description">Nick name : ${member.nickname}</p>
-        <p class="member-description">Faverite animal : ${member.favAnimal}</p>
-        <p class="member-description">Email address : ${member.email}</p>
-        <p class="member-description">Contact : ${member.linkedin}</p>
-        <p class="member-description">Contact : ${member.github}</p>
+        <div class="member-info-container">
+            <p class="member-description">Nick name : ${member.nickname}</p>
+            <p class="member-description">Faverite animal : ${member.favAnimal}</p>
+            <p class="member-description">Email address : ${member.email}</p>
+        <p class="memberContact">
+            <a href="${member.linkedin}" target="_blank"><i class="fa-brands fa-linkedin-in"></i>
+            <a href="${member.github}" target="_blank"><i class="fa-brands fa-github"></i>
+        </a>
+        </p>
     </div>
 `;
 
