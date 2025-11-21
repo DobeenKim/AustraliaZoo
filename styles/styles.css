@@ -18,6 +18,16 @@ body {
   min-height: 100vh;
 }
 
+.main {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../images/background-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -33,10 +43,10 @@ body {
 
 .main-container {
   display: flex;
-  flex:1;
+  flex: 1;
 }
 
-.main__sidebar { 
+.main__sidebar {
   align-items: center;
   background-color: var(--main-color);
   display: flex;
@@ -56,7 +66,7 @@ body {
   padding: 16px;
   position: absolute;
   overflow-wrap: break-word;
-  top:0;
+  top: 0;
   transition: left 0.4s ease;
   width: 280px;
   white-space: normal;
@@ -81,9 +91,9 @@ body {
 }
 
 .sidebar .ulList {
- list-style: none;
- margin: 0;
- padding: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 8px;
 }
 
 .ulList .list {
@@ -135,7 +145,7 @@ body {
 }
 
 .welcome-hero-section {
-  padding-top: 100px; 
+  padding-top: 100px;
 }
 
 .footer {
@@ -185,24 +195,18 @@ body {
   }
 
   .welcome-hero-section {
-    padding-top: 200px; 
+    padding-top: 200px;
   }
 
-  .welcome-tagline { 
-    font-size: 2rem; 
+  .welcome-tagline {
+    font-size: 2rem;
   }
 
   .welcome-main-title {
-    font-size: 3rem; 
+    font-size: 3rem;
   }
 
-  .welcome-description { 
-    font-size: 1.3rem; 
+  .welcome-description {
+    font-size: 1.3rem;
   }
 }
-
-
-
-
-
-
