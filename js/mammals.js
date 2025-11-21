@@ -126,4 +126,3 @@ mammals.animals.forEach(animal => {
     }
   });
 });
-
