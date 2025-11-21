@@ -1,23 +1,23 @@
 function Animal(name, lifespan, group, food, description, length, weight, location, image) {
-  (this.name = name),
-    (this.lifespan = `${lifespan} years`),
-    (this.group = group),
-    (this.food = food),
-    (this.description = description),
-    (this.length = `${length} cm`),
-    (this.weight = `${weight} kg`),
-    (this.location = location);
+  this.name = name,
+  this.lifespan = `${lifespan} years`,
+  this.group = group,
+  this.food = food,
+  this.description = description,
+  this.length = `${length} cm`,
+  this.weight = `${weight} kg`,
+  this.location = location;
   this.image = image;
-}
+};
 
 function Species(name, description) {
-  (this.name = name),
-    (this.description = description),
-    (this.animals = []),
-    (this.addAnimal = function (animal) {
-      this.animals.push(animal);
-    });
-}
+  this.name = name,
+  this.description = description,
+  this.animals = [],
+  this.addAnimal = function (animal) {
+    this.animals.push(animal);
+  };
+};
 
 const mammals = new Species(
   "Mammals",
