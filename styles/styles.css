@@ -9,6 +9,8 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   font-family: "Ribeye", serif;
   font-weight: 400;
@@ -108,15 +110,33 @@ body {
   text-decoration: none;
 }
 
-.icon:hover{
+.icon:hover {
   color: var(--color-secondary);
   transform: scale(1.1);
 }
 
 @media (min-width: 768px) {
-  .header-logo{
-    margin: 20px;
-    width: 100px
+  .header-logo {
+    width: 100px;
+  }
+  .main__sidebar.open {
+    width: 320px;
+  }
+
+  .welcome-hero-section {
+    padding-top: 200px;
+  }
+
+  .welcome-tagline {
+    font-size: 2rem;
+  }
+
+  .welcome-main-title {
+    font-size: 3rem;
+  }
+
+  .welcome-description {
+    font-size: 1.3rem;
   }
 
   .welcome-hero-section {
