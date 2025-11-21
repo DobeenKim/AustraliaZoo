@@ -49,7 +49,7 @@
 }
 
 .main-content .member-card {
-  /* display: none; */
+  display: none;
   flex-direction: column;
   align-items: center;
   color: var(--color-tertiary);
