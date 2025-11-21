@@ -79,13 +79,13 @@ const showShortSummary = (name) => {
     }" class="reptile-image" style="width: 150px; height: 150px; border-radius: 50%;">
           </div>
           <h3>${reptile.name}</h3>
-          <p><strong>Group:</strong> ${reptile.group}</p>
-          <button class="read-more-btn" onclick="showFullSummary('${
-            reptile.name
-          }')">Read More</button>
+          <p>${reptile.description}</p>
           <div id="full-summary-${reptile.name
             .replace(/\s+/g, "-")
             .toLowerCase()}" style="display: none;"></div>
+            <button class="read-more-btn" onclick="showFullSummary('${
+              reptile.name
+            }')">Read More</button>
       `;
     reptilesContainer.innerHTML = shortSummaryHTML;
   } else {
@@ -104,12 +104,12 @@ const showFullSummary = (name) => {
 
   if (reptile) {
     const fullSummaryHTML = `
-          <p><strong>Description:</strong> ${reptile.description}</p>
           <p><strong>Length:</strong> ${reptile.length}</p>
           <p><strong>Weight:</strong> ${reptile.weight}</p>
           <p><strong>Food:</strong> ${reptile.food}</p>
           <p><strong>Found in:</strong> ${reptile.found}</p>
           <p><strong>Lifespan:</strong> ${reptile.lifespan}</p>
+          <p><strong>Group:</strong> ${reptile.group}</p>
       `;
     const summaryDiv = document.getElementById(
       `full-summary-${name.replace(/\s+/g, "-").toLowerCase()}`
