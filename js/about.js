@@ -61,6 +61,10 @@ let maho = new Member(
 let mainContent = document.querySelector(".main-content");
 let memberArray = [dobeen,claudia,ting,gabriella,maho]
 
+mainContent.innerHTML = `
+<h2 class="message">Welcome to the About Page! <br>Meet our lovely staff!</h2>
+`;
+
 memberArray.forEach(member => {
     let preview = member.nickname;
     let memberContainer = document.createElement("div")
