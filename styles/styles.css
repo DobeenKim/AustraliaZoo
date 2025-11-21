@@ -15,13 +15,12 @@ body {
   min-height: 100vh;
 }
 
-
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
   background-color: var(--main-color);
+  padding: 10px;
 }
 
 .header__logo {
@@ -29,6 +28,109 @@ body {
   flex: 0 0 auto;
   width: 80px;
   height: auto;
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../images/background-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+}
+
+.welcome-hero-section {
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.main-container {
+  display: flex;
+  flex: 1;
+}
+
+.main__sidebar {
+  align-items: center;
+  background-color: var(--main-color);
+  display: flex;
+  position: relative;
+  transition: 0.5s;
+}
+
+.sidebar.open {
+  left: 60px;
+}
+
+.sidebar-tab {
+  font-size: 2rem;
+  height: 100%;
+  padding: 24px 12px;
+  position: relative;
+  width: 60px;
+  z-index: 20;
+  color: var(--color-tertiary);
+}
+
+.sidebar a {
+  color: var(--color-secondary);
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding: 8px;
+}
+
+.sidebar .ulList {
+  list-style: none;
+  margin: 0;
+  padding: 8px;
+}
+
+.ulList .list {
+  color: var(--color-tertiary);
+  font-size: 1rem;
+  padding: 16px;
+}
+
+.ulList .active {
+  display: none;
+}
+
+.sidebar {
+  background-color: var(--main-color);
+  height: 100%;
+  left: -280px;
+  margin: 0;
+  padding: 16px;
+  position: absolute;
+  overflow-wrap: break-word;
+  top: 0;
+  transition: left 0.4s ease;
+  width: 280px;
+  white-space: normal;
+  z-index: 10;
+}
+
+.wrap {
+  width: 90%;
+  margin: 0 auto;
+  font-weight: 600;
+  color: var(--color-tertiary);
+}
+
+.welcome-tagline {
+  font-size: 1.5rem;
+}
+
+.welcome-main-title {
+  font-size: 2rem;
+}
+
+.welcome-description {
+  font-size: 1rem;
+  margin: 0;
+  padding-bottom: 32px;
 }
 
 .main-container {
@@ -80,11 +182,14 @@ body {
 
 .ulChildren {
   color: var(--color-tertiary);
-  cursor: pointer;
   font-size: 1rem;
   list-style: none;
   margin: 0;
   padding: 16px;
+}
+
+.hide {
+  display: none;
 }
 
 .main-content {
@@ -98,7 +203,9 @@ body {
 
 .card {
   background-color: var(--color-secondary);
+   background-clip: content-box;
   border-radius: 10px;
+  display: block;
   margin: 8px;
   padding: 8px;
 }
@@ -181,11 +288,25 @@ body {
 
 @media (min-width: 768px) {
   .header-logo {
-    margin: 20px;
     width: 100px;
   }
-  .main-content {
-    margin: 0 auto;
-    width: 60%;
+  .main__sidebar.open {
+    width: 320px;
+  }
+
+  .welcome-hero-section {
+    padding-top: 200px;
+  }
+
+  .welcome-tagline {
+    font-size: 2rem;
+  }
+
+  .welcome-main-title {
+    font-size: 3rem;
+  }
+
+  .welcome-description {
+    font-size: 1.3rem;
   }
 }
