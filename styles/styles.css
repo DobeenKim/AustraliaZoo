@@ -137,14 +137,13 @@ body {
 }
 
 .bird-content {
-  margin-top: 10px;
+  margin-top: 10px;background: none; /* 明确设置为无背景 */
+  background-color: transparent; /* 或者设置为透明 */
 }
 
 .card {
   background-color: var(--color-secondary);
-  background-clip: content-box;
   border-radius: 10px;
-  display: block;
   margin: 8px;
   padding: 8px;
 }

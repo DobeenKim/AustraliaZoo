@@ -27,7 +27,6 @@
 
 // document.addEventListener("DOMContentLoaded", buildNavMenu);
 
-
 function Birds(name, lessDescription, moreDescription, img) {
   (this.name = name),
     (this.lessDescription = lessDescription),
@@ -62,6 +61,7 @@ let currentAnimal = null;
 let content = document.querySelector(".main-content");
 let card = document.createElement("div");
 card.className = "card";
+card.style.display = "none";
 content.appendChild(card);
 
 function commonPart() {
@@ -93,17 +93,31 @@ birdsArray.forEach((animal) => {
 
       if (birdsTitle) {
         birdsTitle.style.display = "block";
-        birdsTitle.style.visibility = "visible";
+
+        card.style.display = "none";
       }
       if (birdsAbstract) {
         birdsAbstract.style.display = "block";
-        birdsAbstract.style.visibility = "visible";
+
+        card.style.display = "none";
       }
 
       currentAnimal = null;
       return;
     }
+    let birdsTitle = document.querySelector(".birds-title");
+    let birdsAbstract = document.querySelector(".birds-abstract");
 
+    if (birdsTitle) {
+      birdsTitle.style.display = "none";
+
+      card.style.display = "block";
+    }
+    if (birdsAbstract) {
+      birdsAbstract.style.display = "none";
+
+      card.style.display = "block";
+    }
     commonPart();
     let animalTitle = document.createElement("H4");
     animalTitle.innerHTML = animal.name;
