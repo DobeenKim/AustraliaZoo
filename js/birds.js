@@ -1,3 +1,33 @@
+// const menuItems = [
+//   { name: "Home", href: "./index.html", active: true },
+//   { name: "Birds", href: "./birds.html" },
+//   { name: "Reptiles", href: "./reptiles.html" },
+//   { name: "Mammals", href: "./mammals.html" },
+//   { name: "About Us", href: "./about.html" },
+// ];
+
+// const buildNavMenu = () => {
+//   const navMenu = document.getElementById("navMenu");
+
+//   menuItems.forEach((item) => {
+//     const anchor = document.createElement("a");
+//     anchor.href = item.href;
+//     anchor.textContent = item.name;
+//     if (item.active) {
+//       anchor.classList.add("active");
+//     }
+//     navMenu.appendChild(anchor);
+//   });
+// };
+
+// const toggleMenu = () => {
+//   const menu = document.querySelector(".nav-menu");
+//   menu.classList.toggle("show");
+// };
+
+// document.addEventListener("DOMContentLoaded", buildNavMenu);
+
+
 function Birds(name, lessDescription, moreDescription, img) {
   (this.name = name),
     (this.lessDescription = lessDescription),
@@ -35,14 +65,7 @@ card.className = "card";
 content.appendChild(card);
 
 function commonPart() {
-  let removeElement = card.querySelectorAll(
-    " .title, .pic, .less, .button, .more"
-  );
-  removeElement.forEach((element) => {
-    if (element && element.parentNode === card) {
-      card.removeChild(element);
-    }
-  });
+  card.innerHTML = "";
 }
 
 birdsArray.forEach((animal) => {
@@ -61,6 +84,7 @@ birdsArray.forEach((animal) => {
   });
 
   ulChildren.addEventListener("click", () => {
+    nav.classList.remove("open");
     if (currentAnimal === animal.name) {
       commonPart();
 
@@ -89,7 +113,7 @@ birdsArray.forEach((animal) => {
     img.src = animal.img;
     img.classList.add("pic");
 
-    let abstract = document.createElement("p");
+    let abstract = document.createElement("div");
     abstract.classList.add("less");
     abstract.innerHTML = animal.lessDescription;
 
