@@ -143,6 +143,6 @@ We welcome contributions to improve the Australian Zoo website!
 
 For support or questions:
 
-📧Please contact us on GitHub or lindedin
+📧Please contact us on GitHub or Linkedin
 
 
