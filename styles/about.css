@@ -4,6 +4,10 @@
   --color-tertiary: #efe3c2;
 }
 
+body {
+  font-family: "Ribeye";
+}
+
 a {
   text-decoration: none;
 }
