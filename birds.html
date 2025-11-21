@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Birds</title>
     <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="stylesheet" href="styles/nav/menu.css">
+    <link rel="stylesheet" href="styles/nav/menu.css" />
+    <link rel="stylesheet" href="./styles/typography.css" />
     <script
       src="https://kit.fontawesome.com/547bf76217.js"
       crossorigin="anonymous"
@@ -19,11 +20,12 @@
         class="header__logo"
         src="images/header-logo.png"
         alt="Header Logo"
-        width="80"
-        height="auto"
       />
+      <div class="nav-container">
+        <nav class="nav-menu" id="navMenu"></nav>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+      </div>
     </header>
-
     <div class="main-container">
       <div class="main-sidebar">
         <div class="sidebar-tab">
@@ -37,17 +39,15 @@
       </div>
       <div class="main-content">
         <div class="bird-content">
-          
-            <h2 class="birds-title">Birds</h2>
-            <p class="birds-abstract">
-              Birds are a class of warm-blooded vertebrates characterized by
-              feathers, beaks without teeth, and the laying of hard-shelled
-              eggs. They have a high metabolic rate, a four-chambered heart, and
-              a lightweight but strong skeleton. Most birds are adapted for
-              flight, with forelimbs that have evolved into wings, though some
-              species are flightless, such as ostriches and penguins.
-            </p>
-         
+          <h2 class="birds-title">Birds</h2>
+          <p class="birds-abstract">
+            Birds are a class of warm-blooded vertebrates characterized by
+            feathers, beaks without teeth, and the laying of hard-shelled eggs.
+            They have a high metabolic rate, a four-chambered heart, and a
+            lightweight but strong skeleton. Most birds are adapted for flight,
+            with forelimbs that have evolved into wings, though some species are
+            flightless, such as ostriches and penguins.
+          </p>
         </div>
       </div>
     </div>
