@@ -73,7 +73,7 @@ const showShortSummary = (name) => {
           </div>
           <h3>${reptile.name}</h3>
           <p><strong>Group:</strong> ${reptile.group}</p>
-          <button onclick="showFullSummary('${
+          <button class="read-more-btn" onclick="showFullSummary('${
             reptile.name
           }')">Read More</button>
           <div id="full-summary-${reptile.name
