@@ -34,11 +34,6 @@
   color: var(--color-tertiary);
 }
 
-.nav-menu a.active {
-  background-color: var(--color-secondary);
-  color: var(--main-color);
-}
-
 .hamburger {
   cursor: pointer;
   font-size: 30px;

@@ -1,5 +1,5 @@
 const menuItems = [
-  { name: "Home", href: "./index.html", active: true },
+  { name: "Home", href: "./index.html"},
   { name: "Birds", href: "./birds.html" },
   { name: "Reptiles", href: "./reptiles.html" },
   { name: "Mammals", href: "./mammals.html" },
@@ -13,9 +13,6 @@ const buildNavMenu = () => {
     const anchor = document.createElement("a");
     anchor.href = item.href;
     anchor.textContent = item.name;
-    if (item.active) {
-      anchor.classList.add("active");
-    }
     navMenu.appendChild(anchor);
   });
 };
