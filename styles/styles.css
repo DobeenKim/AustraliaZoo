@@ -110,6 +110,10 @@ p {
   display: none;
 }
 
+.sidebar .list:hover {
+  cursor: pointer;
+}
+
 .main {
   width: 100%;
   min-height: 100vh;
