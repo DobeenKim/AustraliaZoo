@@ -7,7 +7,7 @@ const menuItems = [
 ];
 
 const buildNavMenu = () => {
-  const navMenu = document.getElementById("navMenu");
+  const navMenu = document.querySelector(".nav-menu");
 
   menuItems.forEach((item) => {
     const anchor = document.createElement("a");
