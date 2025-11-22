@@ -16,6 +16,10 @@ body {
   min-height: 100vh;
 }
 
+p {
+  font-family: "Cabin", serif;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -146,6 +150,7 @@ body {
 .extra-info {
   display: none;
   margin-top: 10px;
+  font-family: "Cabin", serif;
 }
 
 .read-more-btn {
