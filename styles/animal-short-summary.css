@@ -4,10 +4,17 @@
   --color-tertiary: #efe3c2;
 }
 
+body {
+  font-family: "Ribeye", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .summary-section {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 50px;
 }
 
 .card {

@@ -12,13 +12,35 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0;
+<<<<<<< HEAD
   min-height: 100vh;
+=======
+  font-family: "Ribeye", serif;
+  font-weight: 400;
+  font-style: normal;
+  min-height: 100vh;
+}
+
+p {
+  font-family: "Cabin", serif;
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../images/background-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+>>>>>>> feature/font-paragraph
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+<<<<<<< HEAD
   background-color: var(--main-color);
   padding: 10px;
 }
@@ -26,10 +48,18 @@ body {
 .header__logo {
   margin-right: 20px;
   flex: 0 0 auto;
+=======
+  padding: 10px;
+  background-color: var(--main-color);
+}
+
+.header__logo {
+>>>>>>> feature/font-paragraph
   width: 80px;
   height: auto;
 }
 
+<<<<<<< HEAD
 .main {
   width: 100%;
   min-height: 100vh;
@@ -47,6 +77,8 @@ body {
   padding-top: 100px;
 }
 
+=======
+>>>>>>> feature/font-paragraph
 .main-container {
   display: flex;
   flex: 1;
@@ -64,14 +96,37 @@ body {
   left: 60px;
 }
 
+<<<<<<< HEAD
 .sidebar-tab {
+=======
+.sidebar {
+  background-color: var(--main-color);
+  height: 100%;
+  left: -280px;
+  margin: 0;
+  padding: 16px;
+  position: absolute;
+  overflow-wrap: break-word;
+  top: 0;
+  transition: left 0.4s ease;
+  width: 280px;
+  white-space: normal;
+  z-index: 10;
+}
+
+.sidebar-tab {
+  color: var(--color-tertiary);
+>>>>>>> feature/font-paragraph
   font-size: 2rem;
   height: 100%;
   padding: 24px 12px;
   position: relative;
   width: 60px;
   z-index: 20;
+<<<<<<< HEAD
   color: var(--color-tertiary);
+=======
+>>>>>>> feature/font-paragraph
 }
 
 .sidebar a {
@@ -97,6 +152,7 @@ body {
   display: none;
 }
 
+<<<<<<< HEAD
 .sidebar {
   background-color: var(--main-color);
   height: 100%;
@@ -110,6 +166,27 @@ body {
   width: 280px;
   white-space: normal;
   z-index: 10;
+=======
+.sidebar .list:hover {
+  cursor: pointer;
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../images/background-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+}
+
+.welcome-hero-section {
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 200px;
+>>>>>>> feature/font-paragraph
 }
 
 .wrap {
@@ -120,11 +197,19 @@ body {
 }
 
 .welcome-tagline {
+<<<<<<< HEAD
   font-size: 1.5rem;
 }
 
 .welcome-main-title {
   font-size: 2rem;
+=======
+  font-size: 2rem;
+}
+
+.welcome-main-title {
+  font-size: 3rem;
+>>>>>>> feature/font-paragraph
 }
 
 .welcome-description {
@@ -133,6 +218,7 @@ body {
   padding-bottom: 32px;
 }
 
+<<<<<<< HEAD
 .main-container {
   display: flex;
   flex: 1;
@@ -262,6 +348,10 @@ body {
 
 .section-link {
   color: var(--main-color);
+=======
+.welcome-hero-section {
+  padding-top: 100px;
+>>>>>>> feature/font-paragraph
 }
 
 .footer {
@@ -308,5 +398,24 @@ body {
 
   .welcome-description {
     font-size: 1.3rem;
+<<<<<<< HEAD
+=======
+  }
+
+  .welcome-hero-section {
+    padding-top: 200px;
+  }
+
+  .welcome-tagline {
+    font-size: 2rem;
+  }
+
+  .welcome-main-title {
+    font-size: 3rem;
+  }
+
+  .welcome-description {
+    font-size: 1.3rem;
+>>>>>>> feature/font-paragraph
   }
 }

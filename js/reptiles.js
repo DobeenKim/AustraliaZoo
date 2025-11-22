@@ -76,7 +76,7 @@ reptiles.addAnimal(
 
 let mainContent = document.querySelector(".main-content");
 mainContent.innerHTML = `
-  <h2 class="species-title">${reptiles.name}</h2>
+  <h1 class="species-title">${reptiles.name}</h1>
   <p class="species-info">${reptiles.description}</p>
 `;
 
@@ -95,7 +95,7 @@ reptiles.animals.forEach((animal) => {
   `;
 
   animalCard.innerHTML = `
-    <h4 class="animal-title">${animal.name}</h4>
+    <h2 class="animal-title">${animal.name}</h2>
     <div class="image-wrapper">
       <img src="${animal.image}" alt="${animal.name} image" class="animal-image" style="width: 160px; height: 160px;">
     </div>

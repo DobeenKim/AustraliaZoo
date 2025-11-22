@@ -4,6 +4,14 @@
   --color-tertiary: #efe3c2;
 }
 
+<<<<<<< HEAD
+=======
+body {
+  margin: 0;
+  ;
+}
+
+>>>>>>> feature/font-paragraph
 .nav-container {
   display: flex;
   align-items: center;
@@ -18,7 +26,11 @@
   left: 0;
   right: 0;
   display: none;
+<<<<<<< HEAD
   z-index: 100;
+=======
+  z-index: 30;
+>>>>>>> feature/font-paragraph
 }
 
 .nav-menu a {

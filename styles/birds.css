@@ -11,10 +11,14 @@
 body {
   display: flex;
   flex-direction: column;
+  font-family: "Ribeye";
   margin: 0;
   min-height: 100vh;
 }
 
+p {
+  font-family: "Cabin", serif;
+}
 
 .header {
   display: flex;
@@ -142,6 +146,7 @@ body {
   margin: 8px;
   padding: 8px;
   text-align: left;
+  font-family: "Cabin", serif;
 }
 
 .section-title {

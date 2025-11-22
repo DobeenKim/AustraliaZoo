@@ -1,4 +1,14 @@
-function Animal(name, lifespan, group, food, description, length, weight, location, image) {
+function Animal(
+  name,
+  lifespan,
+  group,
+  food,
+  description,
+  length,
+  weight,
+  location,
+  image
+) {
   (this.name = name),
     (this.lifespan = `${lifespan} years`),
     (this.group = group),
@@ -66,11 +76,11 @@ mammals.addAnimal(
 let mainContent = document.querySelector(".main-content");
 
 mainContent.innerHTML = `
-  <h2 class="species-title">${mammals.name}</h2>
+  <h1 class="species-title">${mammals.name}</h1>
   <p class="species-info">${mammals.description}</p>
 `;
 
-mammals.animals.forEach(animal => {
+mammals.animals.forEach((animal) => {
   let preview = animal.description.substring(0, 200) + "...";
   let animalCard = document.createElement("div");
   const animalClassname = animal.name.toLowerCase().replace(/\s+/g, "-");
@@ -86,7 +96,7 @@ mammals.animals.forEach(animal => {
   `;
 
   animalCard.innerHTML = `
-  <h4 class="animal-title">${animal.name}</h4>
+  <h2 class="animal-title">${animal.name}</h2>
   <div class="image-wrapper">
     <img 
       src="${animal.image}" 
@@ -94,7 +104,7 @@ mammals.animals.forEach(animal => {
       class="animal-image"
       style="width: 160px; height: 160px;"
     >
-  <div>
+  </div>
   <div class="animal-info-container">
   <p class="animal-description">${preview}</p>
   <div class="extra-info">
