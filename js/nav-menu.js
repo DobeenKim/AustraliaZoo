@@ -1,5 +1,5 @@
 const menuItems = [
-  { name: "Home", href: "./index.html", active: true },
+  { name: "Home", href: "./index.html" },
   { name: "Birds", href: "./birds.html" },
   { name: "Reptiles", href: "./reptiles.html" },
   { name: "Mammals", href: "./mammals.html" },
@@ -7,7 +7,7 @@ const menuItems = [
 ];
 
 const buildNavMenu = () => {
-  const navMenu = document.getElementById("navMenu");
+  const navMenu = document.querySelector(".nav-menu");
 
   menuItems.forEach((item) => {
     const anchor = document.createElement("a");
