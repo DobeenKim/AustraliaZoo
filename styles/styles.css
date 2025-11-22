@@ -12,9 +12,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0;
-<<<<<<< HEAD
   min-height: 100vh;
-=======
   font-family: "Ribeye", serif;
   font-weight: 400;
   font-style: normal;
@@ -33,52 +31,21 @@ p {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
->>>>>>> feature/font-paragraph
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-<<<<<<< HEAD
-  background-color: var(--main-color);
-  padding: 10px;
-}
-
-.header__logo {
-  margin-right: 20px;
-  flex: 0 0 auto;
-=======
   padding: 10px;
   background-color: var(--main-color);
 }
 
 .header__logo {
->>>>>>> feature/font-paragraph
   width: 80px;
   height: auto;
 }
 
-<<<<<<< HEAD
-.main {
-  width: 100%;
-  min-height: 100vh;
-  background-image: url(../images/background-image.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: flex;
-}
-
-.welcome-hero-section {
-  width: 95%;
-  margin: 0 auto;
-  text-align: center;
-  padding-top: 100px;
-}
-
-=======
->>>>>>> feature/font-paragraph
 .main-container {
   display: flex;
   flex: 1;
@@ -96,9 +63,6 @@ p {
   left: 60px;
 }
 
-<<<<<<< HEAD
-.sidebar-tab {
-=======
 .sidebar {
   background-color: var(--main-color);
   height: 100%;
@@ -116,17 +80,12 @@ p {
 
 .sidebar-tab {
   color: var(--color-tertiary);
->>>>>>> feature/font-paragraph
   font-size: 2rem;
   height: 100%;
   padding: 24px 12px;
   position: relative;
   width: 60px;
   z-index: 20;
-<<<<<<< HEAD
-  color: var(--color-tertiary);
-=======
->>>>>>> feature/font-paragraph
 }
 
 .sidebar a {
@@ -152,21 +111,6 @@ p {
   display: none;
 }
 
-<<<<<<< HEAD
-.sidebar {
-  background-color: var(--main-color);
-  height: 100%;
-  left: -280px;
-  margin: 0;
-  padding: 16px;
-  position: absolute;
-  overflow-wrap: break-word;
-  top: 0;
-  transition: left 0.4s ease;
-  width: 280px;
-  white-space: normal;
-  z-index: 10;
-=======
 .sidebar .list:hover {
   cursor: pointer;
 }
@@ -186,7 +130,6 @@ p {
   margin: 0 auto;
   text-align: center;
   padding-top: 200px;
->>>>>>> feature/font-paragraph
 }
 
 .wrap {
@@ -197,19 +140,11 @@ p {
 }
 
 .welcome-tagline {
-<<<<<<< HEAD
-  font-size: 1.5rem;
-}
-
-.welcome-main-title {
-  font-size: 2rem;
-=======
   font-size: 2rem;
 }
 
 .welcome-main-title {
   font-size: 3rem;
->>>>>>> feature/font-paragraph
 }
 
 .welcome-description {
@@ -218,140 +153,8 @@ p {
   padding-bottom: 32px;
 }
 
-<<<<<<< HEAD
-.main-container {
-  display: flex;
-  flex: 1;
-}
-
-.main-sidebar {
-  align-items: center;
-  background-color: var(--main-color);
-  display: flex;
-  position: relative;
-  transition: 0.5s;
-}
-
-.sidebar.open {
-  left: 60px;
-}
-
-.sidebar {
-  background-color: var(--main-color);
-  height: 100%;
-  left: -300px;
-  padding: 16px;
-  position: absolute;
-  overflow-wrap: break-word;
-  transition: left 0.4s ease;
-  width: 280px;
-  white-space: normal;
-  z-index: 10;
-}
-
-.sidebar-tab {
-  color: var(--color-tertiary);
-  cursor: pointer;
-  font-size: 2rem;
-  height: 100%;
-  padding: 24px 12px;
-  width: 60px;
-  z-index: 20;
-}
-
-.sidebar a {
-  color: var(--color-secondary);
-  font-size: 1.5rem;
-  text-decoration: none;
-  padding: 8px;
-}
-
-.ulChildren {
-  color: var(--color-tertiary);
-  font-size: 1rem;
-  list-style: none;
-  margin: 0;
-  padding: 16px;
-}
-
-.hide {
-  display: none;
-}
-
-.main-content {
-  text-align: center;
-  padding: 32px;
-}
-
-.bird-content {
-  margin-top: 10px;
-}
-
-.card {
-  background-color: var(--color-secondary);
-   background-clip: content-box;
-  border-radius: 10px;
-  display: block;
-  margin: 8px;
-  padding: 8px;
-}
-
-.title {
-  color: var(--color-tertiary);
-  padding-top: 26px;
-  text-align: center;
-}
-
-.more {
-  height: 100%;
-  overflow-wrap: break-word;
-  white-space: normal;
-  word-break: break-word;
-  word-wrap: break-word;
-}
-
-.button {
-  background-color: var(--main-color);
-  border: none;
-  border-radius: 10px;
-  color: var(--color-tertiary);
-  display: block;
-  margin: 10px 0;
-  padding: 16px;
-}
-
-.pic {
-  border-radius: 50%;
-  margin: 8px;
-  height: 160px;
-  object-fit: cover;
-  width: 160px;
-}
-
-.less {
-  background-color: var(--color-tertiary);
-  border-radius: 10px;
-  color: var(--main-color);
-  margin: 8px;
-  padding: 8px;
-  text-align: left;
-}
-
-.section-title {
-  margin: 0;
-}
-
-.description,
-.section-paragraph {
-  padding-bottom: 1.5rem;
-}
-
-.section-link {
-  color: var(--main-color);
-=======
 .welcome-hero-section {
   padding-top: 100px;
->>>>>>> feature/font-paragraph
 }
 
 .footer {
@@ -398,8 +201,6 @@ p {
 
   .welcome-description {
     font-size: 1.3rem;
-<<<<<<< HEAD
-=======
   }
 
   .welcome-hero-section {
@@ -416,6 +217,5 @@ p {
 
   .welcome-description {
     font-size: 1.3rem;
->>>>>>> feature/font-paragraph
   }
 }
