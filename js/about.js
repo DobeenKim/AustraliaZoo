@@ -62,7 +62,7 @@ let mainContent = document.querySelector(".main-content");
 let memberArray = [dobeen, claudia, ting, gabriella, maho];
 
 mainContent.innerHTML = `
-<h1 class="message">Welcome to the About Page! <br>Meet our lovely staff!</h2>
+<h1 class="message">Welcome to the About Page! <br>Meet our lovely staff!</h1>
 `;
 
 memberArray.forEach((member) => {

@@ -76,7 +76,7 @@ mammals.addAnimal(
 let mainContent = document.querySelector(".main-content");
 
 mainContent.innerHTML = `
-  <h1 class="species-title">${mammals.name}</h2>
+  <h1 class="species-title">${mammals.name}</h1>
   <p class="species-info">${mammals.description}</p>
 `;
 
@@ -96,7 +96,7 @@ mammals.animals.forEach((animal) => {
   `;
 
   animalCard.innerHTML = `
-  <h2 class="animal-title">${animal.name}</h4>
+  <h2 class="animal-title">${animal.name}</h2>
   <div class="image-wrapper">
     <img 
       src="${animal.image}" 
