@@ -23,6 +23,7 @@ body {
   left: 0;
   right: 0;
   display: none;
+  z-index: 30;
 }
 
 .nav-menu a {

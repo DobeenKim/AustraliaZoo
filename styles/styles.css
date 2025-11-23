@@ -15,6 +15,21 @@ body {
   font-family: "Ribeye", serif;
   font-weight: 400;
   font-style: normal;
+  min-height: 100vh;
+}
+
+p {
+  font-family: "Cabin", serif;
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../images/background-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .header {
@@ -30,26 +45,73 @@ body {
   height: auto;
 }
 
-.footer {
+.main-container {
+  display: flex;
+  flex: 1;
+}
+
+.main__sidebar {
+  align-items: center;
   background-color: var(--main-color);
-  color: var(--color-tertiary);
+  display: flex;
+  position: relative;
+  transition: 0.5s;
+}
+
+.sidebar.open {
+  left: 60px;
+}
+
+.sidebar {
+  background-color: var(--main-color);
+  height: 100%;
+  left: -280px;
+  margin: 0;
   padding: 16px;
-  text-align: center;
+  position: absolute;
+  overflow-wrap: break-word;
+  top: 0;
+  transition: left 0.4s ease;
+  width: 280px;
+  white-space: normal;
+  z-index: 10;
 }
 
-.icon {
-  margin: 8px;
-}
-
-.social-media:visited,
-.social-media a {
+.sidebar-tab {
   color: var(--color-tertiary);
-  text-decoration: none;
+  font-size: 2rem;
+  height: 100%;
+  padding: 24px 12px;
+  position: relative;
+  width: 60px;
+  z-index: 20;
 }
 
-.icon:hover {
+.sidebar a {
   color: var(--color-secondary);
-  transform: scale(1.1);
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding: 8px;
+}
+
+.sidebar .ulList {
+  list-style: none;
+  margin: 0;
+  padding: 8px;
+}
+
+.ulList .list {
+  color: var(--color-tertiary);
+  font-size: 1rem;
+  padding: 16px;
+}
+
+.ulList .active {
+  display: none;
+}
+
+.sidebar .list:hover {
+  cursor: pointer;
 }
 
 .main {
@@ -59,6 +121,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  display: flex;
 }
 
 .welcome-hero-section {
@@ -90,7 +153,7 @@ body {
 }
 
 .welcome-hero-section {
-  padding-top: 100px; 
+  padding-top: 100px;
 }
 
 .footer {
@@ -140,18 +203,18 @@ body {
   }
 
   .welcome-hero-section {
-    padding-top: 200px; 
+    padding-top: 200px;
   }
 
-  .welcome-tagline { 
-    font-size: 2rem; 
+  .welcome-tagline {
+    font-size: 2rem;
   }
 
   .welcome-main-title {
-    font-size: 3rem; 
+    font-size: 3rem;
   }
 
-  .welcome-description { 
-    font-size: 1.3rem; 
+  .welcome-description {
+    font-size: 1.3rem;
   }
 }

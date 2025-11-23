@@ -3,19 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/styles.css" />
-    <link rel="stylesheet" href="styles/animal-short-summary.css" />
-    <link rel="stylesheet" href="./styles/typography.css" />
-    <link rel="stylesheet" href="styles/nav-menu.css" />
+    <title>Aussie Zoo | Reptiles</title>
+    <script src="./js/reptiles.js" defer></script>
     <script src="./js/nav-menu.js" defer></script>
-    <script src="./js/script.js" defer></script>
-    <script src="./js/animal-short-summary.js" defer></script>
     <script
       src="https://kit.fontawesome.com/547bf76217.js"
       crossorigin="anonymous"
     ></script>
-    <title>Aussie Zoo</title>
-
+    <link rel="stylesheet" href="./styles/reptiles.css" />
+    <link rel="stylesheet" href="./styles/nav-menu.css" />
+    <link rel="stylesheet" href="./styles/typography.css" />
   </head>
   <body>
     <header class="header">
@@ -25,30 +22,19 @@
         alt="Header Logo"
       />
       <div class="nav-container">
-        <nav class="nav-menu" id="navMenu"></nav>
+        <nav class="nav-menu"></nav>
         <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
       </div>
     </header>
-    <main class="main">
-      <div class="main-container">
-        <div class="main__sidebar">
-          <div class="sidebar-tab">
-            <i class="fa-solid fa-paw"></i>
-          </div>
-          <ul class="sidebar"></ul>
+    <div class="main-container">
+      <div class="sidebar">
+        <div class="sidebar-tab">
+          <i class="fa-solid fa-paw"></i>
         </div>
+        <div class="sidebar-content"></div>
       </div>
-      <section class="welcome-hero-section">
-        <div class="wrap">
-          <h2 class="welcome-tagline">Ready for an Aussie Adventure?</h2>
-          <h1 class="welcome-main-title">Welcome to Our Aussie Zoo!</h1>
-          <p class="welcome-description">
-            Feed the animals, join a guided tour, or snap some photos fun for
-            kids and adults alike!
-          </p>
-        </div>
-      </section>
-    </main>
+      <div class="main-content"></div>
+    </div>
     <footer class="footer">
       <div class="contact-info">
         <h4 class="address">42 Wallaby Way, Sydney NSW 2000, Australia</h4>
