@@ -110,9 +110,9 @@ p {
   font-size: 24px;
 }
 
-  .member-card:nth-of-type(4) .fa-linkedin-in {
-    display: none;
-  }
+.member-card:nth-of-type(4) .fa-linkedin-in {
+  display: none;
+}
 
 .member-info-container {
   background-color: var(--color-tertiary);
