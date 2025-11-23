@@ -81,14 +81,13 @@ memberArray.forEach(member => {
         style="width: 160px; height: 160px;"
         >
     </div>
-        <div class="member-info-container">
+    <div class="member-info-container">
             <p class="member-description">Nick name : ${member.nickname}</p>
             <p class="member-description">Favorite animal : ${member.favAnimal}</p>
             <p class="member-description">Email address : ${member.email}</p>
         <p class="memberContact">
-            <a href="${member.linkedin}" target="_blank"><i class="fa-brands fa-linkedin-in"></i>
-            <a href="${member.github}" target="_blank"><i class="fa-brands fa-github"></i>
-        </a>
+            <a href="${member.linkedin}" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="${member.github}" target="_blank"><i class="fa-brands fa-github"></i></a>
         </p>
     </div>
 `;
