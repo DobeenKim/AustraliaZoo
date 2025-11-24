@@ -106,13 +106,13 @@ birdsArray.forEach((animal) => {
     let birdsAbstract = document.querySelector(".birds-abstract");
 
     if (birdsTitle) {
-      birdsTitle.style.display = "none";
+      birdsTitle.style.display = "block";
       card.style.display = "block";
     }
-    if (birdsAbstract) {
-      birdsAbstract.style.display = "block";
-      card.style.display = "block";
-    }
+    // if (birdsAbstract) {
+    //   birdsAbstract.style.display = "block";
+    //   card.style.display = "block";
+    // }
     commonPart();
     let animalTitle = document.createElement("H2");
     animalTitle.innerHTML = animal.name;
