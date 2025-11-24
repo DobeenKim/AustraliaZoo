@@ -110,7 +110,7 @@ birdsArray.forEach((animal) => {
       card.style.display = "block";
     }
     if (birdsAbstract) {
-      birdsAbstract.style.display = "none";
+      birdsAbstract.style.display = "block";
       card.style.display = "block";
     }
     commonPart();
